@@ -4,9 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useFindCareHref } from "@/hooks/use-find-care-href";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const findCareHref = useFindCareHref();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -68,7 +70,7 @@ export function Header() {
                 Contact
               </button>
               <Link
-                href="/find-care"
+                href={findCareHref}
                 className="px-6 py-3 bg-[#5F7E9D] text-white font-modern font-normal text-[18px] leading-[100%] rounded-[10px] border-2 border-transparent hover:bg-white md:text-[14px] hover:text-[#5F7E9D] m-0 hover:border-[#5F7E9D] transition-all duration-300"
               >
                 Create Your Dog's Profile
@@ -153,7 +155,7 @@ export function Header() {
           </button>
 
           <Link
-            href="/find-care"
+            href={findCareHref}
             onClick={() => setIsMenuOpen(false)}
             className={`mt-8 w-full max-w-[320px] text-center px-8 py-4 bg-[#5F7E9D] text-white font-modern font-normal text-[20px] leading-[100%] rounded-[14px] border-2 border-transparent hover:bg-white hover:text-[#5F7E9D] hover:border-[#5F7E9D] transition-all duration-500 ${
               isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"

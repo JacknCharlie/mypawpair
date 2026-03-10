@@ -3,9 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useFindCareHref } from "@/hooks/use-find-care-href";
 
 export function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
+  const findCareHref = useFindCareHref();
 
   useEffect(() => {
     setIsVisible(true);
@@ -74,9 +76,8 @@ export function HeroSection() {
 
               <div className="flex flex-col sm:flex-row gap-[10px] sm:gap-[5px] mt-8">
                 <Link
-                  href="/find-care"
+                  href={findCareHref}
                   className="font-modern inline-block px-8 py-3.5 bg-[#5F7E9D] text-white font-normal text-[18px] leading-[100%] rounded-[10px] border-2 border-transparent hover:bg-white hover:text-[#5F7E9D] hover:border-[#5F7E9D] transition-all duration-300 text-center"
-                 
                 >
                   Create Your Dog's Profile
                 </Link>
