@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { PWAInstaller } from "@/components/pwa-installer";
+import { RouteProgressLine } from "@/components/route-progress-line";
 import "./globals.css";
 
 const APP_NAME = "PawPair";
@@ -73,6 +74,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <RouteProgressLine />
           {children}
           <PWAInstaller />
         </ThemeProvider>
