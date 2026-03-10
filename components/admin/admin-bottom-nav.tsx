@@ -11,6 +11,7 @@ import {
   X,
   UserCheck,
   Heart,
+  ClipboardList,
 } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 
@@ -24,6 +25,7 @@ const mainTabs = [
 const moreTabs = [
   { label: "Dog Owners", href: "/dashboard/admin/owners", icon: UserCheck },
   { label: "Caregivers", href: "/dashboard/admin/caregivers", icon: Heart },
+  { label: "Waitlist", href: "/dashboard/admin/waitlist", icon: ClipboardList },
 ];
 
 export function AdminBottomNav() {

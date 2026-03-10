@@ -14,6 +14,7 @@ const headingMap: Record<string, string> = {
   "/dashboard/admin/matches": "Matches",
   "/dashboard/admin/settings": "Settings",
   "/dashboard/admin/users": "Users",
+  "/dashboard/admin/waitlist": "Waitlist",
 };
 
 interface AdminTopbarProps {

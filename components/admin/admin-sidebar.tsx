@@ -10,6 +10,7 @@ import {
   Heart,
   ArrowLeftRight,
   Users,
+  ClipboardList,
 } from "lucide-react";
 
 const navItems = [
@@ -19,6 +20,7 @@ const navItems = [
   { label: "Caregivers", href: "/dashboard/admin/caregivers", icon: Heart },
   { label: "Matches", href: "/dashboard/admin/matches", icon: ArrowLeftRight },
   { label: "Users", href: "/dashboard/admin/users", icon: Users },
+  { label: "Waitlist", href: "/dashboard/admin/waitlist", icon: ClipboardList },
 ];
 
 export function AdminSidebar() {
