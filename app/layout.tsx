@@ -10,7 +10,7 @@ const APP_DESCRIPTION =
   "Compatibility-based dog care, starting local and built thoughtfully.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL ?? "https://pawpair.vercel.app"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL ?? "https://www.mypawpair.com"),
   applicationName: APP_NAME,
   title: APP_TITLE,
   description: APP_DESCRIPTION,

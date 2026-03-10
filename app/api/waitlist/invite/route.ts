@@ -5,7 +5,7 @@ import { Resend } from "resend";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const SIGNUP_URL =
-  process.env.NEXT_PUBLIC_APP_URL ?? "https://mypawpair.com";
+  process.env.NEXT_PUBLIC_APP_URL ?? "https://www.mypawpair.com";
 
 export async function POST(request: NextRequest) {
   try {
