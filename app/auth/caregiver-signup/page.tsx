@@ -1,0 +1,11 @@
+import { CaregiverSignUpForm } from "@/components/caregiver-sign-up-form";
+
+export default function Page() {
+  return (
+    <div className="flex min-h-svh w-full items-center justify-center p-6 md:p-10 bg-[#F6F2EA]">
+      <div className="w-full max-w-sm">
+        <CaregiverSignUpForm />
+      </div>
+    </div>
+  );
+}
