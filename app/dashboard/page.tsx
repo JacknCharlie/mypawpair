@@ -26,5 +26,9 @@ export default async function DashboardPage() {
     redirect("/dashboard/caregiver");
   }
 
+  if (profile?.role === "provider") {
+    redirect("/dashboard/provider");
+  }
+
   redirect("/dashboard/owner");
 }

@@ -27,6 +27,10 @@ export default async function DashboardLayout({
     return <>{children}</>;
   }
 
+  if (profile?.role === "provider") {
+    return <>{children}</>;
+  }
+
   return (
     <div className="min-h-screen flex flex-col bg-[#F6F2EA]">
       <DashboardHeader
