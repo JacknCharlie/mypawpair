@@ -75,20 +75,29 @@ export function Footer() {
           </p>
 
           {/* Email + Button Form */}
-          <form onSubmit={handleSubmit} className="mt-8 w-full max-w-lg">
+          <form onSubmit={handleSubmit} className="mt-8 w-full max-w-lg" aria-label="Join the PawPair waitlist">
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-0">
+              <label htmlFor="waitlist-email" className="sr-only">
+                Email address for waitlist
+              </label>
               <input
+                id="waitlist-email"
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
                 disabled={loading}
+                autoComplete="email"
                 className="font-inter flex-1 px-5 py-3 bg-[#D9D9D9] border border-gray-300 rounded-lg sm:rounded-l-lg sm:rounded-r-none focus:outline-none focus:ring-2 focus:ring-[#5F7E9D] text-gray-900 placeholder-gray-600 disabled:opacity-50 disabled:cursor-not-allowed"
                 required
+                aria-invalid={message?.type === "error"}
+                aria-describedby={message ? "waitlist-message" : undefined}
               />
               <button
                 type="submit"
                 disabled={loading}
+                aria-busy={loading}
+                aria-label={loading ? "Joining waitlist" : "Join the waitlist"}
                 className="footer-inputs-btn font-modern font-normal px-8 py-3 bg-[#5F7E9D] text-[16px] rounded-[10px] -ml-[20px] md:text-[18px] lg:text-[20px] text-white font-regular rounded-lg sm:rounded-l-none sm:rounded-r-lg hover:bg-[#4b657d] transition-colors disabled:opacity-50 disabled:cursor-not-allowed min-w-[180px] sm:min-w-[160px]"
               >
                 {loading ? (
@@ -108,6 +117,8 @@ export function Footer() {
             {/* Success/Error Message */}
             {message && (
               <div
+                id="waitlist-message"
+                role="alert"
                 className={`mt-4 px-4 py-3 rounded-lg text-sm font-medium ${
                   message.type === "success"
                     ? "bg-green-100 text-green-800 border border-green-200"

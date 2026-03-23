@@ -93,24 +93,25 @@ export function TimelineSection() {
   return (
     <section
       ref={sectionRef}
+      id="how-pawpair-works"
+      aria-labelledby="how-pawpair-works-heading"
       className="w-full py-[60px] bg-[#5F7E9D] relative overflow-hidden"
     >
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-16">
         <div className="text-center mb-16 md:mb-20">
           <div className="flex items-center justify-center gap-3 mb-4">
             <h2
+              id="how-pawpair-works-heading"
               className="font-['Modern_Sans'] font-normal text-[27px] md:text-[36px] lg:text-[40px] xl:text-[46px] leading-[120%] text-[#fff]"
-              
             >
               How PawPair Works
             </h2>
-          
           </div>
           <p
             className="text-[16px] font-sans font-normal md:text-[18px] leading-[120%] text-center text-[#fff]"
             style={{ fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif" }}
           >
-            Start your dog's journey with the right match.
+            Start your dog&apos;s journey with the right match.
           </p>
         </div>
 
@@ -173,7 +174,7 @@ export function TimelineSection() {
                     } max-w-[500px]`}
                   >
                     <div className="time-line-inner-blocks flex flex-col items-start gap-4  mb-[25px]">
-                      <div className="relative w-[40px] h-[40px] md:w-[80px] md:h-[80px] flex-shrink-0">
+                      <div className="relative w-[40px] h-[40px] md:w-[80px] md:h-[80px] flex-shrink-0" aria-hidden="true">
                         <Image
                           src={item.icon}
                           alt=""

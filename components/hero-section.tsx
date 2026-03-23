@@ -77,14 +77,16 @@ export function HeroSection() {
               <div className="flex flex-col sm:flex-row gap-[10px] sm:gap-[5px] mt-8">
                 <Link
                   href={findCareHref}
+                  aria-label="Create your dog's profile and find care"
                   className="font-modern inline-block px-8 py-3.5 bg-[#5F7E9D] text-white font-normal text-[18px] leading-[100%] rounded-[10px] border-2 border-transparent hover:bg-white hover:text-[#5F7E9D] hover:border-[#5F7E9D] transition-all duration-300 text-center"
                 >
                   Create Your Dog's Profile
                 </Link>
                 <button
+                  type="button"
                   onClick={scrollToBottom}
+                  aria-label="Scroll to Ask PawPair AI section"
                   className=" font-modern  inline-block px-8 py-3.5 text-[#5F7E9D] font-normal text-[18px] leading-[100%] rounded-[10px] border-2 border-[#5F7E9D] hover:bg-[#5F7E9D] hover:text-white transition-all duration-300 text-center"
-              
                 >
                   Ask PawPair AI
                 </button>

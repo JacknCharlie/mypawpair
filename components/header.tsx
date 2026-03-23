@@ -52,7 +52,9 @@ export function Header() {
 
             <nav className="navigation hidden nav:flex items-center space-x-[49px] md:space-x-[15px] lg:space-x-[49px]">
               <button
+                type="button"
                 onClick={() => scrollToSection("about")}
+                aria-label="Scroll to About section"
                 className="font-normal text-[18px] leading-[18px] text-black m-0 font-modern md:text-[14px] lg:text-[18px] hover:opacity-70 transition-opacity"
               >
                 About
@@ -64,13 +66,16 @@ export function Header() {
                 Find a Provider
               </Link>
               <button
+                type="button"
                 onClick={() => scrollToSection("contact")}
+                aria-label="Scroll to Contact section"
                 className="font-normal text-[18px] leading-[18px] text-black m-0 font-modern md:text-[14px] lg:text-[18px] hover:opacity-70 transition-opacity"
               >
                 Contact
               </button>
               <Link
                 href={findCareHref}
+                aria-label="Create your dog's profile and find care"
                 className="px-6 py-3 bg-[#5F7E9D] text-white font-modern font-normal text-[18px] leading-[100%] rounded-[10px] border-2 border-transparent hover:bg-white md:text-[14px] hover:text-[#5F7E9D] m-0 hover:border-[#5F7E9D] transition-all duration-300"
               >
                 Create Your Dog's Profile
@@ -110,7 +115,9 @@ export function Header() {
 
         <nav className="flex flex-col items-center justify-center h-full gap-2 px-8">
           <button
+            type="button"
             onClick={() => scrollToSection("about")}
+            aria-label="Scroll to About section"
             className={`text-[#2F3E4E] font-modern font-normal text-[32px] leading-[100%] py-5 hover:text-[#5F7E9D] transition-all duration-500 ${
               isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
@@ -145,7 +152,9 @@ export function Header() {
           />
 
           <button
+            type="button"
             onClick={() => scrollToSection("contact")}
+            aria-label="Scroll to Contact section"
             className={`text-[#2F3E4E] font-modern font-normal text-[32px] leading-[100%] py-5 hover:text-[#5F7E9D] transition-all duration-500 ${
               isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
@@ -157,6 +166,7 @@ export function Header() {
           <Link
             href={findCareHref}
             onClick={() => setIsMenuOpen(false)}
+            aria-label="Create your dog's profile and find care"
             className={`mt-8 w-full max-w-[320px] text-center px-8 py-4 bg-[#5F7E9D] text-white font-modern font-normal text-[20px] leading-[100%] rounded-[14px] border-2 border-transparent hover:bg-white hover:text-[#5F7E9D] hover:border-[#5F7E9D] transition-all duration-500 ${
               isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
