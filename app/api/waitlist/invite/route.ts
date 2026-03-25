@@ -38,7 +38,7 @@ export async function POST(request: NextRequest) {
     const signupLink = `${SIGNUP_URL}/auth/sign-up`;
 
     await resend.emails.send({
-      from: "myPawPair <noreply@contact.mypawpair.com>",
+      from: "myPawPair <noreply@support.mypawpair.com>",
       to: [email],
       subject: "You're invited to join myPawPair as a Dog Owner! 🐾",
       html: `

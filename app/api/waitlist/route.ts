@@ -77,7 +77,7 @@ export async function POST(request: NextRequest) {
     // Send email to user
     try {
       await resend.emails.send({
-        from: "myPawPair <noreply@contact.mypawpair.com>",
+        from: "myPawPair <noreply@support.mypawpair.com>",
         to: [email],
         subject: "Welcome to myPawPair Waitlist! 🐾",
         html: `
@@ -163,7 +163,7 @@ export async function POST(request: NextRequest) {
     try {
       console.log("Sending notification to admins:", ADMIN_EMAILS);
       const adminEmailResult = await resend.emails.send({
-        from: "myPawPair Waitlist <noreply@contact.mypawpair.com>",
+        from: "myPawPair Waitlist <noreply@support.mypawpair.com>",
         to: ADMIN_EMAILS,
         subject: "🎉 New Waitlist Signup - myPawPair",
         html: `
