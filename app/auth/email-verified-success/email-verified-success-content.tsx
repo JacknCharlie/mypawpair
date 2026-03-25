@@ -42,7 +42,7 @@ export default function EmailVerifiedSuccessContent() {
               {isOwner && (
                 <div className="space-y-2">
                   <p className="text-gray-600 text-sm" style={{ fontFamily: "Inter, sans-serif" }}>
-                    Your email has been successfully verified. You're all set to start finding trusted caregivers for your furry friend!
+                    Your email has been successfully verified. You&apos;re all set to start finding trusted care providers for your furry friend!
                   </p>
                 </div>
               )}
@@ -57,7 +57,7 @@ export default function EmailVerifiedSuccessContent() {
                       ⏳ Application Under Review
                     </p>
                     <p className="text-amber-700 text-xs" style={{ fontFamily: "Inter, sans-serif" }}>
-                      Our team is reviewing your caregiver application. You'll receive an email once you've been approved to start accepting care requests.
+                      Our team is reviewing your care provider application. You&apos;ll receive an email once you&apos;ve been approved to start accepting care requests.
                     </p>
                   </div>
                 </div>

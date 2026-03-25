@@ -83,7 +83,7 @@ export function TimelineSection() {
     {
       icon: "/ticons3.png",
       image: "/timeline3.png",
-      title: "Find trusted local providers",
+      title: "Find trusted local service providers",
       description:
         "When you need help, myPawPair connects you with verified trainers, groomers, walkers, and vets.",
       position: "left",

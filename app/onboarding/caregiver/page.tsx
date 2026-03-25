@@ -118,7 +118,7 @@ export default async function CaregiverOnboardingPage() {
               className="text-white/80 text-[15px] leading-relaxed"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
-              Your account is confirmed. Now let&apos;s build your caregiver
+              Your account is confirmed. Now let&apos;s build your care provider
               profile so our team can review your application and start matching
               you with dogs near you.
             </p>

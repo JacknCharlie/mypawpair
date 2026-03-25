@@ -71,7 +71,7 @@ export function SignUpForm({
             Find care for your dog
           </h1>
           <p className="text-gray-500 text-sm" style={{ fontFamily: "Inter, sans-serif" }}>
-            Create your owner account and get matched with trusted caregivers
+            Create your owner account and get matched with trusted care providers
           </p>
         </div>
 
@@ -155,7 +155,7 @@ export function SignUpForm({
             <p className="text-center text-sm text-gray-500" style={{ fontFamily: "Inter, sans-serif" }}>
               Want to offer care instead?{" "}
               <Link href="/auth/caregiver-signup" className="text-[#5F7E9D] font-medium hover:underline">
-                Apply as a Caregiver
+                Apply as a care provider
               </Link>
             </p>
 

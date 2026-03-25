@@ -66,13 +66,13 @@ export function ProviderSignUpForm({
         <div className="px-8 pt-8 pb-2">
           <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-700 text-xs font-medium px-3 py-1.5 rounded-full mb-4">
             <span>🏪</span>
-            <span style={{ fontFamily: "Inter, sans-serif" }}>Provider Registration</span>
+            <span style={{ fontFamily: "Inter, sans-serif" }}>Service provider registration</span>
           </div>
           <h1
             className="text-[#2F3E4E] text-2xl font-semibold mb-1"
             style={{ fontFamily: "var(--font-modern-sans), ui-sans-serif, system-ui, sans-serif" }}
           >
-            Become a myPawPair Provider
+            Become a myPawPair service provider
           </h1>
           <p className="text-gray-500 text-sm" style={{ fontFamily: "Inter, sans-serif" }}>
             List your grooming, training, vet, or other dog services
@@ -153,7 +153,7 @@ export function ProviderSignUpForm({
               </p>
               <ul className="text-gray-500 text-xs space-y-1 mt-1" style={{ fontFamily: "Inter, sans-serif" }}>
                 <li>✓ Confirm your email address</li>
-                <li>✓ Complete your provider profile (business name, category, location)</li>
+                <li>✓ Complete your service provider profile (business name, category, location)</li>
                 <li>✓ Add your services to your dashboard</li>
                 <li>✓ Get discovered by dog owners in your area</li>
               </ul>
@@ -165,7 +165,7 @@ export function ProviderSignUpForm({
               className="w-full h-11 bg-[#5F7E9D] text-white font-medium text-[16px] rounded-[10px] border-2 border-transparent hover:bg-white hover:text-[#5F7E9D] hover:border-[#5F7E9D] transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed mt-1"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
-              {isLoading ? "Creating account..." : "Become a Provider"}
+              {isLoading ? "Creating account..." : "Become a service provider"}
             </button>
 
             <p className="text-center text-sm text-gray-500" style={{ fontFamily: "Inter, sans-serif" }}>

@@ -63,7 +63,7 @@ export function Header() {
                 href="/auth/caregiver-signup"
                 className="text-[#000000] font-modern font-normal text-[18px] leading-[100%] hover:opacity-70 transition-opacity"
               >
-                Find a Provider
+                Become a care provider
               </Link>
               <button
                 type="button"
@@ -141,7 +141,7 @@ export function Header() {
             }`}
             style={{ transitionDelay: isMenuOpen ? "250ms" : "0ms" }}
           >
-            Find a Provider
+            Become a care provider
           </Link>
 
           <div

@@ -28,10 +28,10 @@ const TEMPERAMENT_OPTIONS = [
 ];
 
 const CARE_TYPE_OPTIONS = [
-  { value: "boarding",  label: "Boarding",       emoji: "🏠", desc: "Stays with caregiver" },
+  { value: "boarding",  label: "Boarding",       emoji: "🏠", desc: "Stays with care provider" },
   { value: "daycare",   label: "Daycare",         emoji: "☀️", desc: "Drop off during day" },
   { value: "walking",   label: "Dog Walking",     emoji: "🦮", desc: "Daily walks" },
-  { value: "drop-in",   label: "Drop-in Visit",   emoji: "🚪", desc: "Caregiver visits home" },
+  { value: "drop-in",   label: "Drop-in Visit",   emoji: "🚪", desc: "Care provider visits home" },
 ];
 
 const AVAILABILITY_OPTIONS = [
@@ -226,7 +226,7 @@ export function DogQuiz({ existingDogs = [] }: { existingDogs?: ExistingDog[] })
           <h2 className="text-[#2F3E4E] text-2xl font-semibold mb-2" style={{ fontFamily: "var(--font-modern-sans), ui-sans-serif, system-ui, sans-serif" }}>
             Refreshing matches for {selectedExistingDog.name}...
           </h2>
-          <p className="text-gray-500 text-sm" style={{ fontFamily: "Inter, sans-serif" }}>Scoring caregivers based on compatibility</p>
+          <p className="text-gray-500 text-sm" style={{ fontFamily: "Inter, sans-serif" }}>Scoring care providers based on compatibility</p>
         </div>
         <div className="flex gap-2">
           {[0, 1, 2].map((i) => (
@@ -318,8 +318,8 @@ export function DogQuiz({ existingDogs = [] }: { existingDogs?: ExistingDog[] })
           </h2>
           <p className="text-gray-500 text-[16px] mt-2" style={{ fontFamily: "Inter, sans-serif" }}>
             {matches.length > 0
-              ? "Here are the most compatible caregivers based on your dog's profile"
-              : "We'll notify you as soon as caregivers in your area are available"}
+              ? "Here are the most compatible care providers based on your dog's profile"
+              : "We'll notify you as soon as care providers in your area are available"}
           </p>
         </div>
 
@@ -328,7 +328,7 @@ export function DogQuiz({ existingDogs = [] }: { existingDogs?: ExistingDog[] })
           <div className="bg-white rounded-2xl p-10 border border-gray-100 shadow-sm flex flex-col items-center text-center gap-4">
             <div className="text-4xl">🔍</div>
             <p className="text-gray-500 text-sm max-w-sm" style={{ fontFamily: "Inter, sans-serif" }}>
-              No approved caregivers in your area yet. We&apos;re growing fast — check back soon!
+              No approved care providers in your area yet. We&apos;re growing fast — check back soon!
             </p>
             <button
               onClick={() => router.push("/dashboard/owner")}
@@ -477,7 +477,7 @@ export function DogQuiz({ existingDogs = [] }: { existingDogs?: ExistingDog[] })
             Finding the best matches for {name}...
           </h2>
           <p className="text-gray-500 text-sm" style={{ fontFamily: "Inter, sans-serif" }}>
-            Scoring caregivers based on compatibility
+            Scoring care providers based on compatibility
           </p>
         </div>
         <div className="flex gap-2">
@@ -574,7 +574,7 @@ export function DogQuiz({ existingDogs = [] }: { existingDogs?: ExistingDog[] })
               How big is {dogName}? *
             </h2>
             <p className="text-gray-500 text-sm" style={{ fontFamily: "Inter, sans-serif" }}>
-              This helps match caregivers experienced with your dog&apos;s size
+              This helps match care providers experienced with your dog&apos;s size
             </p>
           </div>
 
@@ -619,7 +619,7 @@ export function DogQuiz({ existingDogs = [] }: { existingDogs?: ExistingDog[] })
               How energetic is {dogName}?
             </h2>
             <p className="text-gray-500 text-sm" style={{ fontFamily: "Inter, sans-serif" }}>
-              Caregivers are matched based on your dog&apos;s energy level
+              Care providers are matched based on your dog&apos;s energy level
             </p>
           </div>
 
@@ -786,7 +786,7 @@ export function DogQuiz({ existingDogs = [] }: { existingDogs?: ExistingDog[] })
               Where are you located?
             </h2>
             <p className="text-gray-500 text-sm" style={{ fontFamily: "Inter, sans-serif" }}>
-              We&apos;ll match {dogName} with caregivers in your area
+              We&apos;ll match {dogName} with care providers in your area
             </p>
           </div>
 
@@ -830,7 +830,7 @@ export function DogQuiz({ existingDogs = [] }: { existingDogs?: ExistingDog[] })
               Any special requirements?
             </h2>
             <p className="text-gray-500 text-sm" style={{ fontFamily: "Inter, sans-serif" }}>
-              Help caregivers understand {dogName}&apos;s unique needs
+              Help care providers understand {dogName}&apos;s unique needs
             </p>
           </div>
 

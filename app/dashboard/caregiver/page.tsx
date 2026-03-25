@@ -54,7 +54,7 @@ async function CaregiverDashboard() {
             Welcome{fullName ? `, ${fullName.split(" ")[0]}` : ""}! 🐾
           </h1>
           <p className="text-gray-500 text-[16px] mt-1" style={{ fontFamily: "Inter, sans-serif" }}>
-            Your caregiver journey starts here
+            Your care provider journey starts here
           </p>
         </div>
 
@@ -73,7 +73,7 @@ async function CaregiverDashboard() {
             <p className="text-gray-500 text-sm leading-relaxed" style={{ fontFamily: "Inter, sans-serif" }}>
               {caregiverProfileExists
                 ? "Your profile is currently under review. Our team will notify you once you're approved to start receiving dog matches."
-                : "Please complete your caregiver profile below. Once submitted, our team will review and approve your application."}
+                : "Please complete your care provider profile below. Once submitted, our team will review and approve your application."}
             </p>
           </div>
 
@@ -133,7 +133,7 @@ async function CaregiverDashboard() {
           Welcome back{fullName ? `, ${fullName.split(" ")[0]}` : ""}! 🐾
         </h1>
         <p className="text-gray-500 text-[16px] mt-1" style={{ fontFamily: "Inter, sans-serif" }}>
-          Here&apos;s your caregiver overview
+          Here&apos;s your care provider overview
         </p>
       </div>
 

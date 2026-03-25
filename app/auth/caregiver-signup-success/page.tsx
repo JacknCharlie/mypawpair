@@ -28,7 +28,7 @@ export default function Page() {
               Application Received!
             </h1>
             <p className="text-gray-500 text-sm leading-relaxed" style={{ fontFamily: "Inter, sans-serif" }}>
-              Thank you for applying to be a myPawPair caregiver. We&apos;ve sent a confirmation
+              Thank you for applying to be a myPawPair care provider. We&apos;ve sent a confirmation
               link to your email — please check your inbox and verify your account.
             </p>
           </div>
@@ -44,7 +44,7 @@ export default function Page() {
             <div className="flex flex-col gap-3">
               {[
                 { step: "1", text: "Verify your email address" },
-                { step: "2", text: "Complete your caregiver profile" },
+                { step: "2", text: "Complete your care provider profile" },
                 { step: "3", text: "Our team reviews your application" },
                 { step: "4", text: "Get matched with dogs near you" },
               ].map((item) => (

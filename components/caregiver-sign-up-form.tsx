@@ -64,16 +64,16 @@ export function CaregiverSignUpForm({
 
       <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
         <div className="px-8 pt-8 pb-2">
-          {/* Caregiver badge */}
+          {/* Provider application badge */}
           <div className="inline-flex items-center gap-2 bg-[#5F7E9D]/10 text-[#5F7E9D] text-xs font-medium px-3 py-1.5 rounded-full mb-4">
             <span>🐾</span>
-            <span style={{ fontFamily: "Inter, sans-serif" }}>Caregiver Application</span>
+            <span style={{ fontFamily: "Inter, sans-serif" }}>Care provider application</span>
           </div>
           <h1
             className="text-[#2F3E4E] text-2xl font-semibold mb-1"
             style={{ fontFamily: "var(--font-modern-sans), ui-sans-serif, system-ui, sans-serif" }}
           >
-            Become a myPawPair Caregiver
+            Become a myPawPair care provider
           </h1>
           <p className="text-gray-500 text-sm" style={{ fontFamily: "Inter, sans-serif" }}>
             Apply to join our trusted network of dog care professionals
@@ -155,7 +155,7 @@ export function CaregiverSignUpForm({
               </p>
               <ul className="text-gray-500 text-xs space-y-1 mt-1" style={{ fontFamily: "Inter, sans-serif" }}>
                 <li>✓ Confirm your email address</li>
-                <li>✓ Complete your caregiver profile</li>
+                <li>✓ Complete your provider profile</li>
                 <li>✓ Our team reviews your application</li>
                 <li>✓ Get matched with dogs near you</li>
               </ul>
@@ -167,7 +167,7 @@ export function CaregiverSignUpForm({
               className="w-full h-11 bg-[#5F7E9D] text-white font-medium text-[16px] rounded-[10px] border-2 border-transparent hover:bg-white hover:text-[#5F7E9D] hover:border-[#5F7E9D] transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed mt-1"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
-              {isLoading ? "Submitting application..." : "Apply as Caregiver"}
+              {isLoading ? "Submitting application..." : "Apply as care provider"}
             </button>
 
             <p className="text-center text-sm text-gray-500" style={{ fontFamily: "Inter, sans-serif" }}>

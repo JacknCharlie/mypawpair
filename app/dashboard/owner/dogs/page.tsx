@@ -68,7 +68,7 @@ export default async function MyDogsPage() {
               No dogs yet
             </h2>
             <p className="text-gray-500 text-sm" style={{ fontFamily: "Inter, sans-serif" }}>
-              Add your dog&apos;s profile to start getting matched with caregivers
+              Add your dog&apos;s profile to start getting matched with care providers
             </p>
           </div>
           <Link

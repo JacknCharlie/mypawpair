@@ -125,7 +125,7 @@ export function FindProvidersContent({
         {providers.length === 0 ? (
           <div className="bg-white rounded-2xl border border-gray-100 p-12 text-center">
             <p className="text-gray-500" style={FONT}>
-              No providers match your filters. Try adjusting the category or city.
+              No service providers match your filters. Try adjusting the category or city.
             </p>
           </div>
         ) : (

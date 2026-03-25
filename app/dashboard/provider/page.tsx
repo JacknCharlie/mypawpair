@@ -48,7 +48,7 @@ export default async function ProviderDashboardPage() {
           Welcome back!
         </h1>
         <p className="text-sm text-gray-500 mt-1">
-          Here&apos;s an overview of your provider dashboard
+          Here&apos;s an overview of your service provider dashboard
         </p>
       </div>
 
@@ -95,7 +95,7 @@ export default async function ProviderDashboardPage() {
           </p>
           {!provider.is_verified && (
             <p className="text-xs text-amber-600 mt-2">
-              Your profile is pending verification. Once verified, you&apos;ll appear in the provider directory.
+              Your profile is pending verification. Once verified, you&apos;ll appear in the service provider directory.
             </p>
           )}
         </div>
@@ -124,7 +124,7 @@ export default async function ProviderDashboardPage() {
             className="inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-gray-200 rounded-xl text-sm font-medium text-[#2F3E4E] hover:border-[#5F7E9D] hover:bg-[#5F7E9D]/5 transition-colors"
           >
             <ExternalLink className="h-4 w-4" />
-            View provider directory
+            View service provider directory
           </Link>
         </div>
       </div>

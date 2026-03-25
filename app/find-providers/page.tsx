@@ -83,7 +83,7 @@ export default async function FindProvidersPage({
                 className="text-[#5F7E9D] text-sm font-medium hover:underline"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
-                Become a Provider
+                Become a service provider
               </Link>
               <Link
                 href="/auth/login"
@@ -103,7 +103,7 @@ export default async function FindProvidersPage({
             className="text-[#2F3E4E] text-[32px] md:text-[40px] font-semibold leading-[120%]"
             style={{ fontFamily: "var(--font-modern-sans), ui-sans-serif, system-ui, sans-serif" }}
           >
-            Find Trusted Providers
+            Find trusted service providers
           </h1>
           <p className="text-gray-500 text-[16px] mt-2 max-w-xl mx-auto" style={{ fontFamily: "Inter, sans-serif" }}>
             Groomers, trainers, vets, and more — verified by myPawPair

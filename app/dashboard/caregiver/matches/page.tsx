@@ -40,7 +40,7 @@ export default async function CaregiverMatchesPage() {
               Complete your profile first
             </h2>
             <p className="text-gray-500 text-sm" style={{ fontFamily: "Inter, sans-serif" }}>
-              Set up your caregiver profile to start receiving dog matches
+              Set up your care provider profile to start receiving dog matches
             </p>
           </div>
           <Link href="/dashboard/caregiver/profile" className="mt-2 px-8 py-3 bg-[#5F7E9D] text-white font-medium text-[15px] rounded-[10px] border-2 border-transparent hover:bg-white hover:text-[#5F7E9D] hover:border-[#5F7E9D] transition-all duration-300" style={{ fontFamily: "Inter, sans-serif" }}>

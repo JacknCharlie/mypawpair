@@ -72,7 +72,7 @@ export default async function ProviderOnboardingPage() {
               className="text-gray-600 text-[15px] leading-relaxed"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
-              Complete your provider profile so dog owners can find and contact you. You&apos;ll be able to add your services from your dashboard next.
+              Complete your service provider profile so dog owners can find and contact you. You&apos;ll be able to add your services from your dashboard next.
             </p>
           </div>
         </div>

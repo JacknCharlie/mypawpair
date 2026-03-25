@@ -94,7 +94,7 @@ export function ProviderTopbar({ userName }: ProviderTopbarProps) {
                     className="inline-block mt-1 text-[10px] font-semibold px-1.5 py-0.5 rounded-full bg-amber-100 text-amber-700"
                     style={{ fontFamily: "Inter, sans-serif" }}
                   >
-                    Provider
+                    Service provider
                   </span>
                 </div>
 

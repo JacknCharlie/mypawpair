@@ -70,7 +70,7 @@ export function ProviderSidebar() {
           className="text-[11px] text-gray-400 font-medium"
           style={{ fontFamily: "Inter, sans-serif" }}
         >
-          myPawPair Provider
+          myPawPair Service provider
         </p>
       </div>
     </aside>

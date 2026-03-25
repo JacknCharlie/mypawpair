@@ -32,7 +32,7 @@ export default async function AddDogPage() {
           Add Your Dog 🐶
         </h1>
         <p className="text-gray-500 text-[16px] mt-2" style={{ fontFamily: "Inter, sans-serif" }}>
-          Tell us about your dog so we can find the best caregiver match
+          Tell us about your dog so we can find the best care provider match
         </p>
       </div>
 

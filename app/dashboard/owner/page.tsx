@@ -55,7 +55,7 @@ async function OwnerGreeting() {
           Welcome{fullName ? `, ${fullName.split(" ")[0]}` : " back"}! 🐾
         </h1>
         <p className="text-gray-500 text-[16px] mt-1" style={{ fontFamily: "Inter, sans-serif" }}>
-          Find the perfect caregiver for your dog
+          Find the perfect care provider for your dog
         </p>
         <Link
           href="/find-care"
@@ -110,7 +110,7 @@ async function OwnerGreeting() {
               Add Your Dog
             </h2>
             <p className="text-white/80 text-sm mt-1" style={{ fontFamily: "Inter, sans-serif" }}>
-              Create a profile for your dog to start getting matched with caregivers
+              Create a profile for your dog to start getting matched with care providers
             </p>
           </div>
           <Link
@@ -122,7 +122,7 @@ async function OwnerGreeting() {
           </Link>
         </div>
 
-        {/* Find caregiver CTA */}
+        {/* Find care providers CTA */}
         <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm flex flex-col gap-4">
           <div className="w-12 h-12 rounded-full bg-[#F6F2EA] flex items-center justify-center text-2xl">
             🔍
@@ -132,10 +132,10 @@ async function OwnerGreeting() {
               className="text-[#2F3E4E] text-xl font-semibold"
               style={{ fontFamily: "var(--font-modern-sans), ui-sans-serif, system-ui, sans-serif" }}
             >
-              Find Caregivers
+              Find care providers
             </h2>
             <p className="text-gray-500 text-sm mt-1" style={{ fontFamily: "Inter, sans-serif" }}>
-              Browse caregivers matched to your dog&apos;s energy, size, and temperament
+              Browse care providers matched to your dog&apos;s energy, size, and temperament
             </p>
           </div>
           <div className="mt-auto flex gap-3 flex-wrap">
@@ -361,7 +361,7 @@ async function OwnerGreeting() {
               {
                 step: "2",
                 title: "Get matched",
-                desc: "Our algorithm finds caregivers compatible with your dog",
+                desc: "Our algorithm finds care providers compatible with your dog",
                 done: false,
               },
               {

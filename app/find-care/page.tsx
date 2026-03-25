@@ -76,11 +76,11 @@ export default async function FindCarePage() {
                 className="text-[#2F3E4E] text-[36px] font-semibold mb-3"
                 style={{ fontFamily: "var(--font-modern-sans), ui-sans-serif, system-ui, sans-serif" }}
               >
-                Find the perfect caregiver for your dog
+                Find the perfect care provider for your dog
               </h1>
               <p className="text-gray-500 text-[16px] leading-relaxed" style={{ fontFamily: "Inter, sans-serif" }}>
                 Answer a few quick questions about your dog and we&apos;ll match you with
-                trusted caregivers based on compatibility — size, energy, temperament, and location.
+                trusted care providers based on compatibility — size, energy, temperament, and location.
               </p>
             </div>
 
@@ -95,8 +95,8 @@ export default async function FindCarePage() {
               <div className="flex flex-col gap-4">
                 {[
                   { step: "1", title: "Tell us about your dog",        desc: "Breed, size, energy, personality — takes 2 min" },
-                  { step: "2", title: "We run a compatibility check",   desc: "Our algorithm scores caregivers across 5 dimensions" },
-                  { step: "3", title: "See your matches",               desc: "View ranked caregivers with detailed compatibility scores" },
+                  { step: "2", title: "We run a compatibility check",   desc: "Our algorithm scores care providers across 5 dimensions" },
+                  { step: "3", title: "See your matches",               desc: "View ranked care providers with detailed compatibility scores" },
                 ].map((item) => (
                   <div key={item.step} className="flex items-start gap-4">
                     <div className="w-8 h-8 rounded-full bg-[#5F7E9D] text-white text-sm font-semibold flex items-center justify-center flex-shrink-0">
@@ -142,7 +142,7 @@ export default async function FindCarePage() {
                 Let&apos;s find care that fits 🐾
               </h1>
               <p className="text-gray-500 text-[16px]" style={{ fontFamily: "Inter, sans-serif" }}>
-                Answer 7 quick questions and we&apos;ll match your dog with the right caregiver
+                Answer 7 quick questions and we&apos;ll match your dog with the right care provider
               </p>
             </div>
 

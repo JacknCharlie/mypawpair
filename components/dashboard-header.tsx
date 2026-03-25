@@ -23,7 +23,7 @@ export function DashboardHeader({ userName, userRole }: DashboardHeaderProps) {
     : "U";
 
   const roleLabel =
-    userRole === "admin" ? "Admin" : userRole === "caregiver" ? "Caregiver" : "Dog Owner";
+    userRole === "admin" ? "Admin" : userRole === "caregiver" ? "Care provider" : "Dog Owner";
   const roleColor =
     userRole === "admin"
       ? "bg-green-100 text-green-700"

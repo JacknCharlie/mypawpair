@@ -121,7 +121,7 @@ export function ProviderProfileForm({ userId, existingProfile }: ProviderProfile
             className="text-[#2F3E4E] text-[26px] font-semibold leading-tight"
             style={{ fontFamily: "var(--font-modern-sans), ui-sans-serif, system-ui, sans-serif" }}
           >
-            Provider Profile
+            Service provider profile
           </h2>
           <p className="text-gray-400 text-sm mt-1" style={{ fontFamily: "Inter, sans-serif" }}>
             Tell dog owners about your business and services

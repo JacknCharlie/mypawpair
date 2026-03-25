@@ -55,7 +55,7 @@ export function CaregiversSection() {
             <div className="relative w-full md:max-w-full lg:max-w-[546px] mx-auto lg:mx-0">
               <Image
                 src="/petcuddle.png"
-                alt="Caregivers with dog"
+                alt="Care providers with dog"
                 width={546}
                 height={566}
                 className="w-full h-auto rounded-[20px]"
@@ -74,14 +74,14 @@ export function CaregiversSection() {
               className="font-['Modern_Sans'] font-normal text-[27px] md:text-[36px] lg:text-[40px] xl:text-[44px] leading-[120%] text-[#fff]"
               
             >
-              Caregivers Who Care Deeply
+              Care providers who care deeply
             </h2>
 
             <p
               className="text-[16px] !mt-5 font-sans font-normal md:text-[18px] leading-[120%] text-[#fff]"
               style={{ fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif" }}
             >
-              Our caregivers aren't just available — they're experienced,
+              Our care providers aren&apos;t just available — they&apos;re experienced,
               intentional, and invested in building real relationships with the
               dogs they care for.
             </p>

@@ -27,8 +27,8 @@ export default function Page() {
               Account Created!
             </h1>
             <p className="text-gray-500 text-sm leading-relaxed" style={{ fontFamily: "Inter, sans-serif" }}>
-              Thank you for signing up as a myPawPair provider. We&apos;ve sent a confirmation
-              link to your email — please verify your account, then complete your provider profile.
+              Thank you for signing up as a myPawPair service provider. We&apos;ve sent a confirmation
+              link to your email — please verify your account, then complete your service provider profile.
             </p>
           </div>
 
@@ -42,7 +42,7 @@ export default function Page() {
             <div className="flex flex-col gap-3">
               {[
                 { step: "1", text: "Verify your email address" },
-                { step: "2", text: "Complete your provider profile (business, category, location)" },
+                { step: "2", text: "Complete your service provider profile (business, category, location)" },
                 { step: "3", text: "Add your services in your dashboard" },
                 { step: "4", text: "Get discovered by dog owners" },
               ].map((item) => (

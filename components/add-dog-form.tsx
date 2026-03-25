@@ -21,10 +21,10 @@ const TEMPERAMENT_OPTIONS = [
 ];
 
 const CARE_TYPE_OPTIONS = [
-  { value: "boarding", label: "Boarding",       icon: "🏠", desc: "Stays with caregiver" },
+  { value: "boarding", label: "Boarding",       icon: "🏠", desc: "Stays with care provider" },
   { value: "daycare",  label: "Daycare",        icon: "☀️", desc: "Drop off during day" },
   { value: "walking",  label: "Dog Walking",    icon: "🦮", desc: "Daily walks" },
-  { value: "drop-in",  label: "Drop-in Visit",  icon: "🚪", desc: "Caregiver visits home" },
+  { value: "drop-in",  label: "Drop-in Visit",  icon: "🚪", desc: "Care provider visits home" },
 ];
 
 const AVAILABILITY_OPTIONS = [

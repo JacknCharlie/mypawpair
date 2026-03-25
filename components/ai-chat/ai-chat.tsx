@@ -18,7 +18,7 @@ export interface ChatSession {
 }
 
 const SUGGESTIONS = [
-  "What grooming services do providers offer?",
+  "What grooming services do service providers offer?",
   "How do I find a dog trainer near me?",
   "What should I ask before choosing a vet?",
   "What's the difference between boarding and pet sitting?",
@@ -250,7 +250,7 @@ export function AiChat() {
                 How can I help you today?
               </h2>
               <p className="text-gray-400 mb-8 text-sm">
-                Ask about dog care, finding providers, or anything else. I&apos;m here to help.
+                Ask about dog care, service providers (groomers, trainers, vets), care provider matching, or anything else — I&apos;m here to help.
               </p>
               <div className="flex flex-wrap gap-2 justify-center">
                 {SUGGESTIONS.map((s) => (
@@ -340,7 +340,7 @@ export function AiChat() {
                   sendMessage(input);
                 }
               }}
-              placeholder="Ask anything about dog care or finding providers..."
+              placeholder="Ask about dog care, service providers, or care provider matching..."
               rows={1}
               disabled={isLoading}
               className="flex-1 min-h-[44px] max-h-32 px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-[#5F7E9D] focus:outline-none focus:ring-1 focus:ring-[#5F7E9D]/50 resize-none text-sm placeholder:text-gray-500"
