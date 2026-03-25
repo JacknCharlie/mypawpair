@@ -1,6 +1,6 @@
-# Email Templates for PawPair
+# Email Templates for myPawPair
 
-This directory contains all email templates for the PawPair application. These templates are designed for use with Supabase Auth email system with Resend SMTP.
+This directory contains all email templates for the myPawPair application. These templates are designed for use with Supabase Auth email system with Resend SMTP.
 
 ## 📧 Available Templates
 
@@ -141,7 +141,7 @@ export async function sendWelcomeEmail(email: string, role: 'owner' | 'caregiver
   await resend.emails.send({
     from: 'noreply@contact.mypawpair.com',
     to: email,
-    subject: role === 'owner' ? 'Welcome to PawPair!' : 'Welcome to PawPair Caregiver Network!',
+    subject: role === 'owner' ? 'Welcome to myPawPair!' : 'Welcome to myPawPair Caregiver Network!',
     html: htmlWithData,
   });
 }

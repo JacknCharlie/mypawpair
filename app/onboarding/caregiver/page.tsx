@@ -49,7 +49,7 @@ export default async function CaregiverOnboardingPage() {
             <Link href="/">
               <Image
                 src="/logo.png"
-                alt="PawPair"
+                alt="myPawPair"
                 width={200}
                 height={50}
                 className="h-11 w-auto"
@@ -112,7 +112,7 @@ export default async function CaregiverOnboardingPage() {
                   "var(--font-modern-sans), ui-sans-serif, system-ui, sans-serif",
               }}
             >
-              Welcome to PawPair, {firstName}!
+              Welcome to myPawPair, {firstName}!
             </h1>
             <p
               className="text-white/80 text-[15px] leading-relaxed"

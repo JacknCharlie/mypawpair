@@ -79,13 +79,13 @@ export function FAQSection() {
             }`}
           >
             <h2 className="font-['Modern_Sans'] font-normal text-[27px] md:text-[36px] lg:text-[40px] xl:text-[46px] leading-[120%] text-[#2F3E4E]">
-              Ask PawPair Anything
+              Ask myPawPair Anything
             </h2>
             <p
               className="font-inter font-normal text-[18px] leading-[120%] text-[#4A5563] mt-[20px]"
              
             >
-              PawPair AI is your personal dog care assistant, ready to help
+              myPawPair AI is your personal dog care assistant, ready to help
               anytime. Ask questions about your dog's health, behavior,
               nutrition, or training and get instant answers tailored to your
               dog's breed, age, and personality.

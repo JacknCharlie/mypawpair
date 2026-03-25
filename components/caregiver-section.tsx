@@ -34,7 +34,7 @@ export function CaregiverSection() {
     {
       icon: "/one.png",
       title: "Knows your dog",
-      description: "PawPair remembers your dog’s breed, age, health conditions, and habits.",
+      description: "myPawPair remembers your dog’s breed, age, health conditions, and habits.",
     },
     {
       icon: "/two.png",
@@ -44,7 +44,7 @@ export function CaregiverSection() {
     {
       icon: "/three.png",
       title: "Guidance that grows",
-      description: "The more you use PawPair, the smarter your dog’s profile becomes.",
+      description: "The more you use myPawPair, the smarter your dog’s profile becomes.",
     },
   ];
 
@@ -91,7 +91,7 @@ export function CaregiverSection() {
               className="font-inter font-normal text-[18px] leading-[120%] text-[#4A5563] mt-[20px] "
               style={{ fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif" }}
             >
-           Ask PawPair anything and get instant answers tailored to your dog.
+           Ask myPawPair anything and get instant answers tailored to your dog.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-[40px]">

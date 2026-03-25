@@ -77,16 +77,16 @@ export async function POST(request: NextRequest) {
     // Send email to user
     try {
       await resend.emails.send({
-        from: "PawPair <noreply@contact.mypawpair.com>",
+        from: "myPawPair <noreply@contact.mypawpair.com>",
         to: [email],
-        subject: "Welcome to PawPair Waitlist! 🐾",
+        subject: "Welcome to myPawPair Waitlist! 🐾",
         html: `
           <!DOCTYPE html>
           <html>
             <head>
               <meta charset="utf-8">
               <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <title>Welcome to PawPair</title>
+              <title>Welcome to myPawPair</title>
             </head>
             <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #F6F2EA;">
               <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #F6F2EA; padding: 40px 20px;">
@@ -96,7 +96,7 @@ export async function POST(request: NextRequest) {
                       <!-- Header -->
                       <tr>
                         <td style="background-color: #5F7E9D; padding: 40px 40px 30px; text-align: center;">
-                          <h1 style="margin: 0; color: #ffffff; font-size: 32px; font-weight: 600;">Welcome to PawPair! 🐾</h1>
+                          <h1 style="margin: 0; color: #ffffff; font-size: 32px; font-weight: 600;">Welcome to myPawPair! 🐾</h1>
                         </td>
                       </tr>
                       
@@ -106,11 +106,11 @@ export async function POST(request: NextRequest) {
                           <h2 style="margin: 0 0 20px; color: #2F3E4E; font-size: 24px; font-weight: 600;">You're on the list!</h2>
                           
                           <p style="margin: 0 0 20px; color: #4A5563; font-size: 16px; line-height: 1.6;">
-                            Thank you for joining the PawPair waitlist! We're thrilled to have you as part of our early community.
+                            Thank you for joining the myPawPair waitlist! We're thrilled to have you as part of our early community.
                           </p>
                           
                           <p style="margin: 0 0 20px; color: #4A5563; font-size: 16px; line-height: 1.6;">
-                            PawPair is your personal AI dog care assistant that truly understands your dog's unique needs. From nutrition advice to behavior tips, we're building something special just for you and your furry friend.
+                            myPawPair is your personal AI dog care assistant that truly understands your dog's unique needs. From nutrition advice to behavior tips, we're building something special just for you and your furry friend.
                           </p>
                           
                           <div style="background-color: #F6F2EA; border-radius: 12px; padding: 24px; margin: 30px 0;">
@@ -124,12 +124,12 @@ export async function POST(request: NextRequest) {
                           </div>
                           
                           <p style="margin: 0 0 20px; color: #4A5563; font-size: 16px; line-height: 1.6;">
-                            We'll keep you updated on our progress and let you know as soon as PawPair is ready to meet your dog!
+                            We'll keep you updated on our progress and let you know as soon as myPawPair is ready to meet your dog!
                           </p>
                           
                           <p style="margin: 30px 0 0; color: #4A5563; font-size: 16px; line-height: 1.6;">
                             Best regards,<br>
-                            <strong style="color: #2F3E4E;">The PawPair Team</strong>
+                            <strong style="color: #2F3E4E;">The myPawPair Team</strong>
                           </p>
                         </td>
                       </tr>
@@ -138,7 +138,7 @@ export async function POST(request: NextRequest) {
                       <tr>
                         <td style="background-color: #F6F2EA; padding: 30px; text-align: center; border-top: 1px solid #e5e7eb;">
                           <p style="margin: 0 0 10px; color: #6B7280; font-size: 14px;">
-                            © 2026 PawPair. All rights reserved.
+                            © 2026 myPawPair. All rights reserved.
                           </p>
                           <p style="margin: 0; color: #9CA3AF; font-size: 12px;">
                             Compatibility-based dog care, starting local and built thoughtfully.
@@ -163,9 +163,9 @@ export async function POST(request: NextRequest) {
     try {
       console.log("Sending notification to admins:", ADMIN_EMAILS);
       const adminEmailResult = await resend.emails.send({
-        from: "PawPair Waitlist <noreply@contact.mypawpair.com>",
+        from: "myPawPair Waitlist <noreply@contact.mypawpair.com>",
         to: ADMIN_EMAILS,
-        subject: "🎉 New Waitlist Signup - PawPair",
+        subject: "🎉 New Waitlist Signup - myPawPair",
         html: `
           <!DOCTYPE html>
           <html>
@@ -190,7 +190,7 @@ export async function POST(request: NextRequest) {
                       <tr>
                         <td style="padding: 40px;">
                           <p style="margin: 0 0 20px; color: #374151; font-size: 16px; line-height: 1.6;">
-                            Great news! Someone just joined the PawPair waitlist.
+                            Great news! Someone just joined the myPawPair waitlist.
                           </p>
                           
                           <div style="background-color: #F6F2EA; border-left: 4px solid #5F7E9D; border-radius: 8px; padding: 20px; margin: 25px 0;">
@@ -214,7 +214,7 @@ export async function POST(request: NextRequest) {
                           </div>
                           
                           <p style="margin: 25px 0 0; color: #6B7280; font-size: 14px; line-height: 1.6;">
-                            This is an automated notification from your PawPair waitlist system.
+                            This is an automated notification from your myPawPair waitlist system.
                           </p>
                         </td>
                       </tr>
@@ -223,7 +223,7 @@ export async function POST(request: NextRequest) {
                       <tr>
                         <td style="background-color: #f9fafb; padding: 20px 40px; text-align: center; border-top: 1px solid #e5e7eb;">
                           <p style="margin: 0; color: #9CA3AF; font-size: 12px;">
-                            PawPair Admin Notification System
+                            myPawPair Admin Notification System
                           </p>
                         </td>
                       </tr>

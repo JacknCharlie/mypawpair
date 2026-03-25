@@ -64,7 +64,7 @@ export function DashboardHeader({ userName, userRole }: DashboardHeaderProps) {
           <Link href="/" className="flex items-center">
             <Image
               src="/logo.png"
-              alt="PawPair Logo"
+              alt="myPawPair Logo"
               width={200}
               height={50}
               className="h-12 w-auto"

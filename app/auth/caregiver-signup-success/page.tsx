@@ -7,7 +7,7 @@ export default function Page() {
       <div className="w-full max-w-sm flex flex-col gap-6">
         <div className="flex flex-col items-center gap-2 mb-2">
           <Link href="/">
-            <Image src="/logo.png" alt="PawPair" width={160} height={40} className="h-12 w-auto" />
+            <Image src="/logo.png" alt="myPawPair" width={160} height={40} className="h-12 w-auto" />
           </Link>
           <p className="text-[#2F3E4E] text-sm" style={{ fontFamily: "Inter, sans-serif" }}>
             Pet care, perfectly matched.
@@ -28,7 +28,7 @@ export default function Page() {
               Application Received!
             </h1>
             <p className="text-gray-500 text-sm leading-relaxed" style={{ fontFamily: "Inter, sans-serif" }}>
-              Thank you for applying to be a PawPair caregiver. We&apos;ve sent a confirmation
+              Thank you for applying to be a myPawPair caregiver. We&apos;ve sent a confirmation
               link to your email — please check your inbox and verify your account.
             </p>
           </div>

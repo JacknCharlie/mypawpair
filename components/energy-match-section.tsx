@@ -63,7 +63,7 @@ export function EnergyMatchSection() {
               className="text-[16px] !mt-5 font-sans font-normal md:text-[18px] leading-[120%] text-[#4A5563]"
               style={{ fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif" }}
             >
-            The more you tell PawPair about your dog, the smarter it gets.  Every answer is personalized to your dog's breed, age, health history, and personality.
+            The more you tell myPawPair about your dog, the smarter it gets.  Every answer is personalized to your dog's breed, age, health history, and personality.
             </p>
 
             <div className="!mt-6">
@@ -104,7 +104,7 @@ export function EnergyMatchSection() {
               className="text-[16px] !mt-5 font-sans font-normal md:text-[18px] leading-[120%] text-[#4A5563]"
               style={{ fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif" }}
             >
-             This allows PawPair to give advice tailored specifically to your dog.
+             This allows myPawPair to give advice tailored specifically to your dog.
             </p>
           </div>
 

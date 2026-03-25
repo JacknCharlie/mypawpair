@@ -1,5 +1,5 @@
 -- ================================================================
--- PawPair — Migration 004
+-- myPawPair — Migration 004
 -- Grant admins full management access to profiles & caregivers.
 -- Run this in Supabase Dashboard → SQL Editor
 -- ================================================================

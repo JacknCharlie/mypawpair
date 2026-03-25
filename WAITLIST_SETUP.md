@@ -1,6 +1,6 @@
 # Waitlist Setup Instructions
 
-This document explains how to set up the waitlist feature for PawPair.
+This document explains how to set up the waitlist feature for myPawPair.
 
 ## Prerequisites
 
@@ -50,9 +50,9 @@ The system sends emails to:
 For production, you need to:
 
 1. Go to your Resend dashboard (https://resend.com/domains)
-2. Add and verify your domain (e.g., pawpair.com)
+2. Add and verify your domain (e.g., mypawpair.com)
 3. Update the `from` email addresses in `/app/api/waitlist/route.ts`:
-   - Change `noreply@pawpair.com` to your verified domain
+   - Change `noreply@contact.mypawpair.com` to your verified domain if needed
    - Or use Resend's default sending domain: `onboarding@resend.dev`
 
 For testing, you can use: `onboarding@resend.dev`

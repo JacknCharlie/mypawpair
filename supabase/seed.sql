@@ -1,5 +1,5 @@
 -- ================================================================
--- PawPair — Seed Data
+-- myPawPair — Seed Data
 -- Run this in the Supabase SQL Editor (as service_role / postgres)
 -- after running 001_initial_schema.sql
 -- ================================================================
@@ -50,7 +50,7 @@ VALUES
   (
     'f0000000-0000-0000-0000-000000000001',
     '00000000-0000-0000-0000-000000000000', 'authenticated', 'authenticated',
-    'admin@mypawpair.com', crypt('PawPair@Admin2026!', gen_salt('bf')),
+    'admin@mypawpair.com', crypt('myPawPair@Admin2026!', gen_salt('bf')),
     now(), now(), now(),
     '{"provider":"email","providers":["email"]}',
     '{"full_name":"Super Admin","role":"admin"}',

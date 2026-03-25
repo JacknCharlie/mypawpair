@@ -26,7 +26,7 @@ export function ProviderSidebar() {
         <Link href="/dashboard/provider" className="flex items-center">
           <Image
             src="/logo.png"
-            alt="PawPair"
+            alt="myPawPair"
             width={140}
             height={36}
             className="h-9 w-auto"
@@ -70,7 +70,7 @@ export function ProviderSidebar() {
           className="text-[11px] text-gray-400 font-medium"
           style={{ fontFamily: "Inter, sans-serif" }}
         >
-          PawPair Provider
+          myPawPair Provider
         </p>
       </div>
     </aside>

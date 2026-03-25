@@ -5,10 +5,10 @@ import { PWAInstaller } from "@/components/pwa-installer";
 import { RouteProgressLine } from "@/components/route-progress-line";
 import "./globals.css";
 
-const APP_NAME = "PawPair";
-const APP_TITLE = "PawPair - Pet Care, Perfectly Matched";
+const APP_NAME = "myPawPair";
+const APP_TITLE = "myPawPair - Pet Care, Perfectly Matched";
 const APP_DESCRIPTION =
-  "Compatibility-based dog care, starting local and built thoughtfully.";
+  "myPawPair — compatibility-based dog care, starting local and built thoughtfully.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL ?? "https://www.mypawpair.com"),

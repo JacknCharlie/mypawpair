@@ -1,5 +1,5 @@
 -- ================================================================
--- PawPair — Initial Schema Migration
+-- myPawPair — Initial Schema Migration
 -- Dog-care matchmaking platform (Supabase / PostgreSQL)
 -- ================================================================
 

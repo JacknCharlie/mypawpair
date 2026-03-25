@@ -1,5 +1,5 @@
 -- ================================================================
--- PawPair — Provider Seed Data
+-- myPawPair — Provider Seed Data
 -- Run AFTER 006_providers.sql migration
 -- 4 providers with complete data (verified, with services)
 -- Password for all: Provider123!

@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "PawPair - Pet Care, Perfectly Matched",
-    short_name: "PawPair",
+    name: "myPawPair - Pet Care, Perfectly Matched",
+    short_name: "myPawPair",
     description:
       "Compatibility-based dog care, starting local and built thoughtfully.",
     start_url: "/",

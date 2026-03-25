@@ -42,7 +42,7 @@ export default async function FindCarePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <Link href="/">
-              <Image src="/logo.png" alt="PawPair" width={200} height={50} className="h-12 w-auto" priority />
+              <Image src="/logo.png" alt="myPawPair" width={200} height={50} className="h-12 w-auto" priority />
             </Link>
             {!isLoggedIn ? (
               <Link

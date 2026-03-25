@@ -203,7 +203,7 @@ export function PuppyFirstYearSection() {
               className="text-[15px] md:text-[16px] leading-[145%] text-white/85 mb-8"
               style={{ fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif" }}
             >
-              PawPair guides new dog parents through every stage with weekly insights,
+              myPawPair guides new dog parents through every stage with weekly insights,
               reminders, and tips tailored to your puppy&apos;s development.
             </p>
 

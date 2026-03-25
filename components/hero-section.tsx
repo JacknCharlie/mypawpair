@@ -85,10 +85,10 @@ export function HeroSection() {
                 <button
                   type="button"
                   onClick={scrollToBottom}
-                  aria-label="Scroll to Ask PawPair AI section"
+                  aria-label="Scroll to Ask myPawPair AI section"
                   className=" font-modern  inline-block px-8 py-3.5 text-[#5F7E9D] font-normal text-[18px] leading-[100%] rounded-[10px] border-2 border-[#5F7E9D] hover:bg-[#5F7E9D] hover:text-white transition-all duration-300 text-center"
                 >
-                  Ask PawPair AI
+                  Ask myPawPair AI
                 </button>
               </div>
             </div>

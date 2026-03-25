@@ -1,5 +1,5 @@
 -- ================================================================
--- PawPair — Provider System
+-- myPawPair — Provider System
 -- Providers offer their own services (grooming, training, vet, etc.)
 -- ================================================================
 

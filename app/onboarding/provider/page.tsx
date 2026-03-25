@@ -41,7 +41,7 @@ export default async function ProviderOnboardingPage() {
             <Link href="/">
               <Image
                 src="/logo.png"
-                alt="PawPair"
+                alt="myPawPair"
                 width={200}
                 height={50}
                 className="h-11 w-auto"

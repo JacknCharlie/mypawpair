@@ -42,4 +42,4 @@ CREATE TRIGGER update_waitlist_updated_at
     EXECUTE FUNCTION update_updated_at_column();
 
 -- Add comment to table
-COMMENT ON TABLE public.waitlist IS 'Stores email addresses of users who joined the PawPair waitlist';
+COMMENT ON TABLE public.waitlist IS 'Stores email addresses of users who joined the myPawPair waitlist';

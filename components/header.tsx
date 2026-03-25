@@ -41,7 +41,7 @@ export function Header() {
             <Link href="/" className="logo flex items-center">
               <Image
                 src="/logo.png"
-                alt="PawPair Logo"
+                alt="myPawPair Logo"
                 width={229}
                 max-width={229}
                 height={72}

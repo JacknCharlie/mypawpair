@@ -32,7 +32,7 @@ export function AdminSidebar() {
         <Link href="/dashboard/admin" className="flex items-center">
           <Image
             src="/logo.png"
-            alt="PawPair"
+            alt="myPawPair"
             width={140}
             height={36}
             className="h-9 w-auto"
@@ -76,7 +76,7 @@ export function AdminSidebar() {
           className="text-[11px] text-gray-400 font-medium"
           style={{ fontFamily: "Inter, sans-serif" }}
         >
-          PawPair Admin
+          myPawPair Admin
         </p>
       </div>
     </aside>

@@ -24,7 +24,7 @@ const SUGGESTIONS = [
   "What's the difference between boarding and pet sitting?",
 ];
 
-const STORAGE_KEY = "pawpair-ai-chat-sessions";
+const STORAGE_KEY = "mypawpair-ai-chat-sessions";
 
 function loadSessions(): ChatSession[] {
   if (typeof window === "undefined") return [];
@@ -232,7 +232,7 @@ export function AiChat() {
             <Menu className="h-5 w-5" />
           </button>
           <Link href="/find-providers" className="flex items-center gap-2">
-            <Image src="/logo.png" alt="PawPair" width={100} height={28} className="h-7 w-auto" />
+            <Image src="/logo.png" alt="myPawPair" width={100} height={28} className="h-7 w-auto" />
           </Link>
         </header>
 
@@ -354,7 +354,7 @@ export function AiChat() {
             </button>
           </form>
           <p className="text-center text-xs text-gray-500 mt-3">
-            PawPair AI can make mistakes. Check important info.
+            myPawPair AI can make mistakes. Check important info.
           </p>
         </div>
       </main>

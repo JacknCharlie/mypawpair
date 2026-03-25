@@ -1,5 +1,5 @@
 -- ================================================================
--- PawPair — Migration 003
+-- myPawPair — Migration 003
 -- Grant admins full CRUD access to the dogs table.
 -- Run this in Supabase Dashboard → SQL Editor
 -- ================================================================

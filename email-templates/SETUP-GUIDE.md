@@ -25,7 +25,7 @@ Files to update:
 
 **Copy content from:** `confirm-email-owner.html`
 
-**Subject:** `Confirm Your Email - PawPair`
+**Subject:** `Confirm Your Email - myPawPair`
 
 **Note:** This will be used for both owners and caregivers initially. See README.md for how to customize by role.
 
@@ -35,7 +35,7 @@ Files to update:
 
 **Copy content from:** `reset-password.html`
 
-**Subject:** `Reset Your Password - PawPair`
+**Subject:** `Reset Your Password - myPawPair`
 
 #### C. Magic Link Template (Optional)
 
@@ -43,7 +43,7 @@ Files to update:
 
 **Copy content from:** `confirm-email-owner.html` (you can customize this later)
 
-**Subject:** `Your Magic Link - PawPair`
+**Subject:** `Your Magic Link - myPawPair`
 
 ### 3. Configure SMTP Settings (Already Done!)
 
@@ -105,8 +105,8 @@ export async function sendWelcomeEmail(
     from: 'noreply@contact.mypawpair.com',
     to: email,
     subject: role === 'owner' 
-      ? 'Welcome to PawPair!' 
-      : 'Welcome to PawPair Caregiver Network!',
+      ? 'Welcome to myPawPair!' 
+      : 'Welcome to myPawPair Caregiver Network!',
     html,
   });
 }

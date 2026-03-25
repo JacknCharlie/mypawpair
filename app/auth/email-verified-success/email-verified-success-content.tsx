@@ -16,7 +16,7 @@ export default function EmailVerifiedSuccessContent() {
       <div className="w-full max-w-md">
         <div className="flex flex-col items-center gap-2 mb-6">
           <Link href="/">
-            <Image src="/logo.png" alt="PawPair" width={160} height={40} className="h-12 w-auto" />
+            <Image src="/logo.png" alt="myPawPair" width={160} height={40} className="h-12 w-auto" />
           </Link>
           <p className="text-[#2F3E4E] text-sm" style={{ fontFamily: "Inter, sans-serif" }}>
             Pet care, perfectly matched.
@@ -36,7 +36,7 @@ export default function EmailVerifiedSuccessContent() {
                 className="text-[#2F3E4E] text-2xl font-semibold mb-2"
                 style={{ fontFamily: "var(--font-modern-sans), ui-sans-serif, system-ui, sans-serif" }}
               >
-                {isCaregiver ? "Email Verified! 🎉" : "Welcome to PawPair! 🎉"}
+                {isCaregiver ? "Email Verified! 🎉" : "Welcome to myPawPair! 🎉"}
               </h1>
               
               {isOwner && (

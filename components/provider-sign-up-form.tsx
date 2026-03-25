@@ -55,7 +55,7 @@ export function ProviderSignUpForm({
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <div className="flex flex-col items-center gap-2 mb-2">
         <Link href="/">
-          <Image src="/logo.png" alt="PawPair" width={160} height={40} className="h-12 w-auto" />
+          <Image src="/logo.png" alt="myPawPair" width={160} height={40} className="h-12 w-auto" />
         </Link>
         <p className="text-[#2F3E4E] text-sm" style={{ fontFamily: "Inter, sans-serif" }}>
           Pet care, perfectly matched.
@@ -72,7 +72,7 @@ export function ProviderSignUpForm({
             className="text-[#2F3E4E] text-2xl font-semibold mb-1"
             style={{ fontFamily: "var(--font-modern-sans), ui-sans-serif, system-ui, sans-serif" }}
           >
-            Become a PawPair Provider
+            Become a myPawPair Provider
           </h1>
           <p className="text-gray-500 text-sm" style={{ fontFamily: "Inter, sans-serif" }}>
             List your grooming, training, vet, or other dog services

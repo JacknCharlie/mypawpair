@@ -1,5 +1,5 @@
 -- ================================================================
--- PawPair — Migration 005
+-- myPawPair — Migration 005
 -- Allow admins to INSERT into profiles (for manual profile creation
 -- or updates after auth.admin.createUser when trigger may not suffice).
 -- ================================================================

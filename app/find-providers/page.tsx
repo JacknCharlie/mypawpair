@@ -63,7 +63,7 @@ export default async function FindProvidersPage({
             <Link href="/">
               <Image
                 src="/logo.png"
-                alt="PawPair"
+                alt="myPawPair"
                 width={200}
                 height={50}
                 className="h-12 w-auto"
@@ -106,7 +106,7 @@ export default async function FindProvidersPage({
             Find Trusted Providers
           </h1>
           <p className="text-gray-500 text-[16px] mt-2 max-w-xl mx-auto" style={{ fontFamily: "Inter, sans-serif" }}>
-            Groomers, trainers, vets, and more — verified by PawPair
+            Groomers, trainers, vets, and more — verified by myPawPair
           </p>
         </div>
 

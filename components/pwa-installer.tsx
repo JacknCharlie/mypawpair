@@ -76,12 +76,12 @@ export function PWAInstaller() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/android-chrome-192x192.png"
-              alt="PawPair"
+              alt="myPawPair"
               className="w-10 h-10 rounded-lg"
             />
             <div>
               <span className="text-white font-semibold text-base block">
-                Install PawPair
+                Install myPawPair
               </span>
               <span className="text-white/80 text-xs">
                 {showAndroidPrompt ? "Tap to install" : "Add to home screen"}
@@ -124,7 +124,7 @@ export function PWAInstaller() {
                     onClick={handleInstall}
                     className="w-full py-3.5 bg-[#5F7E9D] text-white rounded-xl text-base font-semibold hover:bg-[#4e6b87] transition-all shadow-md active:scale-95"
                   >
-                    🐾 Install PawPair App
+                    🐾 Install myPawPair App
                   </button>
                   <button
                     onClick={toggleCollapse}
@@ -142,7 +142,7 @@ export function PWAInstaller() {
                   Add to Home Screen
                 </p>
                 <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                  Install PawPair on your iPhone for quick access and a native app experience.
+                  Install myPawPair on your iPhone for quick access and a native app experience.
                 </p>
                 <ol className="text-sm text-gray-700 space-y-3 mb-5 bg-gray-50 rounded-xl p-4">
                   <li className="flex items-start gap-3">

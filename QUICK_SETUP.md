@@ -35,7 +35,7 @@ In Vercel, make sure this environment variable is set:
 - `RESEND_API_KEY` = your_resend_api_key_here
 
 ⚠️ **Important:** Update the email sender in `/app/api/waitlist/route.ts`:
-- Change `noreply@pawpair.com` to your verified Resend domain
+- Change the `from` address to your verified Resend domain (e.g. `noreply@contact.mypawpair.com`)
 - Or use `onboarding@resend.dev` for testing
 
 ## 3. Deploy

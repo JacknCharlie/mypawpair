@@ -1,15 +1,15 @@
-![PawPair — Pet care, perfectly matched.](app/opengraph-image.png)
+![myPawPair — Pet care, perfectly matched.](app/opengraph-image.png)
 
-# PawPair 🐾
+# myPawPair 🐾
 
 > **Pet care, perfectly matched.**  
 > A compatibility-based dog care matchmaking platform that connects dog owners with trusted caregivers.
 
 ---
 
-## What is PawPair?
+## What is myPawPair?
 
-PawPair is an Airbnb-style marketplace built specifically for dog care. Instead of manual browsing, PawPair runs a **5-dimension compatibility algorithm** that matches dogs to caregivers based on size, temperament, location, energy level, and experience — giving every match a score and a compatibility tier (High / Medium / Low).
+myPawPair is an Airbnb-style marketplace built specifically for dog care. Instead of manual browsing, myPawPair runs a **5-dimension compatibility algorithm** that matches dogs to caregivers based on size, temperament, location, energy level, and experience — giving every match a score and a compatibility tier (High / Medium / Low).
 
 ---
 
@@ -165,8 +165,8 @@ Each caregiver is scored 0–5 across 5 dimensions:
 ## Getting Started (Local Development)
 
 ```bash
-git clone https://github.com/your-username/pawpair
-cd pawpair
+git clone https://github.com/your-username/mypawpair
+cd mypawpair
 npm install
 ```
 

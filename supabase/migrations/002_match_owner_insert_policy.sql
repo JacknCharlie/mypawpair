@@ -1,5 +1,5 @@
 -- ================================================================
--- PawPair — Migration 002
+-- myPawPair — Migration 002
 -- Allow dog owners to insert/upsert matches for their own dogs.
 -- This is needed so the quiz server action can save match results.
 -- Run this in Supabase Dashboard → SQL Editor

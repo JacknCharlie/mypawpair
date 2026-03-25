@@ -69,7 +69,7 @@ export function TimelineSection() {
       image: "/timeline1.png",
       title: "Create your dog's profile",
       description:
-        "Tell PawPair about your dog’s breed, age, health, and personality.",
+        "Tell myPawPair about your dog’s breed, age, health, and personality.",
       position: "left",
     },
     {
@@ -85,7 +85,7 @@ export function TimelineSection() {
       image: "/timeline3.png",
       title: "Find trusted local providers",
       description:
-        "When you need help, PawPair connects you with verified trainers, groomers, walkers, and vets.",
+        "When you need help, myPawPair connects you with verified trainers, groomers, walkers, and vets.",
       position: "left",
     },
   ];
@@ -93,18 +93,18 @@ export function TimelineSection() {
   return (
     <section
       ref={sectionRef}
-      id="how-pawpair-works"
-      aria-labelledby="how-pawpair-works-heading"
+      id="how-mypawpair-works"
+      aria-labelledby="how-mypawpair-works-heading"
       className="w-full py-[60px] bg-[#5F7E9D] relative overflow-hidden"
     >
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-16">
         <div className="text-center mb-16 md:mb-20">
           <div className="flex items-center justify-center gap-3 mb-4">
             <h2
-              id="how-pawpair-works-heading"
+              id="how-mypawpair-works-heading"
               className="font-['Modern_Sans'] font-normal text-[27px] md:text-[36px] lg:text-[40px] xl:text-[46px] leading-[120%] text-[#fff]"
             >
-              How PawPair Works
+              How myPawPair Works
             </h2>
           </div>
           <p

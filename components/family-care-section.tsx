@@ -59,7 +59,7 @@ export function FamilyCareSection() {
               className="text-[16px] !mt-5 font-sans font-normal md:text-[18px] leading-[120%] text-[#4A5563]"
               style={{ fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif" }}
             >
-             PawPair connects you with verified trainers, groomers, vets, and walkers in your area. The AI can recommend the right provider based on your dog’s specific needs.
+             myPawPair connects you with verified trainers, groomers, vets, and walkers in your area. The AI can recommend the right provider based on your dog’s specific needs.
             </p>
    <div className="!mt-6">
               <h3

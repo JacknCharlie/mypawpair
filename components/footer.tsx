@@ -67,15 +67,15 @@ export function Footer() {
       <div className="relative z-10 max-w-[1400px] mx-auto px-8 sm:px-12 lg:px-16 py-24 md:py-32 pb-32 md:pb-40">
         <div className="flex flex-col items-center text-center md:max-w-[756px] md:mx-auto space-y-4">
           <h2 className="font-['Modern_Sans'] font-normal text-[27px] md:text-[36px] lg:text-[40px] xl:text-[46px] leading-[120%] text-[#fff]">
-            Get Early Access to PawPair
+            Get Early Access to myPawPair
           </h2>
 
           <p className="text-[16px] !mt-5 font-inter font-normal md:text-[18px] leading-[120%] text-[#fff]">
-            Be among the first dog owners to experience PawPair — the AI assistant designed to understand your dog. Join the waitlist to get early access, updates, and exclusive features before the public launch.
+            Be among the first dog owners to experience myPawPair — the AI assistant designed to understand your dog. Join the waitlist to get early access, updates, and exclusive features before the public launch.
           </p>
 
           {/* Email + Button Form */}
-          <form onSubmit={handleSubmit} className="mt-8 w-full max-w-lg" aria-label="Join the PawPair waitlist">
+          <form onSubmit={handleSubmit} className="mt-8 w-full max-w-lg" aria-label="Join the myPawPair waitlist">
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-0">
               <label htmlFor="waitlist-email" className="sr-only">
                 Email address for waitlist
@@ -138,7 +138,7 @@ export function Footer() {
             <Link href="/" className="flex items-center">
               <Image
                 src="/logo.png"
-                alt="PawPair Logo"
+                alt="myPawPair Logo"
                 width={200}
                 height={50}
                 className="h-14 w-auto"
@@ -153,7 +153,7 @@ export function Footer() {
 
             <div className="pt-6 w-full border-t border-[#000000]/10">
               <p className=" font-inter text-[16px] text-[#000000] font-['Inter'] md:text-[18px] font-normal leading-[120%] tracking-[0%] opacity-80">
-                © 2026 PawPair. All rights reserved.
+                © 2026 myPawPair. All rights reserved.
               </p>
             </div>
           </div>
