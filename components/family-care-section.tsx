@@ -31,11 +31,11 @@ export function FamilyCareSection() {
   }, []);
 
   const points = [
-    "Experienced providers",
-    "Qualified trainers",
-    "Dedicated pet sitters",
-    "Passionate dog lovers",
-    "Local service providers",
+    "Former vet techs",
+    "Trainers",
+    "Long-time pet sitters",
+    "Retired pet lovers",
+    "Passion-driven small business owners",
   ];
 
   return (
