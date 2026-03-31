@@ -37,36 +37,36 @@ export function FAQSection() {
 
   const faqs = [
     {
-      question: "Is it normal that my puppy sleeps 18 hours a day?",
+      question: "My cat has been hiding more than usual — should I be concerned?",
       answer:
-        "Yes, it's completely normal! Puppies need lots of sleep for healthy growth and development. Young puppies (8-12 weeks) can sleep 18-20 hours per day. As they grow, this will gradually decrease to 12-14 hours by adulthood.",
+        "Beta helps us refine myPawPair before launch. We're testing features, gathering feedback, and improving the experience for the public release. Your input shapes how we build.",
     },
     {
-      question: "What food is best for a 6-month Golden with a sensitive stomach?",
+      question: "What's the best diet for a 3-year-old indoor cat?",
       answer:
-        "For a Golden Retriever with a sensitive stomach, look for limited ingredient diets with easily digestible proteins like chicken, turkey, or salmon. Avoid foods with corn, wheat, or soy. Consider brands specifically formulated for sensitive stomachs and introduce new foods gradually over 7-10 days.",
+        "Sign up with your email on this page. We'll send you access and updates as we add new features and improvements during the beta period. Check your inbox for next steps.",
     },
     {
       question: "How do I stop leash pulling?",
       answer:
-        "Start with positive reinforcement training. Stop walking when your dog pulls and only move forward when the leash is loose. Reward your dog frequently for walking beside you. Consider using a front-clip harness for better control and practice in low-distraction areas first.",
+        "We're actively building and improving. The launch date will be announced to beta testers first. Your feedback shapes our timeline and priorities for the public release.",
     },
     {
-      question: "How do I stop my dog from pulling on the leash during walks?",
+      question: "How do I stop my pet’s from pulling on the leash during walks?",
       answer:
-        "Use the 'stop and go' method: when your dog pulls, stop immediately and wait. Only continue walking when they return to your side and the leash is slack. Consistency is key. You can also try the 'reverse direction' technique where you turn and walk the opposite way whenever pulling occurs.",
+        "Yes. We use the same security standards for beta as we will for launch. Your dog's profile and data are protected and never shared. We take privacy seriously.",
     },
     {
-      question: "How often should I take my dog to the vet?",
+      question: "How often should I take my pet’s to the vet?",
       answer:
-        "Adult dogs should visit the vet at least once a year for a wellness check and vaccinations. Puppies need more frequent visits (every 3-4 weeks until 16 weeks old). Senior dogs (7+ years) benefit from twice-yearly checkups. Always consult your vet if you notice any health concerns.",
+        "We're gradually expanding beta access. Share your feedback and we may open more spots. Check back for updates on waitlist availability and referral options.",
     },
   ];
 
   return (
     <section
       ref={sectionRef}
-      className="w-full py-[60px] md:py-[80px] bg-[#F6F2EA]"
+      className="w-full py-[60px] md:py-[80px] bg-[#FFF2DD]"
     >
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-16">
         <div className="flex flex-col lg:flex-row gap-[40px] lg:gap-[60px] xl:gap-[80px]">
@@ -78,17 +78,14 @@ export function FAQSection() {
                 : "opacity-0 -translate-x-10"
             }`}
           >
-            <h2 className="font-['Modern_Sans'] font-normal text-[27px] md:text-[36px] lg:text-[40px] xl:text-[46px] leading-[120%] text-[#2F3E4E]">
-              Ask myPawPair Anything
+            <h2 className="text-[#260900] font-['Modern_Sans'] font-normal text-[27px] md:text-[36px] lg:text-[40px] xl:text-[46px] leading-[120%] bg-[#FFF2DD]">
+             Ask myPawPair Anything
             </h2>
             <p
-              className="font-inter font-normal text-[18px] leading-[120%] text-[#4A5563] mt-[20px]"
-             
+              className="font-inter font-normal text-[18px] leading-[120%] text-[#6B7280] mt-[20px]"
             >
-              myPawPair AI is your personal dog care assistant, ready to help
-              anytime. Ask questions about your dog's health, behavior,
-              nutrition, or training and get instant answers tailored to your
-              dog's breed, age, and personality.
+               
+               myPawPair AI is your personal pet care assistant, ready to help anytime. Ask questions about your pet’s health, behavior, nutrition, or training and get instant answers tailored to your pet’s breed, age, and personality.
             </p>
           </div>
 
@@ -103,7 +100,7 @@ export function FAQSection() {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className={`bg-[#DFE5EB] rounded-[12px] overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 ${
+                className={`accordion-main-bg bg-[#FFF2DD] border border-[#825E46] rounded-[16px]  overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                 }`}
                 style={{
@@ -114,7 +111,7 @@ export function FAQSection() {
                   onClick={() => toggleFAQ(index)}
                   className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-gray-50 transition-colors duration-200"
                 >
-                  <span className="font-inter font-mediuml text-[18px] md:text-[20px] leading-[120%] tracking-[-0.5px] text-[#4A5563] pr-4">
+                  <span className="font-inter font-mediuml text-[18px] md:text-[20px] leading-[120%] tracking-[-0.5px] text-[#825E46] pr-4">
                     {faq.question}
                   </span>
 
@@ -134,7 +131,7 @@ export function FAQSection() {
                 >
                   <div className="px-6 pb-4 pt-2">
                     <p
-                      className="font-inter font-normal text-[16px] leading-[140%] text-[#4A5563]"
+                      className="font-inter font-normal text-[16px] leading-[140%] text-[#825E46]"
                       style={{ fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif" }}
                     >
                       {faq.answer}

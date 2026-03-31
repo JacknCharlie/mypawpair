@@ -31,7 +31,7 @@ export function EnergyMatchSection() {
   }, []);
 
   const criteria = [
-    "Breed insights",
+    "Pet type & breed insights", 
     "Health conditions",
     "Diet preferences",
     "Behavioral patterns",
@@ -41,7 +41,7 @@ export function EnergyMatchSection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full py-[60px] md:py-[70px] lg:py-[80px] bg-white"
+      className="w-full py-[60px] md:py-[70px] lg:py-[80px] bg-[#FFF2DD]"
     >
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[40px] items-center">
@@ -53,24 +53,23 @@ export function EnergyMatchSection() {
             }`}
           >
             <h2
-              className="font-['Modern_Sans'] font-normal text-[27px] md:text-[36px] lg:text-[40px] xl:text-[46px] leading-[120%] text-[#2F3E4E]"
-               
+              className="font-['Modern_Sans'] font-normal text-[27px] md:text-[36px] lg:text-[40px] xl:text-[46px] leading-[120%] text-[#260900]"
             >
-              A Care Profile Built Around Your Dog
+            A Care Profile Built Around Your Pet
             </h2>
 
             <p
               className="text-[16px] !mt-5 font-sans font-normal md:text-[18px] leading-[120%] text-[#4A5563]"
               style={{ fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif" }}
             >
-            The more you tell myPawPair about your dog, the smarter it gets.  Every answer is personalized to your dog's breed, age, health history, and personality.
+             The more you tell myPawPair about your pet’s profile, it will get smarter.
             </p>
 
             <div className="!mt-6">
               <h3
-                className=" text-[18px] !text-[#000000]  font-modern font-normal leading-[120%] mb-5  md:text-[20px] xl:text-[24px]"
+                className=" text-[18px] !text-[#260900]  font-modern font-normal leading-[120%] mb-5  md:text-[20px] xl:text-[24px]"
               >
-                Your dog's profile gets smarter over time.  
+               Explain AI memory.
               </h3>
 
               <div className="space-y-3">
@@ -86,8 +85,8 @@ export function EnergyMatchSection() {
                         : "translateX(-20px)",
                     }}
                   >
-                    <div className="w-5 h-5 rounded-full border-2 border-[#5F7E9D] flex items-center justify-center flex-shrink-0">
-                      <div className="w-2.5 h-2.5 rounded-full bg-[#5F7E9D]" />
+                    <div className="w-5 h-5 rounded-full border-2 border-[#F3B443] flex items-center justify-center flex-shrink-0">
+                      <div className="w-2.5 h-2.5 rounded-full bg-[#F3B443]" />
                     </div>
                     <p
                       className="text-[18px] font-['Modern_Sans']  font-normal md:text-[18px] leading-[120%] text-[rgba(18,18,18,0.7)]"
@@ -104,7 +103,7 @@ export function EnergyMatchSection() {
               className="text-[16px] !mt-5 font-sans font-normal md:text-[18px] leading-[120%] text-[#4A5563]"
               style={{ fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif" }}
             >
-             This allows myPawPair to give advice tailored specifically to your dog.
+              This allows myPawPair to give advice tailored specifically to your pet.
             </p>
           </div>
 

@@ -150,6 +150,10 @@
 }
 .btn-ext:hover{ background: #260900 !important; color:#fff !important;  
 }
+.accordion-main-bg {
+    box-shadow: 0px 2px 4px rgba(137, 82, 43, 0.6), inset 0px 4px 8px rgba(137, 82, 43, 0.3);
+    border-radius: 16px;
+}
 .accordion-btn {
     
     border: 0px !important;
@@ -208,8 +212,10 @@
 }
 
 
-
-
+ @media only screen and (max-width: 1199px) {
+.btn-same { padding: 11px 30px; font-size: 16px !important;}
+.btn-ext { padding: 11px 30px;  font-size: 16px !important;}
+ }
 
  @media only screen and (max-width: 1024px) {
 .header-row .logo img {  max-width: 180px;}
@@ -221,6 +227,9 @@
     right: 4.3rem;
     top: 0;
 }
+.banner-btn-same {
+    flex-direction: column;
+}
  }
 
  @media only screen and (max-width: 767px) {
@@ -230,11 +239,19 @@
 br {
     display: none;
 }
+.banner-btn-same {
+    flex-direction: row;
+}
  }
  @media only screen and (max-width: 639px) {
 .footer-inputs-btn {  margin-left: 0px !important;}
 .footer-inputs-btn {  margin-left: 0px !important;}
 footer#contact .footer-inputs-btn {
     position: static;
+}
+.btn-same { padding: 12px 42px; font-size: 16px !important;}
+.btn-ext { padding: 12px 42px;  font-size: 16px !important;}
+.banner-btn-same {
+    flex-direction: column;
 }
  }

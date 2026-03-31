@@ -4,11 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import { useFindCareHref } from "@/hooks/use-find-care-href";
-
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const findCareHref = useFindCareHref();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -35,10 +32,10 @@ export function Header() {
 
   return (
     <>
-      <header className="header-main py-5 px-0 w-full bg-[#F6F2EA] sticky top-0 z-50">
+      <header className="header-main py-5 px-0 w-full bg-[#FFF2DD] sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="header-row flex items-center justify-between h-20">
-            <Link href="/" className="logo flex items-center">
+            <Link href="/" className="logo flex items-center gap-2">
               <Image
                 src="/logo.png"
                 alt="myPawPair Logo"
@@ -48,13 +45,14 @@ export function Header() {
                 className="h-12 w-auto"
                 priority
               />
+              {/* <span className="hidden sm:inline-flex px-2 py-0.5 bg-[#5F7E9D] text-white text-[11px] font-semibold rounded uppercase tracking-wide">
+                Beta
+              </span> */}
             </Link>
 
             <nav className="navigation hidden nav:flex items-center space-x-[49px] md:space-x-[15px] lg:space-x-[49px]">
               <button
-                type="button"
                 onClick={() => scrollToSection("about")}
-                aria-label="Scroll to About section"
                 className="font-normal text-[18px] leading-[18px] text-black m-0 font-modern md:text-[14px] lg:text-[18px] hover:opacity-70 transition-opacity"
               >
                 About
@@ -63,22 +61,19 @@ export function Header() {
                 href="/auth/caregiver-signup"
                 className="text-[#000000] font-modern font-normal text-[18px] leading-[100%] hover:opacity-70 transition-opacity"
               >
-                Become a care provider
+                Find a Provider
               </Link>
               <button
-                type="button"
                 onClick={() => scrollToSection("contact")}
-                aria-label="Scroll to Contact section"
                 className="font-normal text-[18px] leading-[18px] text-black m-0 font-modern md:text-[14px] lg:text-[18px] hover:opacity-70 transition-opacity"
               >
                 Contact
               </button>
               <Link
-                href={findCareHref}
-                aria-label="Create your dog's profile and find care"
-                className="px-6 py-3 bg-[#5F7E9D] text-white font-modern font-normal text-[18px] leading-[100%] rounded-[10px] border-2 border-transparent hover:bg-white md:text-[14px] hover:text-[#5F7E9D] m-0 hover:border-[#5F7E9D] transition-all duration-300"
+                href="/auth/login"
+                className="HEADER-BTN px-6 py-3 bg-[#5F7E9D] text-white font-modern font-normal text-[18px] leading-[100%] rounded-[10px] border-2 border-transparent hover:bg-white md:text-[14px] hover:text-[#5F7E9D] m-0 hover:border-[#5F7E9D] transition-all duration-300"
               >
-                Create Your Dog's Profile
+                Create Your Pet's Profile
               </Link>
             </nav>
 
@@ -98,7 +93,7 @@ export function Header() {
 
       {/* Full-screen mobile menu overlay */}
       <div
-        className={`fixed inset-0 z-[60] bg-[#F6F2EA] transition-all duration-500 ease-in-out nav:hidden ${
+        className={`header-row fixed inset-0 z-[60] bg-[#F6F2EA] transition-all duration-500 ease-in-out nav:hidden ${
           isMenuOpen
             ? "opacity-100 visible"
             : "opacity-0 invisible pointer-events-none"
@@ -115,10 +110,8 @@ export function Header() {
 
         <nav className="flex flex-col items-center justify-center h-full gap-2 px-8">
           <button
-            type="button"
             onClick={() => scrollToSection("about")}
-            aria-label="Scroll to About section"
-            className={`text-[#2F3E4E] font-modern font-normal text-[32px] leading-[100%] py-5 hover:text-[#5F7E9D] transition-all duration-500 ${
+            className={`!text-[#260900] font-modern font-normal text-[32px] leading-[100%] py-5 hover:text-[#5F7E9D] transition-all duration-500 ${
               isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
             style={{ transitionDelay: isMenuOpen ? "150ms" : "0ms" }}
@@ -136,12 +129,12 @@ export function Header() {
           <Link
             href="/auth/caregiver-signup"
             onClick={() => setIsMenuOpen(false)}
-            className={`text-[#2F3E4E] font-modern font-normal text-[32px] leading-[100%] py-5 hover:text-[#5F7E9D] transition-all duration-500 ${
+            className={`text-[#260900] font-modern font-normal text-[32px] leading-[100%] py-5 hover:text-[#5F7E9D] transition-all duration-500 ${
               isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
             style={{ transitionDelay: isMenuOpen ? "250ms" : "0ms" }}
           >
-            Become a care provider
+            Find a Provider
           </Link>
 
           <div
@@ -152,10 +145,8 @@ export function Header() {
           />
 
           <button
-            type="button"
             onClick={() => scrollToSection("contact")}
-            aria-label="Scroll to Contact section"
-            className={`text-[#2F3E4E] font-modern font-normal text-[32px] leading-[100%] py-5 hover:text-[#5F7E9D] transition-all duration-500 ${
+            className={`text-[#260900] font-modern font-normal text-[32px] leading-[100%] py-5 hover:text-[#5F7E9D] transition-all duration-500 ${
               isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
             style={{ transitionDelay: isMenuOpen ? "350ms" : "0ms" }}
@@ -164,15 +155,14 @@ export function Header() {
           </button>
 
           <Link
-            href={findCareHref}
+            href="/auth/login"
             onClick={() => setIsMenuOpen(false)}
-            aria-label="Create your dog's profile and find care"
-            className={`mt-8 w-full max-w-[320px] text-center px-8 py-4 bg-[#5F7E9D] text-white font-modern font-normal text-[20px] leading-[100%] rounded-[14px] border-2 border-transparent hover:bg-white hover:text-[#5F7E9D] hover:border-[#5F7E9D] transition-all duration-500 ${
+            className={`HEADER-BTN  mt-8 w-full max-w-[320px] text-center px-8 py-4 bg-[#5F7E9D] text-white font-modern font-normal text-[20px] leading-[100%] rounded-[14px] border-2 border-transparent hover:bg-white hover:text-[#5F7E9D] hover:border-[#5F7E9D] transition-all duration-500 ${
               isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
             style={{ transitionDelay: isMenuOpen ? "450ms" : "0ms" }}
           >
-            Create Your Dog's Profile
+            Create Your Pet's Profile
           </Link>
         </nav>
       </div>

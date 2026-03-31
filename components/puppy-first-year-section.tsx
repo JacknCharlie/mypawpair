@@ -6,23 +6,23 @@ import { useEffect, useRef } from "react";
 const milestones = [
   {
     label: "Week 1-4",
-    description: "Early bonding & sleep routines",
+    description: "Early bonding and sleep routines (beta)",
   },
   {
     label: "Week 5-8",
-    description: "Socialization begins",
+    description: "Socialization begins (testing)",
   },
   {
     label: "Week 9-12",
-    description: "Basic training milestones",
+    description: "Basic training milestones (beta)",
   },
   {
     label: "Month 4-6",
-    description: "Teething & behavior changes",
+    description: "Teething and behavior changes (beta)",
   },
   {
     label: "Month 7-12",
-    description: "Confidence & routine building",
+    description: "Confidence and routine building (beta)",
   },
 ];
 
@@ -179,7 +179,7 @@ export function PuppyFirstYearSection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full py-[60px] md:py-[70px] lg:py-[80px] bg-[#5F7E9D] relative overflow-hidden"
+      className="w-full py-[60px] md:py-[70px] lg:py-[80px] bg-[rgba(243,180,67,0.5)] relative overflow-hidden"
     >
       <div className="week-by-week-main max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-16">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 xl:gap-16 items-stretch">
@@ -187,24 +187,22 @@ export function PuppyFirstYearSection() {
           {/* ══════════ LEFT 70% — Heading + Text + Image ══════════ */}
           <div className="puppy-left-col w-full lg:w-[70%] flex flex-col">
             {/* Heading */}
-            <h2 className="font-['Modern_Sans'] font-normal text-[32px] md:text-[40px] lg:text-[44px] xl:text-[50px] leading-[120%] text-white mb-5">
-              Your Puppy&apos;s First Year —{" "}
-              <span className="inline">Guided Week by Week</span>
+            <h2 className="font-['Modern_Sans'] font-normal text-[32px] md:text-[40px] lg:text-[44px] xl:text-[50px] leading-[120%] text-[#260900] mb-5">
+             myPawPair guides new  <br/>pet parents.{" "}
             </h2>
 
             {/* Description paragraphs */}
             <p
-              className="text-[15px] md:text-[16px] leading-[145%] text-white/85 mb-3"
+              className="text-[15px] md:text-[16px] leading-[145%] text-[#260900]/85 mb-3"
               style={{ fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif" }}
             >
-              The first year of a dog&apos;s life is full of important milestones.
+             Milestone guidance tailored to your specific pet type.
             </p>
             <p
-              className="text-[15px] md:text-[16px] leading-[145%] text-white/85 mb-8"
+              className="text-[15px] md:text-[16px] leading-[145%] text-[#260900]/85 mb-8"
               style={{ fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif" }}
             >
-              myPawPair guides new dog parents through every stage with weekly insights,
-              reminders, and tips tailored to your puppy&apos;s development.
+              myPawPair guides new pet parents through every stage with weekly insights, reminders, and tips tailored to your pet’s development.
             </p>
 
             {/* kidcare.png image */}
@@ -255,11 +253,11 @@ export function PuppyFirstYearSection() {
                                  transition-all duration-300 hover:shadow-xl hover:-translate-y-1 
                                  cursor-default relative group"
                     >
-                      <h3 className=" text-[18px] !text-[#000000]  font-modern font-normal leading-[120%] mb-5  md:text-[20px] xl:text-[24px] mb-[15px]">
+                      <h3 className=" text-[18px] !text-[#260900]  font-modern font-normal leading-[120%] mb-5  md:text-[20px] xl:text-[24px] mb-[15px]">
                         {item.label}
                       </h3>
                       <p
-                        className=" text-[18px] font-['Inter'] font-normal md:text-[18px] leading-[120%] text-[#4A5563]"
+                        className=" text-[18px] font-['Inter'] font-normal md:text-[18px] leading-[120%] text-[#6B7280]"
                         style={{ fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif" }}
                       >
                         {item.description}
@@ -278,7 +276,7 @@ export function PuppyFirstYearSection() {
                     <div
                       ref={(el) => { dotsRef.current[index] = el; }}
                       className="weekly-dots absolute top-1/2 -translate-y-1/2 right-[20px] md:right-[-51px] 
-                                  w-[16px] h-[16px] rounded-full bg-white shadow-lg border-[3px] border-[#5F7E9D] z-10"
+                                  w-[16px] h-[16px] rounded-full bg-white shadow-lg border-[3px] border-[#fff] z-10"
                     />
 
                     {/* Paw icon */}

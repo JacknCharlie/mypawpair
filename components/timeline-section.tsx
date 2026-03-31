@@ -67,9 +67,9 @@ export function TimelineSection() {
     {
       icon: "/ticons1.png",
       image: "/timeline1.png",
-      title: "Create your dog's profile",
+      title: "Create your pet's profile",
       description:
-        "Tell myPawPair about your dog’s breed, age, health, and personality.",
+        "Tell myPawPair about your pet's breed, age, health, and personality.",
       position: "left",
     },
     {
@@ -83,7 +83,7 @@ export function TimelineSection() {
     {
       icon: "/ticons3.png",
       image: "/timeline3.png",
-      title: "Find trusted local service providers",
+      title: "Find trusted local providers",
       description:
         "When you need help, myPawPair connects you with verified trainers, groomers, walkers, and vets.",
       position: "left",
@@ -93,25 +93,23 @@ export function TimelineSection() {
   return (
     <section
       ref={sectionRef}
-      id="how-mypawpair-works"
-      aria-labelledby="how-mypawpair-works-heading"
-      className="w-full py-[60px] bg-[#5F7E9D] relative overflow-hidden"
+      className="w-full py-[60px] bg-[rgba(243,180,67,0.5)] relative overflow-hidden"
     >
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-16">
         <div className="text-center mb-16 md:mb-20">
-          <div className="flex items-center justify-center gap-3 mb-4">
+          <div className="flex items-center justify-center gap-3 mb-4 flex-wrap">
             <h2
-              id="how-mypawpair-works-heading"
-              className="font-['Modern_Sans'] font-normal text-[27px] md:text-[36px] lg:text-[40px] xl:text-[46px] leading-[120%] text-[#fff]"
+              className="font-['Modern_Sans'] font-normal text-[27px] md:text-[36px] lg:text-[40px] xl:text-[46px] leading-[120%] text-[#260900]"
             >
-              How myPawPair Works
+             How myPawPair Works
             </h2>
+           
           </div>
           <p
-            className="text-[16px] font-sans font-normal md:text-[18px] leading-[120%] text-center text-[#fff]"
+            className="text-[16px] font-sans font-normal md:text-[18px] leading-[120%] text-center text-[#825E46]"
             style={{ fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif" }}
           >
-            Start your dog&apos;s journey with the right match.
+           Start your pet journey with the right match.
           </p>
         </div>
 
@@ -174,7 +172,7 @@ export function TimelineSection() {
                     } max-w-[500px]`}
                   >
                     <div className="time-line-inner-blocks flex flex-col items-start gap-4  mb-[25px]">
-                      <div className="relative w-[40px] h-[40px] md:w-[80px] md:h-[80px] flex-shrink-0" aria-hidden="true">
+                      <div className="relative w-[40px] h-[40px] md:w-[80px] md:h-[80px] flex-shrink-0">
                         <Image
                           src={item.icon}
                           alt=""
@@ -183,14 +181,14 @@ export function TimelineSection() {
                         />
                       </div>
                       <h3
-                        className=" text-[18px] !text-[#2F3E4E]  font-modern font-normal leading-[120%]  md:text-[20px] xl:text-[24px]"
+                        className=" text-[18px] !text-[#260900]  font-modern font-normal leading-[120%]  md:text-[20px] xl:text-[24px]"
                         
                       >
                         {item.title}
                       </h3>
                     </div>
                     <p
-                      className="text-[16px] font-sans font-normal md:text-[18px] leading-[120%] text-[#4A5563]"
+                      className="text-[16px] font-sans font-normal md:text-[18px] leading-[120%] text-[#6B7280]"
                       style={{
                         fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif",
                       }}
@@ -201,7 +199,7 @@ export function TimelineSection() {
                 </div>
 
                 <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden lg:block z-10">
-                  <div className="w-6 h-6 rounded-full bg-white border-4 border-[#5F7E9D] shadow-lg" />
+                  <div className="w-6 h-6 rounded-full bg-white border-4 border-[#FFF2DD] shadow-lg" />
                 </div>
               </div>
             ))}

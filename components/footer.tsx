@@ -66,38 +66,29 @@ export function Footer() {
       
       <div className="relative z-10 max-w-[1400px] mx-auto px-8 sm:px-12 lg:px-16 py-24 md:py-32 pb-32 md:pb-40">
         <div className="flex flex-col items-center text-center md:max-w-[756px] md:mx-auto space-y-4">
-          <h2 className="font-['Modern_Sans'] font-normal text-[27px] md:text-[36px] lg:text-[40px] xl:text-[46px] leading-[120%] text-[#fff]">
-            Get Early Access to myPawPair
+          <h2 className="font-['Modern_Sans'] font-normal text-[27px] md:text-[36px] lg:text-[40px] xl:text-[46px] leading-[120%] text-[#FFF2DD]">
+        Get Early Access to myPawPair
           </h2>
 
           <p className="text-[16px] !mt-5 font-inter font-normal md:text-[18px] leading-[120%] text-[#fff]">
-            Be among the first dog owners to experience myPawPair — the AI assistant designed to understand your dog. Join the waitlist to get early access, updates, and exclusive features before the public launch.
+             Be among the first pet owners to experience myPawPair — the AI assistant designed to understand your pet. Join the waitlist to get early access, updates, and exclusive features before the public launch.
           </p>
 
           {/* Email + Button Form */}
-          <form onSubmit={handleSubmit} className="mt-8 w-full max-w-lg" aria-label="Join the myPawPair waitlist">
+          <form onSubmit={handleSubmit} className="mt-8 w-full max-w-lg">
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-0">
-              <label htmlFor="waitlist-email" className="sr-only">
-                Email address for waitlist
-              </label>
               <input
-                id="waitlist-email"
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
                 disabled={loading}
-                autoComplete="email"
                 className="font-inter flex-1 px-5 py-3 bg-[#D9D9D9] border border-gray-300 rounded-lg sm:rounded-l-lg sm:rounded-r-none focus:outline-none focus:ring-2 focus:ring-[#5F7E9D] text-gray-900 placeholder-gray-600 disabled:opacity-50 disabled:cursor-not-allowed"
                 required
-                aria-invalid={message?.type === "error"}
-                aria-describedby={message ? "waitlist-message" : undefined}
               />
               <button
                 type="submit"
                 disabled={loading}
-                aria-busy={loading}
-                aria-label={loading ? "Joining waitlist" : "Join the waitlist"}
                 className="footer-inputs-btn font-modern font-normal px-8 py-3 bg-[#5F7E9D] text-[16px] rounded-[10px] -ml-[20px] md:text-[18px] lg:text-[20px] text-white font-regular rounded-lg sm:rounded-l-none sm:rounded-r-lg hover:bg-[#4b657d] transition-colors disabled:opacity-50 disabled:cursor-not-allowed min-w-[180px] sm:min-w-[160px]"
               >
                 {loading ? (
@@ -117,8 +108,6 @@ export function Footer() {
             {/* Success/Error Message */}
             {message && (
               <div
-                id="waitlist-message"
-                role="alert"
                 className={`mt-4 px-4 py-3 rounded-lg text-sm font-medium ${
                   message.type === "success"
                     ? "bg-green-100 text-green-800 border border-green-200"
@@ -133,7 +122,7 @@ export function Footer() {
       </div>
 
       <div className="relative z-10 px-8 sm:px-12 lg:px-16 pb-8 -mt-24 md:-mt-28">
-        <div className="max-w-[1200px] mx-auto bg-[#F6F2EA] rounded-[20px] px-16 !pb-[30px] md:px-24 py-10 md:py-12 shadow-2xl">
+        <div className="footer-inner-bg max-w-[1200px] mx-auto bg-[#F6F2EA] rounded-[20px] px-16 !pb-[30px] md:px-24 py-10 md:py-12 shadow-2xl">
           <div className="flex flex-col items-center text-center space-y-5">
             <Link href="/" className="flex items-center">
               <Image
@@ -147,12 +136,12 @@ export function Footer() {
 
             <div className="max-w-2xl">
               <p className=" font-inter text-[16px] text-[#4A5563] font-['Inter'] md:text-[18px] font-normal leading-[120%] tracking-[0%]">
-              AI-powered care for your dog, starting in your neighborhood.
+             AI-powered care for your pet, starting in your neighborhood.  
               </p>
             </div>
 
             <div className="pt-6 w-full border-t border-[#000000]/10">
-              <p className=" font-inter text-[16px] text-[#000000] font-['Inter'] md:text-[18px] font-normal leading-[120%] tracking-[0%] opacity-80">
+              <p className=" font-inter text-[16px] text-[#260900] font-['Inter'] md:text-[18px] font-normal leading-[120%] tracking-[0%] opacity-80">
                 © 2026 myPawPair. All rights reserved.
               </p>
             </div>

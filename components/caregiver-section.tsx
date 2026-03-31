@@ -33,8 +33,8 @@ export function CaregiverSection() {
   const features = [
     {
       icon: "/one.png",
-      title: "Knows your dog",
-      description: "myPawPair remembers your dog’s breed, age, health conditions, and habits.",
+      title: "Knows your pet",
+      description: "myPawPair remembers your pet's breed, age, health conditions, and habits.",
     },
     {
       icon: "/two.png",
@@ -44,7 +44,7 @@ export function CaregiverSection() {
     {
       icon: "/three.png",
       title: "Guidance that grows",
-      description: "The more you use myPawPair, the smarter your dog’s profile becomes.",
+      description: "The more you use myPawPair, the smarter your pet profile becomes.",
     },
   ];
 
@@ -52,7 +52,7 @@ export function CaregiverSection() {
     <section
       id="about"
       ref={sectionRef}
-      className="w-full py-[60px] md:py-[80px] bg-white"
+      className="w-full py-[60px] md:py-[80px] bg-[#FFF2DD]"
     >
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-16">
         <div className="flex flex-col items-center gap-[30px] md:gap-[40px] lg:gap-[30px] md:flex-col lg:flex-row xl:gap-[50px]">
@@ -82,16 +82,17 @@ export function CaregiverSection() {
             }`}
           >
             <h2
-              className="font-['Modern_Sans'] font-normal text-[27px] md:text-[36px] lg:text-[40px] xl:text-[46px] leading-[120%] text-[#2F3E4E]"
-        >
-              Your Dog Has an AI Companion
+              className="font-['Modern_Sans'] font-normal text-[27px] md:text-[36px] lg:text-[40px] xl:text-[46px] leading-[120%] text-[#260900]"
+            >
+          Your Pet Has an AI Companion
+            
             </h2>
 
             <p
               className="font-inter font-normal text-[18px] leading-[120%] text-[#4A5563] mt-[20px] "
               style={{ fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif" }}
             >
-           Ask myPawPair anything and get instant answers tailored to your dog.
+            Ask myPawPair anything and get instant answers tailored to your pet.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-[40px]">
@@ -117,7 +118,7 @@ export function CaregiverSection() {
                   </div>
 
                   <h3
-                    className=" text-[18px] !text-[#2F3E4E]  font-modern font-normal leading-[120%] text-center md:text-[20px] xl:text-[24px]"
+                    className=" text-[18px] !text-[#260900]  font-modern font-normal leading-[120%] text-center md:text-[20px] xl:text-[24px]"
                   
                   >
                     {feature.title}
