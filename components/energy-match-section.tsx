@@ -59,7 +59,7 @@ export function EnergyMatchSection() {
             </h2>
 
             <p
-              className="text-[16px] !mt-5 font-sans font-normal md:text-[18px] leading-[120%] text-[#4A5563]"
+              className="text-[16px] !mt-5 font-sans font-normal md:text-[18px] leading-[120%] text-[#6B7280]"
               style={{ fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif" }}
             >
              The more you tell myPawPair about your pet’s profile, it will get smarter.
@@ -89,7 +89,7 @@ export function EnergyMatchSection() {
                       <div className="w-2.5 h-2.5 rounded-full bg-[#F3B443]" />
                     </div>
                     <p
-                      className="text-[18px] font-['Modern_Sans']  font-normal md:text-[18px] leading-[120%] text-[rgba(18,18,18,0.7)]"
+                      className="text-[18px] font-['Modern_Sans']  font-normal md:text-[18px] leading-[120%] text-[#6B7280]"
                       
                     >
                       {item}
@@ -100,7 +100,7 @@ export function EnergyMatchSection() {
             </div>
 
             <p
-              className="text-[16px] !mt-5 font-sans font-normal md:text-[18px] leading-[120%] text-[#4A5563]"
+              className="text-[16px] !mt-5 font-sans font-normal md:text-[18px] leading-[120%] !text-[#6B7280]"
               style={{ fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif" }}
             >
               This allows myPawPair to give advice tailored specifically to your pet.

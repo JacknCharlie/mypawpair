@@ -66,7 +66,7 @@ export function FAQSection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full py-[60px] md:py-[80px] bg-[#FFF2DD]"
+      className="!pt-0 w-full py-[60px] md:py-[80px] bg-[#FFF2DD]"
     >
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-16">
         <div className="flex flex-col lg:flex-row gap-[40px] lg:gap-[60px] xl:gap-[80px]">
