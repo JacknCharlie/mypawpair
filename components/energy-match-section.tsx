@@ -64,6 +64,12 @@ export function EnergyMatchSection() {
             >
              The more you tell myPawPair about your pet’s profile, it will get smarter.
             </p>
+            <p
+              className="text-[16px] !mt-5 font-sans font-normal md:text-[18px] leading-[120%] text-[#6B7280]"
+              style={{ fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif" }}
+            >
+            myPawPair starts with dogs because that is where our story begins. But it was always built for every pet that someone has ever loved like family."
+            </p>
 
             <div className="!mt-6">
               <h3
