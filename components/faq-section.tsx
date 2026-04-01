@@ -37,12 +37,12 @@ export function FAQSection() {
 
   const faqs = [
     {
-      question: "My cat has been hiding more than usual — should I be concerned?",
+      question: "My pet has been hiding more than usual — should I be concerned?",
       answer:
         "Beta helps us refine myPawPair before launch. We're testing features, gathering feedback, and improving the experience for the public release. Your input shapes how we build.",
     },
     {
-      question: "What's the best diet for a 3-year-old indoor cat?",
+      question: "What's the best diet for a 3-year-old indoor pet?",
       answer:
         "Sign up with your email on this page. We'll send you access and updates as we add new features and improvements during the beta period. Check your inbox for next steps.",
     },
@@ -111,7 +111,7 @@ export function FAQSection() {
                   onClick={() => toggleFAQ(index)}
                   className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-gray-50 transition-colors duration-200"
                 >
-                  <span className="font-inter font-mediuml text-[18px] md:text-[20px] leading-[120%] tracking-[-0.5px] text-[#825E46] pr-4">
+                  <span className="font-inter text-[16px] font-mediuml text-[18px] md:text-[16px] leading-[120%] tracking-[-0.5px] text-[#825E46] pr-4">
                     {faq.question}
                   </span>
 
@@ -131,7 +131,7 @@ export function FAQSection() {
                 >
                   <div className="px-6 pb-4 pt-2">
                     <p
-                      className="font-inter font-normal text-[16px] leading-[140%] text-[#825E46]"
+                      className="font-inter font-normal text-[15px] leading-[140%] text-[#825E46]"
                       style={{ fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif" }}
                     >
                       {faq.answer}

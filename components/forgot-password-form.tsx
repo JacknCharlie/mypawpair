@@ -77,7 +77,7 @@ export function ForgotPasswordForm({
           <>
             <div className="px-8 pt-8 pb-2">
               <h1
-                className="text-[#2F3E4E] text-2xl font-semibold mb-1"
+                className="text-[#260900] text-2xl font-semibold mb-1"
                 style={{ fontFamily: "var(--font-modern-sans), ui-sans-serif, system-ui, sans-serif" }}
               >
                 Reset your password
@@ -90,7 +90,7 @@ export function ForgotPasswordForm({
             <div className="px-8 pb-8 pt-6">
               <form onSubmit={handleForgotPassword} className="flex flex-col gap-5">
                 <div className="flex flex-col gap-1.5">
-                  <Label htmlFor="email" className="text-[#2F3E4E] text-sm font-medium">
+                  <Label htmlFor="email" className="text-[#260900] text-sm font-medium">
                     Email
                   </Label>
                   <Input
@@ -113,15 +113,15 @@ export function ForgotPasswordForm({
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full h-11 bg-[#5F7E9D] text-white font-medium text-[16px] rounded-[10px] border-2 border-transparent hover:bg-white hover:text-[#5F7E9D] hover:border-[#5F7E9D] transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed mt-1"
+                  className="btn-all-sign-in w-full h-11 text-white font-medium text-[16px] rounded-[10px] border-2 border-transparent hover:bg-white hover:text-[#5F7E9D] hover:border-[#5F7E9D] transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed mt-1"
                   style={{ fontFamily: "Inter, sans-serif" }}
                 >
                   {isLoading ? "Sending..." : "Send Reset Link"}
                 </button>
 
-                <p className="text-center text-sm text-gray-500" style={{ fontFamily: "Inter, sans-serif" }}>
+                <p className="text-[#260900] text-center text-sm text-gray-500" style={{ fontFamily: "Inter, sans-serif" }}>
                   Remember your password?{" "}
-                  <Link href="/auth/login" className="text-[#5F7E9D] font-medium hover:underline">
+                  <Link href="/auth/login" className="text-[#260900] font-medium hover:underline">
                     Sign in
                   </Link>
                 </p>

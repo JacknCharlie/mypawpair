@@ -64,16 +64,16 @@ export function CaregiverSignUpForm({
 
       <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
         <div className="px-8 pt-8 pb-2">
-          {/* Provider application badge */}
+          {/* Caregiver badge */}
           <div className="inline-flex items-center gap-2 bg-[#5F7E9D]/10 text-[#5F7E9D] text-xs font-medium px-3 py-1.5 rounded-full mb-4">
             <span>🐾</span>
-            <span style={{ fontFamily: "Inter, sans-serif" }}>Care provider application</span>
+            <span style={{ fontFamily: "Inter, sans-serif" }}>Caregiver Application</span>
           </div>
           <h1
-            className="text-[#2F3E4E] text-2xl font-semibold mb-1"
+            className="text-[#260900] text-2xl font-semibold mb-1"
             style={{ fontFamily: "var(--font-modern-sans), ui-sans-serif, system-ui, sans-serif" }}
           >
-            Become a myPawPair care provider
+            Become a myPawPair Caregiver
           </h1>
           <p className="text-gray-500 text-sm" style={{ fontFamily: "Inter, sans-serif" }}>
             Apply to join our trusted network of dog care professionals
@@ -83,7 +83,7 @@ export function CaregiverSignUpForm({
         <div className="px-8 pb-8 pt-6">
           <form onSubmit={handleSignUp} className="flex flex-col gap-5">
             <div className="flex flex-col gap-1.5">
-              <Label htmlFor="full-name" className="text-[#2F3E4E] text-sm font-medium">
+              <Label htmlFor="full-name" className="text-[#260900] text-sm font-medium">
                 Full Name
               </Label>
               <Input
@@ -98,7 +98,7 @@ export function CaregiverSignUpForm({
             </div>
 
             <div className="flex flex-col gap-1.5">
-              <Label htmlFor="email" className="text-[#2F3E4E] text-sm font-medium">
+              <Label htmlFor="email" className="text-[#260900] text-sm font-medium">
                 Email
               </Label>
               <Input
@@ -113,7 +113,7 @@ export function CaregiverSignUpForm({
             </div>
 
             <div className="flex flex-col gap-1.5">
-              <Label htmlFor="password" className="text-[#2F3E4E] text-sm font-medium">
+              <Label htmlFor="password" className="text-[#260900] text-sm font-medium">
                 Password
               </Label>
               <Input
@@ -128,7 +128,7 @@ export function CaregiverSignUpForm({
             </div>
 
             <div className="flex flex-col gap-1.5">
-              <Label htmlFor="repeat-password" className="text-[#2F3E4E] text-sm font-medium">
+              <Label htmlFor="repeat-password" className="text-[#260900] text-sm font-medium">
                 Confirm Password
               </Label>
               <Input
@@ -149,13 +149,13 @@ export function CaregiverSignUpForm({
             )}
 
             {/* What happens next info box */}
-            <div className="bg-[#F6F2EA] rounded-xl px-4 py-3 flex flex-col gap-1">
-              <p className="text-[#2F3E4E] text-xs font-semibold" style={{ fontFamily: "Inter, sans-serif" }}>
+            <div className="bg-[#260900] rounded-xl px-4 py-3 flex flex-col gap-1">
+              <p className="text-[#fff] text-xs font-semibold" style={{ fontFamily: "Inter, sans-serif" }}>
                 What happens after you apply?
               </p>
-              <ul className="text-gray-500 text-xs space-y-1 mt-1" style={{ fontFamily: "Inter, sans-serif" }}>
+              <ul className="text-white text-xs space-y-1 mt-1" style={{ fontFamily: "Inter, sans-serif" }}>
                 <li>✓ Confirm your email address</li>
-                <li>✓ Complete your provider profile</li>
+                <li>✓ Complete your caregiver profile</li>
                 <li>✓ Our team reviews your application</li>
                 <li>✓ Get matched with dogs near you</li>
               </ul>
@@ -164,22 +164,22 @@ export function CaregiverSignUpForm({
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full h-11 bg-[#5F7E9D] text-white font-medium text-[16px] rounded-[10px] border-2 border-transparent hover:bg-white hover:text-[#5F7E9D] hover:border-[#5F7E9D] transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed mt-1"
+              className="btn-all-sign-in w-full h-11 bg-[#5F7E9D] text-white font-medium text-[16px] rounded-[10px] border-2 border-transparent hover:bg-white hover:text-[#5F7E9D] hover:border-[#5F7E9D] transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed mt-1"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
-              {isLoading ? "Submitting application..." : "Apply as care provider"}
+              {isLoading ? "Submitting application..." : "Apply as Caregiver"}
             </button>
 
             <p className="text-center text-sm text-gray-500" style={{ fontFamily: "Inter, sans-serif" }}>
               Looking for care instead?{" "}
-              <Link href="/auth/sign-up" className="text-[#5F7E9D] font-medium hover:underline">
+              <Link href="/auth/sign-up" className="text-[#260900] font-medium hover:underline">
                 Sign up as an Owner
               </Link>
             </p>
 
             <p className="text-center text-sm text-gray-500" style={{ fontFamily: "Inter, sans-serif" }}>
               Already have an account?{" "}
-              <Link href="/auth/login" className="text-[#5F7E9D] font-medium hover:underline">
+              <Link href="/auth/login" className="text-[#260900] font-medium hover:underline">
                 Sign in
               </Link>
             </p>

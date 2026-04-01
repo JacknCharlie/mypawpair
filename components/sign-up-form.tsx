@@ -65,20 +65,20 @@ export function SignUpForm({
       <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
         <div className="px-8 pt-8 pb-2">
           <h1
-            className="text-[#2F3E4E] text-2xl font-semibold mb-1"
+            className="text-[#260900] text-2xl font-semibold mb-1"
             style={{ fontFamily: "var(--font-modern-sans), ui-sans-serif, system-ui, sans-serif" }}
           >
             Find care for your dog
           </h1>
           <p className="text-gray-500 text-sm" style={{ fontFamily: "Inter, sans-serif" }}>
-            Create your owner account and get matched with trusted care providers
+            Create your owner account and get matched with trusted caregivers
           </p>
         </div>
 
         <div className="px-8 pb-8 pt-6">
           <form onSubmit={handleSignUp} className="flex flex-col gap-5">
             <div className="flex flex-col gap-1.5">
-              <Label htmlFor="full-name" className="text-[#2F3E4E] text-sm font-medium">
+              <Label htmlFor="full-name" className="text-[#260900] text-sm font-medium">
                 Full Name
               </Label>
               <Input
@@ -93,7 +93,7 @@ export function SignUpForm({
             </div>
 
             <div className="flex flex-col gap-1.5">
-              <Label htmlFor="email" className="text-[#2F3E4E] text-sm font-medium">
+              <Label htmlFor="email" className="text-[#260900] text-sm font-medium">
                 Email
               </Label>
               <Input
@@ -108,7 +108,7 @@ export function SignUpForm({
             </div>
 
             <div className="flex flex-col gap-1.5">
-              <Label htmlFor="password" className="text-[#2F3E4E] text-sm font-medium">
+              <Label htmlFor="password" className="text-[#260900] text-sm font-medium">
                 Password
               </Label>
               <Input
@@ -123,7 +123,7 @@ export function SignUpForm({
             </div>
 
             <div className="flex flex-col gap-1.5">
-              <Label htmlFor="repeat-password" className="text-[#2F3E4E] text-sm font-medium">
+              <Label htmlFor="repeat-password" className="text-[#260900] text-sm font-medium">
                 Confirm Password
               </Label>
               <Input
@@ -146,7 +146,7 @@ export function SignUpForm({
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full h-11 bg-[#5F7E9D] text-white font-medium text-[16px] rounded-[10px] border-2 border-transparent hover:bg-white hover:text-[#5F7E9D] hover:border-[#5F7E9D] transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed mt-1"
+              className="btn-all-sign-in w-full h-11 bg-[#5F7E9D] text-white font-medium text-[16px] rounded-[10px] border-2 border-transparent hover:bg-white hover:text-[#5F7E9D] hover:border-[#5F7E9D] transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed mt-1"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
               {isLoading ? "Creating account..." : "Create Owner Account"}
@@ -154,14 +154,14 @@ export function SignUpForm({
 
             <p className="text-center text-sm text-gray-500" style={{ fontFamily: "Inter, sans-serif" }}>
               Want to offer care instead?{" "}
-              <Link href="/auth/caregiver-signup" className="text-[#5F7E9D] font-medium hover:underline">
-                Apply as a care provider
+              <Link href="/auth/caregiver-signup" className="text-[#260900] font-medium hover:underline">
+                Apply as a Caregiver
               </Link>
             </p>
 
             <p className="text-center text-sm text-gray-500" style={{ fontFamily: "Inter, sans-serif" }}>
               Already have an account?{" "}
-              <Link href="/auth/login" className="text-[#5F7E9D] font-medium hover:underline">
+              <Link href="/auth/login" className="text-[#260900] font-medium hover:underline">
                 Sign in
               </Link>
             </p>
