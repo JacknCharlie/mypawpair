@@ -68,10 +68,10 @@ export function AdminOverviewPage({
     <div className="space-y-6 md:space-y-8" style={FONT}>
       {/* Header */}
       <div>
-        <h1 className="text-2xl md:text-3xl font-semibold text-[#2F3E4E] tracking-tight">
+        <h1 className="text-2xl md:text-3xl font-semibold text-[#260900] tracking-tight">
           Dashboard Overview
         </h1>
-        <p className="text-sm text-gray-500 mt-1">
+        <p className=" text-[#6B7280] text-sm text-gray-500 mt-1">
           Key metrics and performance at a glance
         </p>
       </div>
@@ -84,14 +84,14 @@ export function AdminOverviewPage({
         >
           <div className="flex items-start justify-between">
             <div>
-              <p className="text-xs font-medium text-gray-500 uppercase tracking-wider">Dogs</p>
-              <p className="text-2xl md:text-3xl font-semibold text-[#2F3E4E] mt-1">{stats.dogs}</p>
+              <p className="text-[#6B7280]text-xs font-medium text-gray-500 uppercase tracking-wider">Dogs</p>
+              <p className="text-2xl md:text-3xl font-semibold text-[#260900] mt-1">{stats.dogs}</p>
             </div>
             <div className="p-2.5 rounded-xl bg-amber-50 text-amber-600 group-hover:bg-amber-100 transition-colors">
               <PawPrint className="h-5 w-5 md:h-6 md:w-6" strokeWidth={2} />
             </div>
           </div>
-          <div className="mt-3 flex items-center text-xs text-[#5F7E9D] font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+          <div className="mt-3 flex items-center text-xs text-[#F3B443] font-medium opacity-0 group-hover:opacity-100 transition-opacity">
             View all <ChevronRight className="h-3.5 w-3.5 ml-0.5" />
           </div>
         </Link>
@@ -102,14 +102,14 @@ export function AdminOverviewPage({
         >
           <div className="flex items-start justify-between">
             <div>
-              <p className="text-xs font-medium text-gray-500 uppercase tracking-wider">Owners</p>
-              <p className="text-2xl md:text-3xl font-semibold text-[#2F3E4E] mt-1">{stats.owners}</p>
+              <p className="text-[#6B7280] text-xs font-medium text-gray-500 uppercase tracking-wider">Owners</p>
+              <p className="text-2xl md:text-3xl font-semibold text-[#260900] mt-1">{stats.owners}</p>
             </div>
             <div className="p-2.5 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-100 transition-colors">
               <UserCheck className="h-5 w-5 md:h-6 md:w-6" strokeWidth={2} />
             </div>
           </div>
-          <div className="mt-3 flex items-center text-xs text-[#5F7E9D] font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+          <div className="mt-3 flex items-center text-xs text-[#F3B443] font-medium opacity-0 group-hover:opacity-100 transition-opacity">
             View all <ChevronRight className="h-3.5 w-3.5 ml-0.5" />
           </div>
         </Link>
@@ -120,14 +120,14 @@ export function AdminOverviewPage({
         >
           <div className="flex items-start justify-between">
             <div>
-              <p className="text-xs font-medium text-gray-500 uppercase tracking-wider">Caregivers</p>
-              <p className="text-2xl md:text-3xl font-semibold text-[#2F3E4E] mt-1">{stats.caregivers}</p>
+              <p className="text-[#6B7280] text-xs font-medium text-gray-500 uppercase tracking-wider">Caregivers</p>
+              <p className="text-2xl md:text-3xl font-semibold text-[#260900] mt-1">{stats.caregivers}</p>
             </div>
             <div className="p-2.5 rounded-xl bg-emerald-50 text-emerald-600 group-hover:bg-emerald-100 transition-colors">
               <Heart className="h-5 w-5 md:h-6 md:w-6" strokeWidth={2} />
             </div>
           </div>
-          <div className="mt-3 flex items-center text-xs text-[#5F7E9D] font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+          <div className="mt-3 flex items-center text-xs text-[#F3B443] font-medium opacity-0 group-hover:opacity-100 transition-opacity">
             View all <ChevronRight className="h-3.5 w-3.5 ml-0.5" />
           </div>
         </Link>
@@ -138,14 +138,14 @@ export function AdminOverviewPage({
         >
           <div className="flex items-start justify-between">
             <div>
-              <p className="text-xs font-medium text-gray-500 uppercase tracking-wider">Matches</p>
-              <p className="text-2xl md:text-3xl font-semibold text-[#2F3E4E] mt-1">{stats.matches}</p>
+              <p className="text-[#6B7280] text-xs font-medium text-gray-500 uppercase tracking-wider">Matches</p>
+              <p className="text-2xl md:text-3xl font-semibold text-[#260900] mt-1">{stats.matches}</p>
             </div>
             <div className="p-2.5 rounded-xl bg-violet-50 text-violet-600 group-hover:bg-violet-100 transition-colors">
               <ArrowLeftRight className="h-5 w-5 md:h-6 md:w-6" strokeWidth={2} />
             </div>
           </div>
-          <div className="mt-3 flex items-center text-xs text-[#5F7E9D] font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+          <div className="mt-3 flex items-center text-xs text-[#F3B443] font-medium opacity-0 group-hover:opacity-100 transition-opacity">
             View all <ChevronRight className="h-3.5 w-3.5 ml-0.5" />
           </div>
         </Link>

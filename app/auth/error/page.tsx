@@ -53,7 +53,7 @@ export default function Page({
 
           <Link
             href="/auth/login"
-            className="btn-all-sign-in mt-2 w-full h-11 flex items-center justify-center bg-[#5F7E9D] text-white font-medium text-[16px] rounded-[10px] border-2 border-transparent hover:bg-white hover:text-[#5F7E9D] hover:border-[#5F7E9D] transition-all duration-300"
+            className="mt-2 w-full h-11 flex items-center justify-center bg-[#5F7E9D] text-white font-medium text-[16px] rounded-[10px] border-2 border-transparent hover:bg-white hover:text-[#5F7E9D] hover:border-[#5F7E9D] transition-all duration-300"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             Back to Sign In
