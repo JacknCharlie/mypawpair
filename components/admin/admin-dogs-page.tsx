@@ -746,7 +746,7 @@ export function AdminDogsPage({ initialDogs, owners }: Props) {
                         }
                         className={`flex-1 px-3 py-2 text-xs font-medium rounded-xl border transition-colors ${
                           form.size === s
-                            ? "bg-[#5F7E9D] text-white border-[#5F7E9D]"
+                            ? "bg-[#F3B443] text-white border-[#F3B443]"
                             : "bg-white text-gray-600 border-gray-200 hover:border-gray-300"
                         }`}
                         style={FONT}
@@ -791,7 +791,7 @@ export function AdminDogsPage({ initialDogs, owners }: Props) {
                       }
                       className={`w-10 h-10 rounded-xl text-sm font-medium border transition-colors ${
                         form.energy_level === n
-                          ? "bg-[#5F7E9D] text-white border-[#5F7E9D]"
+                          ? "bg-[#F3B443] text-white border-[#F3B443]"
                           : "bg-white text-gray-600 border-gray-200 hover:border-gray-300"
                       }`}
                       style={FONT}
@@ -865,7 +865,7 @@ export function AdminDogsPage({ initialDogs, owners }: Props) {
                       }
                       className={`flex-1 px-3 py-2 text-xs font-medium rounded-xl border transition-colors ${
                         form.availability === a
-                          ? "bg-[#5F7E9D] text-white border-[#5F7E9D]"
+                          ? "bg-[#F3B443] text-white border-[#F3B443]"
                           : "bg-white text-gray-600 border-gray-200 hover:border-gray-300"
                       }`}
                       style={FONT}
