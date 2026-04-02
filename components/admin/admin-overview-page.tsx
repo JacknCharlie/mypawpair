@@ -165,13 +165,13 @@ export function AdminOverviewPage({
             <div>
               <p className="text-lg font-semibold text-[#260900]">{topCaregiver.name}</p>
               <div className="mt-2 flex items-baseline gap-2">
-                <span className="text-2xl font-bold text-[#5F7E9D]">{topCaregiver.avg}</span>
+                <span className="text-2xl font-bold text-[#6B7280]">{topCaregiver.avg}</span>
                 <span className="text-sm text-gray-500">avg score / 25</span>
               </div>
               <p className="text-xs text-gray-500 mt-1">{topCaregiver.count} matches</p>
               <Link
                 href="/dashboard/admin/caregivers"
-                className="mt-4 inline-flex items-center text-sm font-medium text-[#5F7E9D] hover:underline"
+                className="mt-4 inline-flex items-center text-sm font-medium text-[#F3B443] hover:underline"
               >
                 View caregivers <ChevronRight className="h-4 w-4 ml-0.5" />
               </Link>
@@ -187,7 +187,7 @@ export function AdminOverviewPage({
             <div className="p-2 rounded-lg bg-emerald-100 text-emerald-600">
               <TrendingUp className="h-5 w-5" strokeWidth={2} />
             </div>
-            <h2 className="text-base font-semibold text-[#2F3E4E]">Match Quality</h2>
+            <h2 className="text-base font-semibold text-[#260900]">Match Quality</h2>
           </div>
           {totalTier > 0 ? (
             <div className="space-y-3">
@@ -221,7 +221,7 @@ export function AdminOverviewPage({
             <div className="p-2 rounded-lg bg-violet-100 text-violet-600">
               <ArrowLeftRight className="h-5 w-5" strokeWidth={2} />
             </div>
-            <h2 className="text-base font-semibold text-[#2F3E4E]">Match Status</h2>
+            <h2 className="text-base font-semibold text-[#260900]">Match Status</h2>
           </div>
           {totalStatus > 0 ? (
             <div className="space-y-3">
