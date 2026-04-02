@@ -205,7 +205,7 @@ export function AdminOwnersPage({ initialOwners }: Props) {
           <div className="overflow-x-auto">
             <table className="w-full min-w-[600px]">
               <thead>
-                <tr className="bg-[#5F7E9D] border-b border-gray-100">
+                <tr className="bg-[#260900] border-b border-gray-100">
                   {["Name", "City", "Phone", "Dogs", "Joined"].map((h) => (
                     <th
                       key={h}
