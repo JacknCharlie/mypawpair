@@ -287,7 +287,7 @@ export function AdminCaregiversPage({ initialCaregivers }: Props) {
           <div className="overflow-x-auto">
             <table className="w-full min-w-[750px]">
               <thead>
-                <tr className="bg-gray-50/80 border-b border-gray-100">
+                <tr className="bg-[#260900] border-b border-gray-100">
                   {[
                     "Name",
                     "City",
