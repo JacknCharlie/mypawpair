@@ -100,7 +100,7 @@ const SIZE_CHIP: Record<string, string> = {
 
 const INPUT =
   "w-full px-3 py-2 text-sm bg-white border border-gray-200 rounded-xl outline-none focus:border-[#5F7E9D] focus:ring-1 focus:ring-[#5F7E9D]/20 transition-all";
-const LABEL = "block text-xs font-medium text-gray-600 mb-1.5";
+const LABEL = "block text-xs font-medium text-[#260900] mb-1.5";
 const FONT = { fontFamily: "Inter, sans-serif" } as const;
 
 interface Props {
@@ -393,7 +393,7 @@ export function AdminDogsPage({ initialDogs, owners }: Props) {
                   ].map((h) => (
                     <th
                       key={h}
-                      className="text-left px-4 py-3 text-[11px] font-semibold text-gray-400 uppercase tracking-wider"
+                      className="text-left px-4 py-3 text-[11px] font-semibold text-[#260900] uppercase tracking-wider"
                       style={FONT}
                     >
                       {h}
@@ -632,7 +632,7 @@ export function AdminDogsPage({ initialDogs, owners }: Props) {
         <div className="flex justify-center pt-1">
           <button
             onClick={() => setShowCount((c) => c + 10)}
-            className="px-6 py-2.5 text-sm font-medium text-[#5F7E9D] bg-white border border-gray-200 rounded-xl hover:bg-gray-50 transition-colors"
+            className="px-6 py-2.5 text-sm font-medium text-[#F3B443] bg-white border-2 border-[#F3B443] rounded-xl hover:bg-gray-50 transition-colors"
             style={FONT}
           >
             View More · {filteredDogs.length - showCount} remaining
@@ -650,7 +650,7 @@ export function AdminDogsPage({ initialDogs, owners }: Props) {
           <div className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl max-h-[90vh] flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200">
             <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100 shrink-0">
               <h2
-                className="text-base font-semibold text-[#2F3E4E]"
+                className="text-base font-semibold text-[#260900]"
                 style={FONT}
               >
                 {modalMode === "add" ? "Add Dog" : "Edit Dog"}
