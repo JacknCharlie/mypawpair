@@ -253,7 +253,7 @@ export function AdminOverviewPage({
       {/* Recent Matches */}
       <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
         <div className="px-5 py-4 md:px-6 md:py-5 border-b border-gray-100 flex items-center justify-between">
-          <h2 className="text-base font-semibold text-[#2F3E4E]">Recent Matches</h2>
+          <h2 className="text-base font-semibold text-[#260900]">Recent Matches</h2>
           <Link
             href="/dashboard/admin/matches"
             className="text-sm font-medium text-[#5F7E9D] hover:underline flex items-center gap-1"
@@ -269,22 +269,22 @@ export function AdminOverviewPage({
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="bg-gray-50/80 border-b border-gray-100">
-                      <th className="text-left px-4 py-3 text-[11px] font-semibold text-gray-500 uppercase tracking-wider">
+                      <th className="text-left px-4 py-3 text-[11px] font-semibold text-[#260900] uppercase tracking-wider">
                         Dog
                       </th>
-                      <th className="text-left px-4 py-3 text-[11px] font-semibold text-gray-500 uppercase tracking-wider">
+                      <th className="text-left px-4 py-3 text-[11px] font-semibold text-[#260900] uppercase tracking-wider">
                         Caregiver
                       </th>
-                      <th className="text-left px-4 py-3 text-[11px] font-semibold text-gray-500 uppercase tracking-wider">
+                      <th className="text-left px-4 py-3 text-[11px] font-semibold text-[#260900] uppercase tracking-wider">
                         Score
                       </th>
-                      <th className="text-left px-4 py-3 text-[11px] font-semibold text-gray-500 uppercase tracking-wider">
+                      <th className="text-left px-4 py-3 text-[11px] font-semibold text-[#260900] uppercase tracking-wider">
                         Tier
                       </th>
-                      <th className="text-left px-4 py-3 text-[11px] font-semibold text-gray-500 uppercase tracking-wider">
+                      <th className="text-left px-4 py-3 text-[11px] font-semibold text-[#260900] uppercase tracking-wider">
                         Status
                       </th>
-                      <th className="text-left px-4 py-3 text-[11px] font-semibold text-gray-500 uppercase tracking-wider">
+                      <th className="text-left px-4 py-3 text-[11px] font-semibold text-[#260900] uppercase tracking-wider">
                         Date
                       </th>
                     </tr>
