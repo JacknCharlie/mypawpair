@@ -889,7 +889,7 @@ export function AdminDogsPage({ initialDogs, owners }: Props) {
                     }))
                   }
                   className={`relative w-11 h-6 rounded-full transition-colors ${
-                    form.special_needs ? "bg-[#5F7E9D]" : "bg-gray-300"
+                    form.special_needs ? "bg-[#F3B443]" : "bg-gray-300"
                   }`}
                 >
                   <div
