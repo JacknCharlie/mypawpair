@@ -798,7 +798,7 @@ export function AdminCaregiversPage({ initialCaregivers }: Props) {
               <button
                 onClick={() => setEditingRow(null)}
                 disabled={isSaving}
-                className="px-4 py-2 text-sm font-medium text-gray-600 bg-white border border-gray-200 rounded-xl hover:bg-gray-50 transition-colors disabled:opacity-50"
+                className="px-4 py-2 text-sm font-medium text-[#F3B443] bg-white border-2 border-[#F3B443] rounded-xl hover:bg-gray-50 transition-colors disabled:opacity-50"
                 style={FONT}
               >
                 Cancel
@@ -806,7 +806,7 @@ export function AdminCaregiversPage({ initialCaregivers }: Props) {
               <button
                 onClick={handleSave}
                 disabled={isSaving}
-                className="px-5 py-2 text-sm font-medium text-white bg-[#5F7E9D] rounded-xl hover:bg-[#4e6d8c] transition-colors disabled:opacity-50 flex items-center gap-2"
+                className="px-5 py-2 text-sm font-medium text-white bg-[#F3B443] border-2 border-[#F3B443] rounded-xl hover: transition-colors disabled:opacity-50 flex items-center gap-2"
                 style={FONT}
               >
                 {isSaving ? (
