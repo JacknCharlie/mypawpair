@@ -70,7 +70,7 @@ const SIZES = ["small", "medium", "large"];
 
 const INPUT =
   "w-full px-3 py-2 text-sm bg-white border border-gray-200 rounded-xl outline-none focus:border-[#5F7E9D] focus:ring-1 focus:ring-[#5F7E9D]/20 transition-all";
-const LABEL = "block text-xs font-medium text-gray-600 mb-1.5";
+const LABEL = "block text-xs font-medium text-[#260900] mb-1.5";
 const FONT = { fontFamily: "Inter, sans-serif" } as const;
 
 function fmtDate(d: string) {
