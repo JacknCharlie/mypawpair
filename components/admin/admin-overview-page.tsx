@@ -306,7 +306,7 @@ export function AdminOverviewPage({
                               m.tier === "high"
                                 ? "bg-emerald-50 text-emerald-700"
                                 : m.tier === "medium"
-                                  ? "bg-[#F3B443] text-white"
+                                  ? "bg-amber-50 text-amber-700"
                                   : "bg-rose-50 text-rose-600"
                             }`}
                           >
@@ -322,7 +322,7 @@ export function AdminOverviewPage({
                                   ? "bg-rose-50 text-rose-600"
                                   : m.status === "contacted"
                                     ? "bg-blue-50 text-blue-600"
-                                    : "bg-[#260900] text-white"
+                                    : "bg-gray-100 text-gray-600"
                             }`}
                           >
                             {cap(m.status)}
