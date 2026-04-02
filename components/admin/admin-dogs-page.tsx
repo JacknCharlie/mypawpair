@@ -877,7 +877,7 @@ export function AdminDogsPage({ initialDogs, owners }: Props) {
               </div>
 
               <div className="flex items-center justify-between">
-                <label className="text-xs font-medium text-gray-600" style={FONT}>
+                <label className="text-xs font-medium text-[#260900]" style={FONT}>
                   Special Needs
                 </label>
                 <button
