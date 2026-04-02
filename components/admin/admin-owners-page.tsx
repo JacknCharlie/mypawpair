@@ -183,11 +183,10 @@ export function AdminOwnersPage({ initialOwners }: Props) {
 
       {/* ── Count ── */}
       <div className="flex items-center justify-between">
-        <p className="text-xs text-gray-500" style={FONT}>
+        <p className="text-xs text-[#260900]" style={FONT}>
           {filtered.length === initialOwners.length
             ? `${initialOwners.length} ${initialOwners.length === 1 ? "owner" : "owners"}`
             : `${filtered.length} of ${initialOwners.length} owners`}
-        </p>
         {hasActiveFilters && (
           <button
             onClick={clearFilters}
@@ -572,7 +571,7 @@ function FilterCard({
   return (
     <div className="bg-white rounded-xl border border-gray-100 p-3.5">
       <p
-        className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider mb-2"
+        className="text-[11px] font-semibold text-[#260900] uppercase tracking-wider mb-2"
         style={FONT}
       >
         {label}
