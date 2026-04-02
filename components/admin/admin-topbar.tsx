@@ -63,7 +63,7 @@ export function AdminTopbar({ userName }: AdminTopbarProps) {
     <header className="sticky top-0 z-40 bg-white border-b border-gray-200 shrink-0">
       <div className="flex items-center justify-between h-16 px-4 md:px-6">
         <h1
-          className="text-lg font-semibold text-[#2F3E4E] truncate"
+          className="text-lg font-semibold text-[#260900] truncate"
           style={{ fontFamily: "Inter, sans-serif" }}
         >
           {heading}

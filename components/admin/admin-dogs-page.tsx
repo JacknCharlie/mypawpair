@@ -287,7 +287,7 @@ export function AdminDogsPage({ initialDogs, owners }: Props) {
         </div>
         <button
           onClick={openAddModal}
-          className="flex items-center gap-2 px-4 py-2.5 bg-[#5F7E9D] text-white text-sm font-medium rounded-xl hover:bg-[#4e6d8c] transition-colors shrink-0"
+          className="flex items-center gap-2 px-4 py-2.5 bg-[#F3B443] text-white text-sm font-medium rounded-xl hover:bg-[#d6a028] transition-colors shrink-0"
           style={FONT}
         >
           <Plus className="h-4 w-4" />
@@ -1090,7 +1090,7 @@ function Pill({
       onClick={onClick}
       className={`px-2.5 py-1 rounded-lg text-[11px] font-medium transition-colors ${
         active
-          ? "bg-[#5F7E9D] text-white"
+          ? "bg-[#F3B443] text-white"
           : "bg-gray-50 text-gray-500 hover:bg-gray-100"
       }`}
       style={FONT}
