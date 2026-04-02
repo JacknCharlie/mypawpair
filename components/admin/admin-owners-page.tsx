@@ -32,7 +32,7 @@ interface OwnerForm {
 const EMPTY_FORM: OwnerForm = { full_name: "", city: "", phone: "" };
 
 const INPUT =
-  "w-full px-3 py-2 text-sm bg-white border border-gray-200 rounded-xl outline-none focus:border-[#5F7E9D] focus:ring-1 focus:ring-[#5F7E9D]/20 transition-all";
+  "w-full px-3 py-2 text-sm bg-white border border-gray-200 rounded-xl outline-none focus:border-[#5F7E9D] focus:ring-1 focus:ring-[#260900]/20 transition-all";
 const LABEL = "block text-xs font-medium text-gray-600 mb-1.5";
 const FONT = { fontFamily: "Inter, sans-serif" } as const;
 
@@ -596,7 +596,7 @@ function Pill({
       onClick={onClick}
       className={`px-2.5 py-1 rounded-lg text-[11px] font-medium transition-colors ${
         active
-          ? "bg-[#5F7E9D] text-white"
+          ? "bg-[#F3B443] text-white"
           : "bg-gray-50 text-gray-500 hover:bg-gray-100"
       }`}
       style={FONT}
