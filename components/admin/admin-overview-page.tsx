@@ -159,11 +159,11 @@ export function AdminOverviewPage({
             <div className="p-2 rounded-lg bg-amber-100 text-amber-600">
               <Trophy className="h-5 w-5" strokeWidth={2} />
             </div>
-            <h2 className="text-base font-semibold text-[#2F3E4E]">Top Scorer</h2>
+            <h2 className="text-base font-semibold text-[#260900]">Top Scorer</h2>
           </div>
           {topCaregiver ? (
             <div>
-              <p className="text-lg font-semibold text-[#2F3E4E]">{topCaregiver.name}</p>
+              <p className="text-lg font-semibold text-[#260900]">{topCaregiver.name}</p>
               <div className="mt-2 flex items-baseline gap-2">
                 <span className="text-2xl font-bold text-[#5F7E9D]">{topCaregiver.avg}</span>
                 <span className="text-sm text-gray-500">avg score / 25</span>
