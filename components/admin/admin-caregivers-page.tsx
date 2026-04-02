@@ -305,7 +305,7 @@ export function AdminCaregiversPage({ initialCaregivers }: Props) {
                     </th>
                   ))}
                   <th
-                    className="text-right px-4 py-3 text-[11px] font-semibold text-gray-400 uppercase tracking-wider"
+                    className="text-right px-4 py-3 text-[11px] font-semibold text-[#fff] uppercase tracking-wider"
                     style={FONT}
                   >
                     Actions
