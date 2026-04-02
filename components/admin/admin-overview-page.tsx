@@ -295,10 +295,10 @@ export function AdminOverviewPage({
                         key={m.id}
                         className="border-b border-gray-50 last:border-0 hover:bg-gray-50/50 transition-colors"
                       >
-                        <td className="px-4 py-3 font-medium text-[#2F3E4E]">{m.dogName}</td>
-                        <td className="px-4 py-3 text-gray-600">{m.caregiverName}</td>
+                        <td className="px-4 py-3 font-medium text-[#6B7280]">{m.dogName}</td>
+                        <td className="px-4 py-3 text-[#6B7280]">{m.caregiverName}</td>
                         <td className="px-4 py-3">
-                          <span className="font-medium tabular-nums">{m.score}/25</span>
+                          <span className="font-medium tabular-nums text-[#6B7280]">{m.score}/25</span>
                         </td>
                         <td className="px-4 py-3">
                           <span
@@ -328,7 +328,7 @@ export function AdminOverviewPage({
                             {cap(m.status)}
                           </span>
                         </td>
-                        <td className="px-4 py-3 text-gray-500">{fmtDate(m.created_at)}</td>
+                        <td className="px-4 py-3 text-[#6B7280]">{fmtDate(m.created_at)}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -343,10 +343,10 @@ export function AdminOverviewPage({
                   >
                     <div className="flex items-start justify-between gap-2">
                       <div>
-                        <p className="font-medium text-[#2F3E4E]">{m.dogName}</p>
-                        <p className="text-sm text-gray-500">{m.caregiverName}</p>
+                        <p className="font-medium text-[#6B7280]">{m.dogName}</p>
+                        <p className="text-sm text-[#6B7280]">{m.caregiverName}</p>
                       </div>
-                      <span className="font-semibold text-[#5F7E9D] tabular-nums shrink-0">
+                      <span className="font-semibold text-[#6B7280] tabular-nums shrink-0">
                         {m.score}/25
                       </span>
                     </div>
@@ -376,7 +376,7 @@ export function AdminOverviewPage({
                         {cap(m.status)}
                       </span>
                     </div>
-                    <p className="text-xs text-gray-400 mt-1.5">{fmtDate(m.created_at)}</p>
+                    <p className="text-xs text-[#6B7280] mt-1.5">{fmtDate(m.created_at)}</p>
                   </div>
                 ))}
               </div>
