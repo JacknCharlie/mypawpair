@@ -306,7 +306,7 @@ export function AdminOverviewPage({
                               m.tier === "high"
                                 ? "bg-emerald-50 text-emerald-700"
                                 : m.tier === "medium"
-                                  ? "bg-amber-50 text-amber-700"
+                                  ? "bg-[#F3B443] text-white"
                                   : "bg-rose-50 text-rose-600"
                             }`}
                           >
@@ -356,7 +356,7 @@ export function AdminOverviewPage({
                           m.tier === "high"
                             ? "bg-emerald-50 text-emerald-700"
                             : m.tier === "medium"
-                              ? "bg-amber-50 text-amber-700"
+                              ? "bg-[#F3B443] text-white"
                               : "bg-rose-50 text-rose-600"
                         }`}
                       >
