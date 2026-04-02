@@ -256,7 +256,7 @@ export function AdminOverviewPage({
           <h2 className="text-base font-semibold text-[#260900]">Recent Matches</h2>
           <Link
             href="/dashboard/admin/matches"
-            className="text-sm font-medium text-[#5F7E9D] hover:underline flex items-center gap-1"
+            className="text-sm font-medium text-[#F3B443] hover:underline flex items-center gap-1"
           >
             View all <ChevronRight className="h-4 w-4" />
           </Link>
@@ -322,7 +322,7 @@ export function AdminOverviewPage({
                                   ? "bg-rose-50 text-rose-600"
                                   : m.status === "contacted"
                                     ? "bg-blue-50 text-blue-600"
-                                    : "bg-gray-100 text-gray-600"
+                                    : "bg-[#260900] text-white"
                             }`}
                           >
                             {cap(m.status)}
@@ -370,7 +370,7 @@ export function AdminOverviewPage({
                               ? "bg-rose-50 text-rose-600"
                               : m.status === "contacted"
                                 ? "bg-blue-50 text-blue-600"
-                                : "bg-gray-100 text-gray-600"
+                                : "bg-[#260900] text-white"
                         }`}
                       >
                         {cap(m.status)}
