@@ -901,7 +901,7 @@ function FilterCard({
   return (
     <div className="bg-white rounded-xl border border-gray-100 p-3.5">
       <p
-        className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider mb-2"
+        className="text-[11px] font-semibold text-[#260900] uppercase tracking-wider mb-2"
         style={FONT}
       >
         {label}
@@ -925,7 +925,7 @@ function Pill({
       onClick={onClick}
       className={`px-2.5 py-1 rounded-lg text-[11px] font-medium transition-colors ${
         active
-          ? "bg-[#5F7E9D] text-white"
+          ? "bg-[#F3B443] text-white"
           : "bg-gray-50 text-gray-500 hover:bg-gray-100"
       }`}
       style={FONT}
