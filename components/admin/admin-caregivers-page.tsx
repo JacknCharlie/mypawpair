@@ -298,7 +298,7 @@ export function AdminCaregiversPage({ initialCaregivers }: Props) {
                   ].map((h) => (
                     <th
                       key={h}
-                      className="text-left px-4 py-3 text-[11px] font-semibold text-gray-400 uppercase tracking-wider"
+                      className="text-left px-4 py-3 text-[11px] font-semibold text-[#fff] uppercase tracking-wider"
                       style={FONT}
                     >
                       {h}
