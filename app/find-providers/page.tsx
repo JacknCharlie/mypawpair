@@ -60,13 +60,13 @@ export default async function FindProvidersPage({
       <header className="w-full bg-[#F6F2EA] border-b border-black/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="find-main-wrapper flex items-center justify-between h-20">
-            <Link href="/">
+            <Link href="/" className="find-provider-logo">
               <Image
                 src="/logo.png"
                 alt="myPawPair"
                 width={200}
                 height={50}
-                className="find-provider-logo h-12 w-auto"
+                className="h-12 w-auto"
                 priority
               />
             </Link>
