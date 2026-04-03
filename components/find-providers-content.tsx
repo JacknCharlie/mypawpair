@@ -191,7 +191,7 @@ export function FindProvidersContent({
                   {p.phone && (
                     <a
                       href={`tel:${p.phone}`}
-                      className="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-[#5F7E9D] text-white text-sm font-medium rounded-xl hover:bg-[#4e6d8c] transition-colors"
+                      className="btn-all-sign-in inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-[#5F7E9D] text-white text-sm font-medium rounded-xl hover:bg-[#4e6d8c] transition-colors"
                     >
                       <Phone className="h-4 w-4" />
                       Call
