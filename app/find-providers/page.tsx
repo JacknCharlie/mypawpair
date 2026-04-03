@@ -59,18 +59,18 @@ export default async function FindProvidersPage({
     <div className="min-h-screen bg-[#F6F2EA]">
       <header className="w-full bg-[#F6F2EA] border-b border-black/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="find-main-wrapper flex items-center justify-between h-20">
             <Link href="/">
               <Image
                 src="/logo.png"
                 alt="myPawPair"
                 width={200}
                 height={50}
-                className="h-12 w-auto"
+                className="find-provider-logo h-12 w-auto"
                 priority
               />
             </Link>
-            <div className="flex items-center gap-4 md:gap-8">
+            <div className="find-provider-nav flex items-center gap-4 md:gap-8">
               <Link
                 href="/ask-ai"
                 className="btn-all-sign-in inline-flex items-center gap-2 px-4 py-2 bg-[#F3B443] text-white text-sm font-medium rounded-xl hover:transition-colors"
