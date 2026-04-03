@@ -47,7 +47,7 @@ const SIZES = ["small", "medium", "large"];
 
 const INPUT =
   "w-full px-3 py-2 text-sm bg-white border border-gray-200 rounded-xl outline-none focus:border-[#5F7E9D] focus:ring-1 focus:ring-[#5F7E9D]/20 transition-all";
-const LABEL = "block text-xs font-medium text-gray-600 mb-1.5";
+const LABEL = "block text-xs font-medium text-[#260900] mb-1.5";
 const FONT = { fontFamily: "Inter, sans-serif" } as const;
 
 function fmtDate(d: string) {
@@ -359,7 +359,7 @@ export function AdminUsersPage({ initialUsers, dogs }: Props) {
     <div className="space-y-5">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <h1
-          className="text-xl font-semibold text-[#2F3E4E]"
+          className="text-xl font-semibold text-[#260900]"
           style={FONT}
         >
           Users
@@ -408,7 +408,7 @@ export function AdminUsersPage({ initialUsers, dogs }: Props) {
         {hasActiveFilters && (
           <button
             onClick={clearFilters}
-            className="text-sm text-[#5F7E9D] hover:underline"
+            className="text-sm text-[#F3B443] hover:underline"
             style={FONT}
           >
             Clear filters
@@ -420,23 +420,23 @@ export function AdminUsersPage({ initialUsers, dogs }: Props) {
       <div className="hidden md:block overflow-x-auto rounded-2xl border border-gray-200 bg-white">
         <table className="w-full text-sm" style={FONT}>
           <thead>
-            <tr className="border-b border-gray-100">
-              <th className="text-left px-4 py-3 font-medium text-gray-600">
+            <tr className="bg-[#260900] border-b border-gray-100">
+              <th className="text-left px-4 py-3 font-medium text-[#fff]">
                 Name
               </th>
-              <th className="text-left px-4 py-3 font-medium text-gray-600">
+              <th className="text-left px-4 py-3 font-medium text-[#fff]">
                 Email
               </th>
-              <th className="text-left px-4 py-3 font-medium text-gray-600">
+              <th className="text-left px-4 py-3 font-medium text-[#fff]">
                 Role
               </th>
-              <th className="text-left px-4 py-3 font-medium text-gray-600">
+              <th className="text-left px-4 py-3 font-medium text-[#fff]">
                 City
               </th>
-              <th className="text-left px-4 py-3 font-medium text-gray-600">
+              <th className="text-left px-4 py-3 font-medium text-[#fff]">
                 Joined
               </th>
-              <th className="text-right px-4 py-3 font-medium text-gray-600">
+              <th className="text-right px-4 py-3 font-medium text-[#fff]">
                 Actions
               </th>
             </tr>
@@ -525,7 +525,7 @@ export function AdminUsersPage({ initialUsers, dogs }: Props) {
                 <div className="flex gap-2 mt-3">
                   <button
                     onClick={() => openEdit(u)}
-                    className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 text-sm font-medium text-[#5F7E9D] bg-[#5F7E9D]/10 rounded-xl"
+                    className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 text-sm font-medium bg-[#F3B443] text-white border-[#F3B443] rounded-xl"
                     style={FONT}
                   >
                     <Pencil className="h-3.5 w-3.5" />
@@ -1088,7 +1088,7 @@ export function AdminUsersPage({ initialUsers, dogs }: Props) {
           />
           <div className="relative w-full max-w-md bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200">
             <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100">
-              <h2 className="text-base font-semibold text-[#2F3E4E]" style={FONT}>
+              <h2 className="text-base font-semibold text-[#260900]" style={FONT}>
                 Edit User
               </h2>
               <button
@@ -1105,7 +1105,7 @@ export function AdminUsersPage({ initialUsers, dogs }: Props) {
                   {error}
                 </div>
               )}
-              <p className="text-sm text-gray-500">{editingUser.email}</p>
+              <p className="text-sm text-[#260900]">{editingUser.email}</p>
               <div>
                 <label className={LABEL} style={FONT}>Full Name *</label>
                 <input
