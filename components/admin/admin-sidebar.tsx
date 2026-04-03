@@ -55,14 +55,14 @@ export function AdminSidebar() {
               href={item.href}
               className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-[13px] font-medium transition-colors ${
                 isActive
-                  ? "bg-[#5F7E9D]/10 text-[#5F7E9D]"
+                  ? "bg-[rgba(243,180,67,0.5)] text-[#260900]"
                   : "text-gray-500 hover:bg-gray-50 hover:text-gray-800"
               }`}
               style={{ fontFamily: "Inter, sans-serif" }}
             >
               <Icon
                 className={`h-[18px] w-[18px] shrink-0 ${
-                  isActive ? "text-[#5F7E9D]" : "text-gray-400"
+                  isActive ? "text-[#260900]" : "text-gray-400"
                 }`}
               />
               {item.label}
