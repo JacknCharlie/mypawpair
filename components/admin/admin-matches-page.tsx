@@ -786,7 +786,7 @@ export function AdminMatchesPage({ initialMatches, dogs, caregivers }: Props) {
               </div>
 
               <div>
-                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3" style={FONT}>
+                <p className="text-xs font-semibold text-[#260900] uppercase tracking-wider mb-3" style={FONT}>
                   Match Status
                 </p>
                 <div className="flex gap-2">
