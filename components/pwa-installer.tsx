@@ -66,10 +66,10 @@ export function PWAInstaller() {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 transition-all duration-300">
-      <div className="bg-white shadow-2xl border-t-2 border-[#5F7E9D]">
+      <div className="bg-white shadow-2xl border-t-2 border-[#F3B443]">
         {/* Header - Always visible */}
         <div 
-          className="bg-[#5F7E9D] px-4 py-3 flex items-center justify-between cursor-pointer"
+          className="bg-[#F3B443] px-4 py-3 flex items-center justify-between cursor-pointer"
           onClick={toggleCollapse}
         >
           <div className="flex items-center gap-3">
@@ -113,7 +113,7 @@ export function PWAInstaller() {
           <div className="px-4 py-4 bg-white">
             {showAndroidPrompt && (
               <>
-                <p className="text-[#2F3E4E] font-semibold text-base mb-2">
+                <p className="text-[#260900] !font-['Modern_Sans'] font-semibold text-base mb-2">
                   Get the Best Experience
                 </p>
                 <p className="text-gray-600 text-sm mb-4 leading-relaxed">
@@ -122,7 +122,7 @@ export function PWAInstaller() {
                 <div className="flex flex-col gap-3">
                   <button
                     onClick={handleInstall}
-                    className="w-full py-3.5 bg-[#5F7E9D] text-white rounded-xl text-base font-semibold hover:bg-[#4e6b87] transition-all shadow-md active:scale-95"
+                    className="w-full py-3.5 bg-[#F3B443] !font-['Modern_Sans'] text-white rounded-xl text-base font-semibold hover:transition-all shadow-md active:scale-95"
                   >
                     🐾 Install myPawPair App
                   </button>
