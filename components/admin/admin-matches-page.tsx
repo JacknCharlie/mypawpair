@@ -633,7 +633,7 @@ export function AdminMatchesPage({ initialMatches, dogs, caregivers }: Props) {
                             }
                             className={`w-8 h-8 rounded-lg text-xs font-medium border transition-colors ${
                               createForm[key] === n
-                                ? "bg-[#5F7E9D] text-white border-[#5F7E9D]"
+                                ? "bg-[#F3B443] text-white border-[#F3B443]"
                                 : "bg-white text-gray-500 border-gray-200 hover:border-gray-300"
                             }`}
                             style={FONT}
@@ -661,7 +661,7 @@ export function AdminMatchesPage({ initialMatches, dogs, caregivers }: Props) {
                       }
                       className={`flex-1 px-3 py-2 text-xs font-medium rounded-xl border transition-colors ${
                         createForm.match_status === s
-                          ? "bg-[#5F7E9D] text-white border-[#5F7E9D]"
+                          ? "bg-[#F3B443] text-white border-[#F3B443]"
                           : "bg-white text-gray-600 border-gray-200 hover:border-gray-300"
                       }`}
                       style={FONT}
@@ -677,7 +677,7 @@ export function AdminMatchesPage({ initialMatches, dogs, caregivers }: Props) {
               <button
                 onClick={() => setCreateOpen(false)}
                 disabled={isSaving}
-                className="px-4 py-2 text-sm font-medium text-gray-600 bg-white border border-gray-200 rounded-xl hover:bg-gray-50 transition-colors disabled:opacity-50"
+                className="px-4 py-2 text-sm font-medium text-[#F3B443] bg-white border-2 border-[#F3B443] rounded-xl hover:bg-gray-50 transition-colors disabled:opacity-50"
                 style={FONT}
               >
                 Cancel
@@ -685,7 +685,7 @@ export function AdminMatchesPage({ initialMatches, dogs, caregivers }: Props) {
               <button
                 onClick={handleCreate}
                 disabled={isSaving}
-                className="px-5 py-2 text-sm font-medium text-white bg-[#5F7E9D] rounded-xl hover:bg-[#4e6d8c] transition-colors disabled:opacity-50 flex items-center gap-2"
+                className="px-5 py-2 text-sm font-medium text-white bg-[#F3B443] border-2 border-[#F3B443] rounded-xl hover:transition-colors disabled:opacity-50 flex items-center gap-2"
                 style={FONT}
               >
                 {isSaving ? (
@@ -712,7 +712,7 @@ export function AdminMatchesPage({ initialMatches, dogs, caregivers }: Props) {
           <div className="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl max-h-[90vh] flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200">
             <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100 shrink-0">
               <div>
-                <h2 className="text-base font-semibold text-[#2F3E4E]" style={FONT}>
+                <h2 className="text-base font-semibold text-[#260900]" style={FONT}>
                   Edit Match
                 </h2>
                 <p className="text-xs text-gray-400 mt-0.5" style={FONT}>
@@ -757,7 +757,7 @@ export function AdminMatchesPage({ initialMatches, dogs, caregivers }: Props) {
                             onClick={() => setForm((f) => ({ ...f, [key]: f[key] === n ? null : n }))}
                             className={`w-8 h-8 rounded-lg text-xs font-medium border transition-colors ${
                               form[key] === n
-                                ? "bg-[#5F7E9D] text-white border-[#5F7E9D]"
+                                ? "bg-[#F3B443] text-white border-[#F3B443]"
                                 : "bg-white text-gray-500 border-gray-200 hover:border-gray-300"
                             }`}
                             style={FONT}
@@ -797,7 +797,7 @@ export function AdminMatchesPage({ initialMatches, dogs, caregivers }: Props) {
                       onClick={() => setForm((f) => ({ ...f, match_status: s }))}
                       className={`flex-1 px-3 py-2 text-xs font-medium rounded-xl border transition-colors ${
                         form.match_status === s
-                          ? "bg-[#5F7E9D] text-white border-[#5F7E9D]"
+                          ? "bg-[#F3B443] text-white border-[#F3B443]"
                           : "bg-white text-gray-600 border-gray-200 hover:border-gray-300"
                       }`}
                       style={FONT}
