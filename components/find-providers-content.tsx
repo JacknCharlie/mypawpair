@@ -168,7 +168,7 @@ export function FindProvidersContent({
                     {p.email && (
                       <a
                         href={`mailto:${p.email}`}
-                        className="flex items-center gap-2 text-[#F3B443] hover:underline"
+                        className="flex items-center gap-2 text-[#F3B443] break-all hover:underline"
                       >
                         <Mail className="h-4 w-4" />
                         {p.email}
