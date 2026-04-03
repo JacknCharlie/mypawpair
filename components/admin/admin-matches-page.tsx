@@ -611,7 +611,7 @@ export function AdminMatchesPage({ initialMatches, dogs, caregivers }: Props) {
               </div>
 
               <div>
-                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3" style={FONT}>
+                <p className="text-xs font-semibold text-[#260900] uppercase tracking-wider mb-3" style={FONT}>
                   Score Breakdown
                 </p>
                 <div className="space-y-3">
@@ -648,7 +648,7 @@ export function AdminMatchesPage({ initialMatches, dogs, caregivers }: Props) {
               </div>
 
               <div>
-                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3" style={FONT}>
+                <p className="text-xs font-semibold text-[#260900] uppercase tracking-wider mb-3" style={FONT}>
                   Match Status
                 </p>
                 <div className="flex gap-2">
@@ -715,7 +715,7 @@ export function AdminMatchesPage({ initialMatches, dogs, caregivers }: Props) {
                 <h2 className="text-base font-semibold text-[#260900]" style={FONT}>
                   Edit Match
                 </h2>
-                <p className="text-xs text-gray-400 mt-0.5" style={FONT}>
+                <p className="text-xs text-[#260900] mt-0.5" style={FONT}>
                   {editingMatch.dog?.name ?? "Dog"} →{" "}
                   {editingMatch.caregiver?.caregiver_user?.full_name ?? "Caregiver"}
                 </p>
@@ -740,13 +740,13 @@ export function AdminMatchesPage({ initialMatches, dogs, caregivers }: Props) {
               )}
 
               <div>
-                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3" style={FONT}>
+                <p className="text-xs font-semibold text-[#260900] uppercase tracking-wider mb-3" style={FONT}>
                   Score Breakdown
                 </p>
                 <div className="space-y-3">
                   {SCORE_FIELDS.map(({ key, label }) => (
                     <div key={key} className="flex items-center justify-between gap-4">
-                      <label className="text-xs font-medium text-gray-600 w-24 shrink-0" style={FONT}>
+                      <label className="text-xs font-medium text-[#260900] w-24 shrink-0" style={FONT}>
                         {label}
                       </label>
                       <div className="flex gap-1">
