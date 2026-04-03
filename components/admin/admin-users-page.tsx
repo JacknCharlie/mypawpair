@@ -713,7 +713,7 @@ export function AdminUsersPage({ initialUsers, dogs }: Props) {
                   {createForm.role === "owner" && (
                     <>
                       <div className="border-t border-gray-100 pt-5">
-                        <h3 className="text-sm font-medium text-[#2F3E4E] mb-3" style={FONT}>
+                        <h3 className="text-sm font-medium text-[#260900] mb-3" style={FONT}>
                           Assign Dogs
                         </h3>
                         <div className="space-y-2 max-h-32 overflow-y-auto">
@@ -754,7 +754,7 @@ export function AdminUsersPage({ initialUsers, dogs }: Props) {
                               showNewDog: !f.showNewDog,
                             }))
                           }
-                          className="mt-2 text-sm font-medium text-[#5F7E9D] hover:underline"
+                          className="mt-2 text-sm font-medium text-[#F3B443] hover:underline"
                           style={FONT}
                         >
                           + Create Dog
@@ -1169,7 +1169,7 @@ export function AdminUsersPage({ initialUsers, dogs }: Props) {
               <button
                 onClick={() => setEditingUser(null)}
                 disabled={isSaving}
-                className="px-4 py-2 text-sm font-medium text-gray-600 bg-white border border-gray-200 rounded-xl hover:bg-gray-50 transition-colors disabled:opacity-50"
+                className="px-4 py-2 text-sm font-medium text-[#F3B443] bg-white border-2 border-[#F3B443] rounded-xl hover:transition-colors disabled:opacity-50"
                 style={FONT}
               >
                 Cancel
@@ -1177,7 +1177,7 @@ export function AdminUsersPage({ initialUsers, dogs }: Props) {
               <button
                 onClick={handleSaveEdit}
                 disabled={isSaving}
-                className="px-5 py-2 text-sm font-medium text-white bg-[#5F7E9D] rounded-xl hover:bg-[#4e6d8c] transition-colors disabled:opacity-50 flex items-center gap-2"
+                className="px-5 py-2 text-sm font-medium text-white bg-[#F3B443] border-2 border-[#F3B443]  rounded-xl hover:bg-[#4e6d8c] transition-colors disabled:opacity-50 flex items-center gap-2"
                 style={FONT}
               >
                 {isSaving ? (
