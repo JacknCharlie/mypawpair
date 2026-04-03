@@ -56,13 +56,13 @@ export function AdminSidebar() {
               className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-[13px] font-medium transition-colors ${
                 isActive
                   ? "bg-[rgba(243,180,67,0.5)] text-[#260900]"
-                  : " hover:!bg-[rgba(243,180,67,0.5)] hover:text-[#260900]"
+                  : "hover:!bg-[rgba(243,180,67,0.5)] hover:text-[#260900]"
               }`}
               style={{ fontFamily: "Inter, sans-serif" }}
             >
               <Icon
                 className={`h-[18px] w-[18px] shrink-0 ${
-                  isActive ? "text-[#260900]" : "text-gray-400"
+                  isActive ? "text-[#260900]" : "text-[#260900]"
                 }`}
               />
               {item.label}
