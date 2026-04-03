@@ -70,7 +70,7 @@ export function FindProvidersContent({
           </div>
           <Link
             href="/ask-ai"
-            className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-[#F3B443] text-white font-medium rounded-xl hover:bg-[#4e6d8c] transition-colors shrink-0"
+            className="btn-all-sign-in inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-[#F3B443] text-white font-medium rounded-xl hover:bg-[#4e6d8c] transition-colors shrink-0"
           >
             <Sparkles className="h-4 w-4" />
             ASK AI
@@ -79,10 +79,10 @@ export function FindProvidersContent({
       </div>
 
       {/* Filters */}
-      <div className="bg-white border-2 border-[#F3B443] rounded-2xl border border-gray-100 p-4 shadow-sm">
+      <div className="bg-white border-2 border-[#F3B443] rounded-2xl p-4 shadow-sm">
         <div className="flex flex-col sm:flex-row gap-4">
           <div className="flex-1">
-            <label className="block text-xs font-medium text-gray-600 mb-2" style={FONT}>
+            <label className="block text-xs !font-['Modern_Sans'] font-semibold text-[#260900] mb-2" style={FONT}>
               Category
             </label>
             <select
@@ -98,7 +98,7 @@ export function FindProvidersContent({
             </select>
           </div>
           <div className="flex-1">
-            <label className="block text-xs font-medium text-gray-600 mb-2" style={FONT}>
+            <label className="block text-xs !font-['Modern_Sans'] font-semibold text-[#260900] mb-2" style={FONT}>
               City
             </label>
             <input
@@ -112,7 +112,7 @@ export function FindProvidersContent({
           <div className="flex items-end">
             <button
               onClick={handleFilter}
-              className="w-full sm:w-auto px-6 py-2.5 bg-[#5F7E9D] text-white font-medium rounded-xl hover:bg-[#4e6d8c] transition-colors"
+              className="btn-all-sign-in w-full sm:w-auto px-6 py-2.5 bg-[#F3B443] text-white font-medium rounded-xl hover:transition-colors"
             >
               Filter
             </button>

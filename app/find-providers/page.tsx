@@ -73,7 +73,7 @@ export default async function FindProvidersPage({
             <div className="flex items-center gap-4 md:gap-8">
               <Link
                 href="/ask-ai"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-[#F3B443] text-white text-sm font-medium rounded-xl hover:transition-colors"
+                className="btn-all-sign-in inline-flex items-center gap-2 px-4 py-2 bg-[#F3B443] text-white text-sm font-medium rounded-xl hover:transition-colors"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
                 ASK AI
