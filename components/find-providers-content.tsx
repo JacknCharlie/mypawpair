@@ -53,24 +53,24 @@ export function FindProvidersContent({
   return (
     <div className="space-y-8">
       {/* ASK AI CTA */}
-      <div className="bg-gradient-to-r from-[#5F7E9D]/10 to-[#5F7E9D]/5 rounded-2xl border border-[#5F7E9D]/20 p-5">
+      <div className=" bg-white border-2 border-[#F3B443] rounded-2xl border border-[#5F7E9D]/20 p-5">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-[#5F7E9D] flex items-center justify-center">
+            <div className="w-10 h-10 rounded-xl bg-[#F3B443] flex items-center justify-center">
               <Sparkles className="h-5 w-5 text-white" />
             </div>
             <div>
-              <h3 className="font-semibold text-[#2F3E4E]" style={FONT}>
+              <h3 className="!font-['Modern_Sans'] font-semibold text-[#260900]" style={FONT}>
                 Not sure what you need?
               </h3>
-              <p className="text-sm text-gray-500" style={FONT}>
+              <p className="text-sm text-[#4A5563] font-medium" style={FONT}>
                 Ask our AI assistant for personalized recommendations
               </p>
             </div>
           </div>
           <Link
             href="/ask-ai"
-            className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-[#5F7E9D] text-white font-medium rounded-xl hover:bg-[#4e6d8c] transition-colors shrink-0"
+            className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-[#F3B443] text-white font-medium rounded-xl hover:bg-[#4e6d8c] transition-colors shrink-0"
           >
             <Sparkles className="h-4 w-4" />
             ASK AI
