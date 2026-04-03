@@ -132,12 +132,12 @@ export function FindProvidersContent({
           providers.map((p) => (
             <div
               key={p.id}
-              className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm hover:shadow-md transition-shadow"
+              className="bg-white border-2 border-[#F3B443] rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
                 <div>
                   <div className="flex items-center gap-2 mb-2">
-                    <h2 className="text-lg font-semibold text-[#2F3E4E]" style={FONT}>
+                    <h2 className="text-lg !font-['Modern_Sans'] font-semibold text-[#260900]" style={FONT}>
                       {p.business_name}
                     </h2>
                     <span className="text-xs font-medium px-2 py-1 rounded-full bg-amber-100 text-amber-700">
@@ -145,13 +145,13 @@ export function FindProvidersContent({
                     </span>
                   </div>
                   {(p.city || p.zip_code) && (
-                    <div className="flex items-center gap-2 text-sm text-gray-500 mb-2">
+                    <div className="flex items-center gap-2 text-sm text-[#4A5563] font-medium mb-2 font-inter">
                       <MapPin className="h-4 w-4 shrink-0" />
                       {[p.city, p.zip_code].filter(Boolean).join(", ")}
                     </div>
                   )}
                   {p.description && (
-                    <p className="text-sm text-gray-600 mb-3 line-clamp-2" style={FONT}>
+                    <p className="text-sm text-[#4A5563] font-medium font-inter mb-3 line-clamp-2" style={FONT}>
                       {p.description}
                     </p>
                   )}
@@ -159,7 +159,7 @@ export function FindProvidersContent({
                     {p.phone && (
                       <a
                         href={`tel:${p.phone}`}
-                        className="flex items-center gap-2 text-[#5F7E9D] hover:underline"
+                        className="flex items-center gap-2 text-[#F3B443] hover:underline"
                       >
                         <Phone className="h-4 w-4" />
                         {p.phone}
@@ -168,7 +168,7 @@ export function FindProvidersContent({
                     {p.email && (
                       <a
                         href={`mailto:${p.email}`}
-                        className="flex items-center gap-2 text-[#5F7E9D] hover:underline"
+                        className="flex items-center gap-2 text-[#F3B443] hover:underline"
                       >
                         <Mail className="h-4 w-4" />
                         {p.email}
@@ -179,7 +179,7 @@ export function FindProvidersContent({
                         href={p.website.startsWith("http") ? p.website : `https://${p.website}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-[#5F7E9D] hover:underline"
+                        className="flex items-center gap-2 text-[#F3B443] hover:underline"
                       >
                         <Globe className="h-4 w-4" />
                         Website
