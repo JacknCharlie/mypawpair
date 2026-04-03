@@ -145,7 +145,7 @@ export function FindProvidersContent({
                     </span>
                   </div>
                   {(p.city || p.zip_code) && (
-                    <div className="flex items-center gap-2 text-sm text-[#4A5563] font-medium mb-2 font-inter">
+                    <div className="flex items-center gap-2 text-sm text-[#F3B443] font-medium mb-2 font-inter">
                       <MapPin className="h-4 w-4 shrink-0" />
                       {[p.city, p.zip_code].filter(Boolean).join(", ")}
                     </div>
