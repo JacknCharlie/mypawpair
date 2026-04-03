@@ -132,7 +132,7 @@ export function FindProvidersContent({
           providers.map((p) => (
             <div
               key={p.id}
-              className="bg-white border-2 border-[#F3B443] rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+              className="same-grid-box bg-white border-2 border-[#F3B443] rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
                 <div>
