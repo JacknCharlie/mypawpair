@@ -329,12 +329,12 @@ export function AdminMatchesPage({ initialMatches, dogs, caregivers }: Props) {
           <div className="overflow-x-auto">
             <table className="w-full min-w-[800px]">
               <thead>
-                <tr className="bg-gray-50/80 border-b border-gray-100">
+                <tr className="bg-[#260900] border-b border-gray-100">
                   {["Dog", "Owner", "Caregiver", "Score", "Tier", "Status"].map(
                     (h) => (
                       <th
                         key={h}
-                        className="text-left px-4 py-3 text-[11px] font-semibold text-gray-400 uppercase tracking-wider"
+                        className="text-left px-4 py-3 text-[11px] font-semibold text-[#fff] uppercase tracking-wider"
                         style={FONT}
                       >
                         {h}
@@ -342,7 +342,7 @@ export function AdminMatchesPage({ initialMatches, dogs, caregivers }: Props) {
                     )
                   )}
                   <th
-                    className="text-right px-4 py-3 text-[11px] font-semibold text-gray-400 uppercase tracking-wider"
+                    className="text-right px-4 py-3 text-[11px] font-semibold text-[#fff] uppercase tracking-wider"
                     style={FONT}
                   >
                     Actions
@@ -528,7 +528,7 @@ export function AdminMatchesPage({ initialMatches, dogs, caregivers }: Props) {
         <div className="flex justify-center pt-1">
           <button
             onClick={() => setShowCount((c) => c + 10)}
-            className="px-6 py-2.5 text-sm font-medium text-[#5F7E9D] bg-white border border-gray-200 rounded-xl hover:bg-gray-50 transition-colors"
+            className="px-6 py-2.5 text-sm font-medium text-[#F3B443] bg-white border-2 border-[#F3B443] rounded-xl hover:bg-gray-50 transition-colors"
             style={FONT}
           >
             View More · {filtered.length - showCount} remaining
@@ -677,7 +677,7 @@ export function AdminMatchesPage({ initialMatches, dogs, caregivers }: Props) {
               <button
                 onClick={() => setCreateOpen(false)}
                 disabled={isSaving}
-                className="px-4 py-2 text-sm font-medium text-[#F3B443] bg-white border-2 border-[#F3B443] rounded-xl hover:bg-gray-50 transition-colors disabled:opacity-50"
+                className="px-4 py-2 text-sm font-medium !text-[#F3B443] !bg-white !border-2 !border-[#F3B443] rounded-xl hover:bg-gray-50 transition-colors disabled:opacity-50"
                 style={FONT}
               >
                 Cancel
@@ -685,7 +685,7 @@ export function AdminMatchesPage({ initialMatches, dogs, caregivers }: Props) {
               <button
                 onClick={handleCreate}
                 disabled={isSaving}
-                className="px-5 py-2 text-sm font-medium text-white bg-[#F3B443] border-2 border-[#F3B443] rounded-xl hover:transition-colors disabled:opacity-50 flex items-center gap-2"
+                className="px-5 py-2 text-sm font-medium !text-white !bg-[#F3B443] !border-2 !border-[#F3B443] rounded-xl hover:transition-colors disabled:opacity-50 flex items-center gap-2"
                 style={FONT}
               >
                 {isSaving ? (
@@ -944,7 +944,7 @@ function FilterCard({
   return (
     <div className="bg-white rounded-xl border border-gray-100 p-3.5">
       <p
-        className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider mb-2"
+        className="text-[11px] font-semibold text-[#260900] uppercase tracking-wider mb-2"
         style={FONT}
       >
         {label}
