@@ -139,7 +139,7 @@ export function AdminWaitlistPage({ initialWaitlist }: Props) {
                       <button
                         onClick={() => handleSendInvite(w.email)}
                         disabled={sending === w.email || sent.has(w.email)}
-                        className="inline-flex items-center gap-2 px-3 py-1.5 text-xs font-medium text-white bg-[#5F7E9D] rounded-xl hover:bg-[#4e6d8c] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="inline-flex items-center gap-2 px-3 py-1.5 text-xs font-medium text-white bg-[#F3B443] rounded-xl hover:bg-[#4e6d8c] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                         style={FONT}
                       >
                         {sending === w.email ? (
