@@ -1177,7 +1177,7 @@ export function AdminUsersPage({ initialUsers, dogs }: Props) {
               <button
                 onClick={handleSaveEdit}
                 disabled={isSaving}
-                className="px-5 py-2 text-sm font-medium text-white bg-[#F3B443] border-2 border-[#F3B443]  rounded-xl hover:bg-[#4e6d8c] transition-colors disabled:opacity-50 flex items-center gap-2"
+                className="px-5 py-2 text-sm font-medium text-white bg-[#F3B443] border-2 border-[#F3B443]  rounded-xl hover:transition-colors disabled:opacity-50 flex items-center gap-2"
                 style={FONT}
               >
                 {isSaving ? (
