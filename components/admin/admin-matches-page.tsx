@@ -272,7 +272,7 @@ export function AdminMatchesPage({ initialMatches, dogs, caregivers }: Props) {
               match_status: "suggested",
             });
           }}
-          className="flex items-center gap-2 px-4 py-2.5 text-sm font-medium text-white bg-[#5F7E9D] rounded-xl hover:bg-[#4e6d8c] transition-colors shrink-0"
+          className="flex items-center gap-2 px-4 py-2.5 text-sm font-medium bg-[#F3B443] text-white rounded-xl hover:bg-[#fff] text-[#fff] transition-colors shrink-0"
           style={FONT}
         >
           <Plus className="h-4 w-4" />
