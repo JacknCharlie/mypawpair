@@ -380,7 +380,7 @@ export function AdminDogsPage({ initialDogs, owners }: Props) {
           <div className="overflow-x-auto">
             <table className="w-full min-w-[720px]">
               <thead>
-                <tr className="bg-gray-50/80 border-b border-gray-100">
+                <tr className="bg-[#260900] border-b border-gray-100">
                   {[
                     "Name",
                     "Breed",
@@ -393,14 +393,14 @@ export function AdminDogsPage({ initialDogs, owners }: Props) {
                   ].map((h) => (
                     <th
                       key={h}
-                      className="text-left px-4 py-3 text-[11px] font-semibold text-[#260900] uppercase tracking-wider"
+                      className="text-left px-4 py-3 text-[11px] font-semibold text-white uppercase tracking-wider"
                       style={FONT}
                     >
                       {h}
                     </th>
                   ))}
                   <th
-                    className="text-right px-4 py-3 text-[11px] font-semibold text-gray-400 uppercase tracking-wider"
+                    className="text-right px-4 py-3 text-[11px] font-semibold text-white uppercase tracking-wider"
                     style={FONT}
                   >
                     Actions

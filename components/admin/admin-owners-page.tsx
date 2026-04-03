@@ -377,7 +377,7 @@ export function AdminOwnersPage({ initialOwners }: Props) {
         <div className="flex justify-center pt-1">
           <button
             onClick={() => setShowCount((c) => c + 10)}
-            className="px-6 py-2.5 text-sm font-medium text-[#5F7E9D] bg-white border border-gray-200 rounded-xl hover:bg-gray-50 transition-colors"
+            className="px-6 py-2.5 text-sm font-medium text-[#F3B443] bg-white border-2 border-[#F3B443] rounded-xl hover:bg-gray-50 transition-colors"
             style={FONT}
           >
             View More · {filtered.length - showCount} remaining
