@@ -80,7 +80,7 @@ export function AdminWaitlistPage({ initialWaitlist }: Props) {
 
       {/* ── Count ── */}
       <div className="flex items-center justify-between">
-        <p className="text-xs text-gray-500" style={FONT}>
+        <p className="text-xstext-[#260900] font-medium" style={FONT}>
           {filtered.length === initialWaitlist.length
             ? `${initialWaitlist.length} ${initialWaitlist.length === 1 ? "person" : "people"} on waitlist`
             : `${filtered.length} of ${initialWaitlist.length} on waitlist`}
@@ -103,11 +103,11 @@ export function AdminWaitlistPage({ initialWaitlist }: Props) {
           <div className="overflow-x-auto">
             <table className="w-full min-w-[500px]">
               <thead>
-                <tr className="bg-gray-50/80 border-b border-gray-100">
+                <tr className="bg-[#260900] border-b border-gray-100">
                   {["Email", "Joined", "Actions"].map((h) => (
                     <th
                       key={h}
-                      className="text-left px-4 py-3 text-[11px] font-semibold text-gray-400 uppercase tracking-wider"
+                      className="text-left px-4 py-3 text-[11px] font-semibold text-white uppercase tracking-wider"
                       style={FONT}
                     >
                       {h}
