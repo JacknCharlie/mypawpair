@@ -225,7 +225,16 @@
     color: #f3b443 !important;
 }
 
+.two-grid-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
 
+
+.two-grid-box .same-grid-box {
+    margin: 0px !important;
+}
 
  @media only screen and (max-width: 1199px) {
 .btn-same { padding: 11px 30px; font-size: 16px !important;}
@@ -245,6 +254,9 @@
 .banner-btn-same {
     flex-direction: column !important;
 }
+.two-grid-box .same-grid-box h2 {
+    font-size: 16px;
+}
  }
 
  @media only screen and (max-width: 767px) {
@@ -254,6 +266,7 @@
 br {  display: none;}
 .banner-btn-same {  flex-direction: row !important; ;}
 .find-main-wrapper .find-provider-logo img { width: 200px; object-fit: contain;}
+.two-grid-box { grid-template-columns: 1fr;}
 }
 
  @media only screen and (max-width: 639px) {
