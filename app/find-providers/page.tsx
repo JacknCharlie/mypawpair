@@ -73,21 +73,21 @@ export default async function FindProvidersPage({
             <div className="flex items-center gap-4">
               <Link
                 href="/ask-ai"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-[#F3B443] text-white text-sm font-medium rounded-xl hover:bg-[#4e6d8c] transition-colors"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-[#F3B443] text-white text-sm font-medium rounded-xl hover:transition-colors"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
                 ASK AI
               </Link>
               <Link
                 href="/auth/provider-signup"
-                className="text-[#5F7E9D] text-sm font-medium hover:underline"
+                className="text-[#260900] text-sm font-medium hover:underline"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
                 Become a service provider
               </Link>
               <Link
                 href="/auth/login"
-                className="text-[#5F7E9D] text-sm font-medium hover:underline"
+                className="text-[#260900] text-sm font-medium hover:underline"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
                 Sign in
