@@ -6,7 +6,7 @@ import { RouteProgressLine } from "@/components/route-progress-line";
 import "./globals.css";
 
 const APP_NAME = "myPawPair";
-const APP_TITLE = "myPawPair - Pet Care, Perfectly Matched";
+const APP_TITLE = "myPawPair - Meet the AI that knows your pet";
 const APP_DESCRIPTION =
   "myPawPair — compatibility-based dog care, starting local and built thoughtfully.";
 

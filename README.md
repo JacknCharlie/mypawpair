@@ -1,8 +1,8 @@
-![myPawPair — Pet care, perfectly matched.](app/opengraph-image.png)
+![myPawPair — Meet the AI that knows your pet.](app/opengraph-image.png)
 
 # myPawPair 🐾
 
-> **Pet care, perfectly matched.**  
+> **Meet the AI that knows your pet.**  
 > A compatibility-based dog care matchmaking platform that connects dog owners with trusted caregivers.
 
 ---

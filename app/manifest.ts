@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "myPawPair - Pet Care, Perfectly Matched",
+    name: "myPawPair - Meet the AI that knows your pet",
     short_name: "myPawPair",
     description:
       "Compatibility-based dog care, starting local and built thoughtfully.",

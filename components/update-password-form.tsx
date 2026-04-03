@@ -49,7 +49,7 @@ export function UpdatePasswordForm({
           <Image src="/logo.png" alt="myPawPair" width={160} height={40} className="h-12 w-auto" />
         </Link>
         <p className="text-[#2F3E4E] text-sm" style={{ fontFamily: "Inter, sans-serif" }}>
-          Pet care, perfectly matched.
+          Meet the AI that knows your pet.
         </p>
       </div>
 
