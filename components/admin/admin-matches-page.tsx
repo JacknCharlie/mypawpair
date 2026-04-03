@@ -968,7 +968,7 @@ function Pill({
       onClick={onClick}
       className={`px-2.5 py-1 rounded-lg text-[11px] font-medium transition-colors ${
         active
-          ? "bg-[#5F7E9D] text-white"
+          ? "bg-[#F3B443] text-white"
           : "bg-gray-50 text-gray-500 hover:bg-gray-100"
       }`}
       style={FONT}
