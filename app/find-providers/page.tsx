@@ -70,7 +70,7 @@ export default async function FindProvidersPage({
                 priority
               />
             </Link>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-8">
               <Link
                 href="/ask-ai"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-[#F3B443] text-white text-sm font-medium rounded-xl hover:transition-colors"
@@ -100,12 +100,12 @@ export default async function FindProvidersPage({
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="text-center mb-10">
           <h1
-            className="text-[#2F3E4E] text-[32px] md:text-[40px] font-semibold leading-[120%]"
+            className="!text-[#260900] !font-['Modern_Sans'] text-[24px] md:text-[40px] font-semibold leading-[120%]"
             style={{ fontFamily: "var(--font-modern-sans), ui-sans-serif, system-ui, sans-serif" }}
           >
             Find trusted service providers
           </h1>
-          <p className="text-gray-500 text-[16px] mt-2 max-w-xl mx-auto" style={{ fontFamily: "Inter, sans-serif" }}>
+          <p className="text-[#4A5563] text-[16px] mt-2 max-w-xl mx-auto" style={{ fontFamily: "Inter, sans-serif" }}>
             Groomers, trainers, vets, and more — verified by myPawPair
           </p>
         </div>
