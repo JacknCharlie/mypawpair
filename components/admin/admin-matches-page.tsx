@@ -545,7 +545,7 @@ export function AdminMatchesPage({ initialMatches, dogs, caregivers }: Props) {
           />
           <div className="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl max-h-[90vh] flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200">
             <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100 shrink-0">
-              <h2 className="text-base font-semibold text-[#2F3E4E]" style={FONT}>
+              <h2 className="text-base font-semibold text-[#260900]" style={FONT}>
                 Create Match
               </h2>
               <button
@@ -568,7 +568,7 @@ export function AdminMatchesPage({ initialMatches, dogs, caregivers }: Props) {
               )}
 
               <div>
-                <label className="block text-xs font-medium text-gray-600 mb-1.5" style={FONT}>
+                <label className="block text-xs font-medium text-[#260900] mb-1.5" style={FONT}>
                   Dog *
                 </label>
                 <select
@@ -590,7 +590,7 @@ export function AdminMatchesPage({ initialMatches, dogs, caregivers }: Props) {
               </div>
 
               <div>
-                <label className="block text-xs font-medium text-gray-600 mb-1.5" style={FONT}>
+                <label className="block text-xs font-medium text-[#260900] mb-1.5" style={FONT}>
                   Caregiver *
                 </label>
                 <select
@@ -617,7 +617,7 @@ export function AdminMatchesPage({ initialMatches, dogs, caregivers }: Props) {
                 <div className="space-y-3">
                   {SCORE_FIELDS.map(({ key, label }) => (
                     <div key={key} className="flex items-center justify-between gap-4">
-                      <label className="text-xs font-medium text-gray-600 w-24 shrink-0" style={FONT}>
+                      <label className="text-xs font-medium text-[#260900] w-24 shrink-0" style={FONT}>
                         {label}
                       </label>
                       <div className="flex gap-1">
