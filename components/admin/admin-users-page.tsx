@@ -1053,7 +1053,7 @@ export function AdminUsersPage({ initialUsers, dogs }: Props) {
                 <button
                   onClick={() => (setCreateOpen(false), resetCreateForm())}
                   disabled={isSaving}
-                  className="px-4 py-2 text-sm font-medium text-gray-600 text-[#F3B443] bg-white border-2 border-[#F3B443] rounded-xl hover:transition-colors disabled:opacity-50"
+                  className="px-4 py-2 text-sm font-medium  text-[#F3B443] bg-white border-2 border-[#F3B443] rounded-xl hover:transition-colors disabled:opacity-50"
                   style={FONT}
                 >
                   Cancel
