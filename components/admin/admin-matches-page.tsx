@@ -307,7 +307,7 @@ export function AdminMatchesPage({ initialMatches, dogs, caregivers }: Props) {
 
       {/* ── Count ── */}
       <div className="flex items-center justify-between">
-        <p className="text-xs text-gray-500" style={FONT}>
+        <p className="text-xs text-[#260900] font-medium" style={FONT}>
           {filtered.length === initialMatches.length
             ? `${initialMatches.length} ${initialMatches.length === 1 ? "match" : "matches"}`
             : `${filtered.length} of ${initialMatches.length} matches`}
@@ -315,7 +315,7 @@ export function AdminMatchesPage({ initialMatches, dogs, caregivers }: Props) {
         {hasActiveFilters && (
           <button
             onClick={clearFilters}
-            className="text-xs text-[#5F7E9D] font-medium hover:underline"
+            className="text-xs text-[#260900] font-medium hover:underline"
             style={FONT}
           >
             Clear filters
