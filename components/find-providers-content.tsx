@@ -79,7 +79,7 @@ export function FindProvidersContent({
       </div>
 
       {/* Filters */}
-      <div className="bg-white rounded-2xl border border-gray-100 p-4 shadow-sm">
+      <div className="bg-white border-2 border-[#F3B443] rounded-2xl border border-gray-100 p-4 shadow-sm">
         <div className="flex flex-col sm:flex-row gap-4">
           <div className="flex-1">
             <label className="block text-xs font-medium text-gray-600 mb-2" style={FONT}>
