@@ -366,7 +366,7 @@ export function AdminUsersPage({ initialUsers, dogs }: Props) {
         </h1>
         <button
           onClick={openCreate}
-          className="inline-flex items-center gap-2 px-4 py-2.5 text-sm font-medium text-white bg-[#5F7E9D] rounded-xl hover:bg-[#4e6d8c] transition-colors"
+          className="inline-flex items-center gap-2 px-4 py-2.5 text-sm font-medium bg-[#F3B443] text-white rounded-xl hover:transition-colors"
           style={FONT}
         >
           <Plus className="h-4 w-4" />
@@ -396,7 +396,7 @@ export function AdminUsersPage({ initialUsers, dogs }: Props) {
               className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${
                 (r === "All" && roleFilter === null) ||
                 (r !== "All" && roleFilter === r)
-                  ? "bg-[#5F7E9D] text-white"
+                  ? "bg-[#F3B443] text-white"
                   : "bg-white text-gray-600 border border-gray-200 hover:border-gray-300"
               }`}
               style={FONT}
