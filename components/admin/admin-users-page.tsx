@@ -1130,7 +1130,7 @@ export function AdminUsersPage({ initialUsers, dogs }: Props) {
                       }
                       className={`flex-1 px-3 py-2 text-xs font-medium rounded-xl border ${
                         editForm.role === r.value
-                          ? "bg-[#5F7E9D] text-white border-[#5F7E9D]"
+                          ? "bg-[#F3B443] text-white border-[#F3B443]"
                           : "bg-white text-gray-600 border-gray-200"
                       }`}
                       style={FONT}
