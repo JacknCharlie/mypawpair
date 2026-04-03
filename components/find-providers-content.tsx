@@ -52,7 +52,6 @@ export function FindProvidersContent({
 
   return (
     <div className="space-y-8">
-      <div className="inner-two-top-box">
       {/* ASK AI CTA */}
       <div className=" bg-white border-2 border-[#F3B443] rounded-2xl border border-[#5F7E9D]/20 p-5">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -120,7 +119,6 @@ export function FindProvidersContent({
           </div>
         </div>
       </div>
-</div>
       {/* Results */}
       <div className="two-grid-box space-y-4">
         {providers.length === 0 ? (
