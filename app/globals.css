@@ -251,13 +251,11 @@
 .home-banner { height: auto !important;}
 .week-by-week-main .weekly-dots {  right: -49px;}
 .week-by-week-main .weekly-hands { right: -116px;}
-br {
-    display: none;
+br {  display: none;}
+.banner-btn-same {  flex-direction: row !important; ;}
+.find-main-wrapper .find-provider-logo img { width: 200px; object-fit: contain;}
 }
-.banner-btn-same {
-    flex-direction: row !important; ;
-}
- }
+
  @media only screen and (max-width: 639px) {
 .footer-inputs-btn {  margin-left: 0px !important;}
 .footer-inputs-btn {  margin-left: 0px !important;}
@@ -266,7 +264,11 @@ footer#contact .footer-inputs-btn {
 }
 .btn-same { padding: 12px 42px; font-size: 16px !important;}
 .btn-ext { padding: 12px 42px;  font-size: 16px !important;}
-.banner-btn-same {
-    flex-direction: column !important;
-}
+.banner-btn-same {  flex-direction: column !important;}
+ }
+
+
+ @media only screen and (max-width:599px) {
+ .find-main-wrapper { flex-direction: column;  padding: 20px 0px;  height: auto;}
+ .btn-all-sign-in { font-size: 14px!important;}
  }
