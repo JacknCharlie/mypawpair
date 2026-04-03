@@ -121,7 +121,7 @@ export function FindProvidersContent({
       </div>
 
       {/* Results */}
-      <div className="space-y-4">
+      <div className="two-grid-box space-y-4">
         {providers.length === 0 ? (
           <div className="bg-white rounded-2xl border border-gray-100 p-12 text-center">
             <p className="text-gray-500" style={FONT}>
