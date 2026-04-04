@@ -93,7 +93,7 @@ export function AccountSettingsForm({
             key={tab.id}
             type="button"
             onClick={() => setActiveTab(tab.id)}
-            className={`flex-1 flex items-center justify-center gap-2 h-10 rounded-xl text-sm font-medium transition-all duration-200 ${
+            className={`flex-1 flex items-center justify-center gap-2 h-10 rounded-xl text-sm font-medium transition-all duration-200 font-modern  ${
               activeTab === tab.id
                 ? tab.id === "danger"
                   ? "bg-red-50 text-red-600 shadow-sm"
@@ -102,7 +102,7 @@ export function AccountSettingsForm({
                 ? "text-red-400 hover:text-red-500"
                 : "text-gray-500 hover:text-[#2F3E4E]"
             }`}
-            style={{ fontFamily: "Inter, sans-serif" }}
+          
           >
             <span className="hidden sm:inline">{tab.icon}</span>
             <span>{tab.label}</span>
