@@ -288,7 +288,7 @@ export function CaregiverProfileForm({ userId, existingProfile }: CaregiverProfi
                     onClick={() => toggle(services, s.value, setServices)}
                     className={`flex items-center gap-4 px-5 py-4 rounded-xl border-2 text-left transition-all ${
                       services.includes(s.value)
-                        ? "bg-[#5F7E9D]/5 border-[#5F7E9D]"
+                        ? "bg-[#5F7E9D]/5 border-[#F3B443]"
                         : "bg-white border-gray-200 hover:border-[#5F7E9D]/50"
                     }`}
                   >
@@ -307,7 +307,7 @@ export function CaregiverProfileForm({ userId, existingProfile }: CaregiverProfi
                     <div
                       className={`w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0 transition-all ${
                         services.includes(s.value)
-                          ? "bg-[#5F7E9D] border-[#5F7E9D] text-white"
+                          ? "bg-[#F3B443] border-[#F3B443] text-white"
                           : "border-gray-300"
                       }`}
                     >
