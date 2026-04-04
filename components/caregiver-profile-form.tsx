@@ -218,7 +218,7 @@ export function CaregiverProfileForm({ userId, existingProfile }: CaregiverProfi
           >
             {STEPS[step - 1].icon} {STEPS[step - 1].title}
           </h2>
-          <p className="text-[#6B7280] text-sm mt-1" style={{ fontFamily: "Inter, sans-serif" }}>
+          <p className="text-[#260900] text-sm mt-1 font-modern">
             {STEPS[step - 1].desc}
           </p>
         </div>
