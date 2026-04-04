@@ -267,7 +267,7 @@ export function CaregiverProfileForm({ userId, existingProfile }: CaregiverProfi
                     value={certifications}
                     onChange={(e) => setCertifications(e.target.value)}
                     placeholder="e.g. Pet First Aid"
-                    className="h-12 rounded-xl border-gray-200 focus:border-[#F3B443] text-[#2F3E4E]"
+                    className="h-12 rounded-xl border-gray-200 focus:border-[#F3B443] text-[#2F3E4E] focus-visible:ring-0"
                   />
                 </div>
               </div>
