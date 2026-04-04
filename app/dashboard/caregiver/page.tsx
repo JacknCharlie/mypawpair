@@ -127,7 +127,7 @@ async function CaregiverDashboard() {
       {/* Welcome header */}
       <div>
         <h1
-          className="text-[#2F3E4E] text-[32px] md:text-[40px] font-semibold leading-[120%]"
+          className="text-center !font-[modern-sans] text-[#260900] text-[32px] md:text-[40px] font-semibold leading-[120%]"
           style={{ fontFamily: "var(--font-modern-sans), ui-sans-serif, system-ui, sans-serif" }}
         >
           Welcome back{fullName ? `, ${fullName.split(" ")[0]}` : ""}! 🐾
