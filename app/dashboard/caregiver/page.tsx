@@ -184,7 +184,7 @@ async function CaregiverDashboard() {
           </div>
           <Link
             href="/dashboard/caregiver/matches"
-            className="mt-auto inline-flex items-center justify-center h-11 px-6 bg-[#260900] text-[#fff] font-medium text-[15px] rounded-[10px] border-2 border-transparent hover:bg-transparent hover:text-[#260900] hover:border-[#260900] transition-all duration-300 w-fit"
+            className="mt-auto inline-flex items-center justify-center h-11 px-6 bg-[#F3B443] text-[#fff] font-medium text-[15px] rounded-[10px] border-2 border-transparent hover:bg-transparent hover:text-[#F3B443] hover:border-[#F3B443] transition-all duration-300 w-fit"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             View Matches →
@@ -209,7 +209,7 @@ async function CaregiverDashboard() {
           </div>
           <Link
             href="/dashboard/caregiver/profile"
-            className="mt-auto inline-flex items-center justify-center h-11 px-6 bg-[#5F7E9D] text-white font-medium text-[15px] rounded-[10px] border-2 border-transparent hover:bg-white hover:text-[#5F7E9D] hover:border-[#5F7E9D] transition-all duration-300 w-fit"
+            className="mt-auto inline-flex items-center justify-center h-11 px-6 bg-[#260900] text-[#fff] font-medium text-[15px] rounded-[10px] border-2 border-transparent hover:bg-transparent hover:text-[#260900] hover:border-[#260900] transition-all duration-300 w-fit"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             Edit Profile →
