@@ -209,16 +209,16 @@ export function CaregiverProfileForm({ userId, existingProfile }: CaregiverProfi
 
         {/* Card header */}
         <div className="px-8 pt-8 pb-6 border-b border-gray-50">
-          <p className="text-[#260900] text-xs font-semibold uppercase tracking-widest mb-1 font-modern">
+          <p className="text-[#6B7280] text-xs font-semibold uppercase tracking-widest mb-1 font-inter">
             Step {step} of {STEPS.length}
           </p>
           <h2
-            className="text-[#6B7280] text-[26px] font-semibold leading-tight"
-            style={{ fontFamily: "var(--font-modern-sans), ui-sans-serif, system-ui, sans-serif" }}
+            className="text-[#260900] text-[26px] font-semibold leading-tight font-modern"
+          
           >
             {STEPS[step - 1].icon} {STEPS[step - 1].title}
           </h2>
-          <p className="text-gray-400 text-sm mt-1" style={{ fontFamily: "Inter, sans-serif" }}>
+          <p className="text-[#6B7280] text-sm mt-1" style={{ fontFamily: "Inter, sans-serif" }}>
             {STEPS[step - 1].desc}
           </p>
         </div>
@@ -230,8 +230,8 @@ export function CaregiverProfileForm({ userId, existingProfile }: CaregiverProfi
           {step === 1 && (
             <div className="flex flex-col gap-5">
               <div className="flex flex-col gap-1.5">
-                <Label className="text-[#2F3E4E] text-sm font-medium">Bio</Label>
-                <p className="text-gray-400 text-xs -mt-0.5" style={{ fontFamily: "Inter, sans-serif" }}>
+                <Label className="text-[#260900] text-sm font-medium font-modern">Bio</Label>
+                <p className="text-[#6B7280] text-xs -mt-0.5" style={{ fontFamily: "Inter, sans-serif" }}>
                   Tell dog owners about yourself — your experience, love for dogs, home environment
                 </p>
                 <textarea
@@ -240,7 +240,7 @@ export function CaregiverProfileForm({ userId, existingProfile }: CaregiverProfi
                   onChange={(e) => setBio(e.target.value)}
                   placeholder="e.g. I'm a dog lover with 5 years of experience caring for dogs of all sizes. I have a spacious home with a yard..."
                   rows={5}
-                  className="w-full rounded-xl border-2 border-gray-200 focus:border-[#5F7E9D] focus:outline-none px-4 py-3 text-sm text-[#2F3E4E] resize-none mt-1"
+                  className="w-full rounded-xl border-2 border-gray-200 focus:border-[#F3B443] focus:outline-none px-4 py-3 text-sm text-[#2F3E4E] resize-none mt-1"
                   style={{ fontFamily: "Inter, sans-serif" }}
                 />
                 <p className="text-right text-xs text-gray-300" style={{ fontFamily: "Inter, sans-serif" }}>
@@ -250,7 +250,7 @@ export function CaregiverProfileForm({ userId, existingProfile }: CaregiverProfi
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex flex-col gap-1.5">
-                  <Label className="text-[#2F3E4E] text-sm font-medium">Years of Experience</Label>
+                  <Label className="text-[#260900] text-sm font-medium font-modern">Years of Experience</Label>
                   <Input
                     type="number"
                     min="0"
@@ -258,16 +258,16 @@ export function CaregiverProfileForm({ userId, existingProfile }: CaregiverProfi
                     value={experienceYears}
                     onChange={(e) => setExperienceYears(e.target.value)}
                     placeholder="e.g. 5"
-                    className="h-12 rounded-xl border-gray-200 focus:border-[#5F7E9D] text-[#2F3E4E]"
+                    className="h-12 rounded-xl border-gray-200 focus:border-[#F3B443] text-[#2F3E4E]"
                   />
                 </div>
                 <div className="flex flex-col gap-1.5">
-                  <Label className="text-[#2F3E4E] text-sm font-medium">Certifications <span className="text-gray-400 font-normal">(optional)</span></Label>
+                  <Label className="text-[#260900] text-sm font-medium font-modern">Certifications <span className="text-gray-400 font-normal">(optional)</span></Label>
                   <Input
                     value={certifications}
                     onChange={(e) => setCertifications(e.target.value)}
                     placeholder="e.g. Pet First Aid"
-                    className="h-12 rounded-xl border-gray-200 focus:border-[#5F7E9D] text-[#2F3E4E]"
+                    className="h-12 rounded-xl border-gray-200 focus:border-[#F3B443] text-[#2F3E4E]"
                   />
                 </div>
               </div>
@@ -277,7 +277,7 @@ export function CaregiverProfileForm({ userId, existingProfile }: CaregiverProfi
           {/* ── Step 2: Services ───────────────────────────────── */}
           {step === 2 && (
             <div className="flex flex-col gap-4">
-              <p className="text-gray-400 text-sm" style={{ fontFamily: "Inter, sans-serif" }}>
+              <p className="text-[#6B7280] text-sm" style={{ fontFamily: "Inter, sans-serif" }}>
                 Select all services you&apos;re comfortable providing
               </p>
               <div className="flex flex-col gap-3">
