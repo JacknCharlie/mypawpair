@@ -195,7 +195,7 @@ export function AccountSettingsForm({
               <button
                 type="submit"
                 disabled={isProfileLoading}
-                className="w-full h-12 bg-[#5F7E9D] text-white font-semibold text-[15px] rounded-xl border-2 border-transparent hover:bg-white hover:text-[#5F7E9D] hover:border-[#5F7E9D] transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
+                className="w-full h-12 bg-[#F3B443] text-white font-semibold text-[15px] rounded-xl border-2 border-transparent hover:bg-white hover:text-[#F3B443] hover:border-[#F3B443] transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
                 {isProfileLoading ? "Saving..." : "Save Changes"}
