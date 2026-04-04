@@ -93,7 +93,7 @@ export function AccountSettingsForm({
             key={tab.id}
             type="button"
             onClick={() => setActiveTab(tab.id)}
-            className={`flex-1 flex items-center justify-center gap-2 h-10 rounded-xl text-sm font-medium transition-all duration-200 ${
+            className={`bg-red flex-1 flex items-center justify-center gap-2 h-10 rounded-xl text-sm font-medium transition-all duration-200 ${
               activeTab === tab.id
                 ? tab.id === "danger"
                   ? "bg-red-50 text-red-600 shadow-sm"
