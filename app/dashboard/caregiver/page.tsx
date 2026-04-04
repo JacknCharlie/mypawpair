@@ -173,7 +173,7 @@ async function CaregiverDashboard() {
           </div>
           <div>
             <h2
-              className="text-white text-xl font-semibold font-inter"
+              className="text-white text-xl font-semibold font-modern"
                
             >
               Your Dog Matches
@@ -184,7 +184,7 @@ async function CaregiverDashboard() {
           </div>
           <Link
             href="/dashboard/caregiver/matches"
-            className="mt-auto inline-flex items-center justify-center h-11 px-6 bg-[#F3B443] text-[#fff] font-medium text-[15px] rounded-[10px] border-2 border-transparent hover:bg-transparent hover:text-[#F3B443] hover:border-[#F3B443] transition-all duration-300 w-fit"
+            className="mt-auto inline-flex items-center justify-center h-11 px-6 bg-[#260900] text-[#fff] font-medium text-[15px] rounded-[10px] border-2 border-transparent hover:bg-transparent hover:text-[#260900] hover:border-[#260900] transition-all duration-300 w-fit"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             View Matches →
@@ -192,18 +192,18 @@ async function CaregiverDashboard() {
         </div>
 
         {/* Edit profile */}
-        <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm flex flex-col gap-4">
+        <div className="bg-[#F3B443] rounded-2xl p-8 border border-gray-100 shadow-sm flex flex-col gap-4">
           <div className="w-12 h-12 rounded-full bg-[#F6F2EA] flex items-center justify-center text-2xl">
             ✏️
           </div>
           <div>
             <h2
-              className="text-[#2F3E4E] text-xl font-semibold"
-              style={{ fontFamily: "var(--font-modern-sans), ui-sans-serif, system-ui, sans-serif" }}
+              className="text-white text-xl font-semibold font-modern"
+             
             >
               Update Your Profile
             </h2>
-            <p className="text-gray-500 text-sm mt-1" style={{ fontFamily: "Inter, sans-serif" }}>
+            <p className="text-white/80 text-sm mt-1" style={{ fontFamily: "Inter, sans-serif" }}>
               Keep your services, availability, and experience up to date for better matches
             </p>
           </div>
