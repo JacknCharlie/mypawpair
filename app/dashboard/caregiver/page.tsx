@@ -127,7 +127,7 @@ async function CaregiverDashboard() {
       {/* Welcome header */}
       <div>
         <h1
-          className="text-center font-modern text-[#260900] text-[32px] md:text-[40px] font-semibold leading-[120%]"
+          className="text-center font-modern text-[#260900] text-[24px] md:text-[40px] font-semibold leading-[120%]"
         >
           Welcome back{fullName ? `, ${fullName.split(" ")[0]}` : ""}! 🐾
         </h1>
@@ -151,12 +151,11 @@ async function CaregiverDashboard() {
               {stat.icon}
             </div>
             <div>
-              <p className="text-gray-400 text-sm" style={{ fontFamily: "Inter, sans-serif" }}>
+              <p className="font-modern text-[#260900] text-sm">
                 {stat.label}
               </p>
               <p
-                className="text-[#2F3E4E] text-3xl font-semibold"
-                style={{ fontFamily: "var(--font-modern-sans), ui-sans-serif, system-ui, sans-serif" }}
+                className="text-[#6B7280] text-3xl font-semibold font-inter"
               >
                 {stat.value}
               </p>
