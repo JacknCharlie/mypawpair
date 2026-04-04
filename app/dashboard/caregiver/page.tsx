@@ -145,7 +145,7 @@ async function CaregiverDashboard() {
         ].map((stat) => (
           <div
             key={stat.label}
-            className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex items-center gap-4"
+            className="bg-red rounded-2xl p-6 shadow-sm border border-gray-100 flex items-center gap-4"
           >
             <div className="w-12 h-12 rounded-full bg-[#F6F2EA] flex items-center justify-center text-2xl flex-shrink-0">
               {stat.icon}
