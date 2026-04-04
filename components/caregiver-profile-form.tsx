@@ -258,7 +258,7 @@ export function CaregiverProfileForm({ userId, existingProfile }: CaregiverProfi
                     value={experienceYears}
                     onChange={(e) => setExperienceYears(e.target.value)}
                     placeholder="e.g. 5"
-                    className="h-12 rounded-xl border-gray-200 focus:border-[#F3B443] text-[#2F3E4E]"
+                    className="h-12 rounded-xl border-gray-200 focus:border-[#F3B443] text-[#2F3E4E]  focus-visible:ring-0"
                   />
                 </div>
                 <div className="flex flex-col gap-1.5">
