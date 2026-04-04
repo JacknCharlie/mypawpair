@@ -30,7 +30,7 @@ export default async function CaregiverSettingsPage() {
       <div className="text-center max-w-xl mx-auto">
         <h1
           className="text-[#260900]  text-[24px] font-modern md:text-[32px] font-semibold leading-[120%]"
-          style={{ fontFamily: "var(--font-modern-sans), ui-sans-serif, system-ui, sans-serif" }}
+          
         >
           Account Settings ⚙️
         </h1>
