@@ -209,11 +209,11 @@ export function CaregiverProfileForm({ userId, existingProfile }: CaregiverProfi
 
         {/* Card header */}
         <div className="px-8 pt-8 pb-6 border-b border-gray-50">
-          <p className="text-[#5F7E9D] text-xs font-semibold uppercase tracking-widest mb-1" style={{ fontFamily: "Inter, sans-serif" }}>
+          <p className="text-[#260900] text-xs font-semibold uppercase tracking-widest mb-1 font-modern">
             Step {step} of {STEPS.length}
           </p>
           <h2
-            className="text-[#2F3E4E] text-[26px] font-semibold leading-tight"
+            className="text-[#6B7280] text-[26px] font-semibold leading-tight"
             style={{ fontFamily: "var(--font-modern-sans), ui-sans-serif, system-ui, sans-serif" }}
           >
             {STEPS[step - 1].icon} {STEPS[step - 1].title}
