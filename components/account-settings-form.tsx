@@ -279,7 +279,7 @@ export function AccountSettingsForm({
               <button
                 type="submit"
                 disabled={isPasswordLoading}
-                className="w-full h-12 bg-[#5F7E9D] text-white font-semibold text-[15px] rounded-xl border-2 border-transparent hover:bg-white hover:text-[#5F7E9D] hover:border-[#5F7E9D] transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
+                className="w-full h-12 bg-[#260900] text-white font-semibold text-[15px] rounded-xl border-2 border-transparent hover:bg-white hover:text-[#260900] hover:border-[#260900] transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
                 {isPasswordLoading ? "Updating..." : "Update Password"}
