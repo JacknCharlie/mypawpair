@@ -97,7 +97,7 @@ export function AccountSettingsForm({
               activeTab === tab.id
                 ? tab.id === "danger"
                   ? "bg-red-50 text-red-600 shadow-sm"
-                  : "bg-[#260900] text-white shadow-sm"
+                  : "bg-[#F3B443] text-white shadow-sm"
                 : tab.id === "danger"
                 ? "text-red-400 hover:text-red-500"
                 : "text-gray-500 hover:text-[#260900]"
