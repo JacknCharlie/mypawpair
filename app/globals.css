@@ -243,6 +243,11 @@
     gap: 20px;
 } */
 
+.two-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 
  @media only screen and (max-width: 1199px) {
 .btn-same { padding: 11px 30px; font-size: 16px !important;}
@@ -269,6 +274,7 @@
     grid-template-columns: 1fr;
 } */
 .two-grid-box { grid-template-columns: 1fr;}
+.two-grid {  grid-template-columns:1fr;}
  }
 
  @media only screen and (max-width: 767px) {
