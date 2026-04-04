@@ -77,8 +77,8 @@ export default async function CaregiverMatchesPage() {
   return (
     <div className="flex flex-col gap-6">
       <div>
-        <div className="flex items-center gap-2 text-sm text-gray-400 mb-2" style={{ fontFamily: "Inter, sans-serif" }}>
-          <Link href="/dashboard/caregiver" className="hover:text-[#5F7E9D] transition-colors">Dashboard</Link>
+        <div className="flex items-center gap-2 text-sm text-[#6B7280] mb-2" style={{ fontFamily: "Inter, sans-serif" }}>
+          <Link href="/dashboard/caregiver" className="hover:text-[#F3B443] transition-colors">Dashboard</Link>
           <span>›</span>
           <span className="text-[#2F3E4E]">My Matches</span>
         </div>
