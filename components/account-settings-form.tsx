@@ -184,9 +184,9 @@ export function AccountSettingsForm({
                 </div>
               )}
               {profileSuccess && (
-                <div className="bg-green-50 border border-green-200 rounded-xl px-4 py-3 flex items-center gap-2">
-                  <span className="text-green-500">✓</span>
-                  <p className="text-sm text-green-700 font-medium" style={{ fontFamily: "Inter, sans-serif" }}>Profile updated successfully</p>
+                <div className="bg-orange-50 border border-orange-200 rounded-xl px-4 py-3 flex items-center gap-2">
+                  <span className="text-orange-500">✓</span>
+                  <p className="text-sm text-orange-700 font-medium" style={{ fontFamily: "Inter, sans-serif" }}>Profile updated successfully</p>
                 </div>
               )}
             </div>
