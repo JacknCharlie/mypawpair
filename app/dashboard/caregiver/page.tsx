@@ -167,14 +167,14 @@ async function CaregiverDashboard() {
       {/* Action cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* View matches */}
-        <div className="bg-[#5F7E9D] rounded-2xl p-8 flex flex-col gap-4">
+        <div className="bg-[#260900] rounded-2xl p-8 flex flex-col gap-4">
           <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-2xl">
             💛
           </div>
           <div>
             <h2
-              className="text-white text-xl font-semibold"
-              style={{ fontFamily: "var(--font-modern-sans), ui-sans-serif, system-ui, sans-serif" }}
+              className="text-white text-xl font-semibold font-inter"
+               
             >
               Your Dog Matches
             </h2>
@@ -184,7 +184,7 @@ async function CaregiverDashboard() {
           </div>
           <Link
             href="/dashboard/caregiver/matches"
-            className="mt-auto inline-flex items-center justify-center h-11 px-6 bg-white text-[#5F7E9D] font-medium text-[15px] rounded-[10px] border-2 border-transparent hover:bg-transparent hover:text-white hover:border-white transition-all duration-300 w-fit"
+            className="mt-auto inline-flex items-center justify-center h-11 px-6 bg-[#F3B443] text-[#fff] font-medium text-[15px] rounded-[10px] border-2 border-transparent hover:bg-transparent hover:text[#F3B443] hover:border-[#F3B443]transition-all duration-300 w-fit"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             View Matches →
