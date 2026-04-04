@@ -21,8 +21,8 @@ export default async function ProviderSettingsPage() {
 
   return (
     <div className="flex flex-col gap-8">
-      <div className="flex items-center gap-2 text-sm text-gray-400" style={{ fontFamily: "Inter, sans-serif" }}>
-        <Link href="/dashboard/provider" className="hover:text-[#5F7E9D] transition-colors">
+      <div className="flex items-center gap-2 text-sm text-[#6B7280] mb-2" style={{ fontFamily: "Inter, sans-serif" }}>
+        <Link href="/dashboard/provider" className="hover:text-[#F3B443] transition-colors">
           Dashboard
         </Link>
         <span>›</span>
