@@ -108,7 +108,7 @@ export default async function CaregiverMatchesPage() {
       )}
 
       {matches && matches.length > 0 && (
-        <div className="flex flex-col gap-4">
+        <div className="two-grid flex flex-col gap-4">
           {matches.map((match) => {
             const dog = (match.dogs as unknown) as {
               id: string; name: string; breed: string | null; size: string | null;
