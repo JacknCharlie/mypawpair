@@ -6,12 +6,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { createClient } from "@/lib/supabase/client";
 import { OnboardingFlow, DogProfile } from "./onboarding-flow";
+import { ProviderGrid } from "./provider-card";
 
 export interface ChatMessage {
   id: string;
   role: "user" | "assistant";
   content: string;
   created_at?: string;
+  providers?: any[];
+  suggestions?: string[];
 }
 
 export interface ChatSession {
@@ -44,6 +47,8 @@ export function AiChat() {
   const [showOnboarding, setShowOnboarding] = useState(false);
   const [dogProfile, setDogProfile] = useState<DogProfileData | null>(null);
   const [userId, setUserId] = useState<string | null>(null);
+  const [typingContent, setTypingContent] = useState("");
+  const [isTyping, setIsTyping] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const supabase = createClient();
@@ -149,7 +154,7 @@ export function AiChat() {
       top: scrollRef.current.scrollHeight,
       behavior: "smooth",
     });
-  }, [messages]);
+  }, [messages, typingContent]);
 
   const handleOnboardingComplete = async (profile: DogProfile) => {
     if (!userId) return;
@@ -364,6 +369,46 @@ export function AiChat() {
         systemContext += ` Always refer to "${dogProfile.species}" (not "fur baby") and personalize responses to ${dogProfile.name}'s specific profile.`;
       }
 
+      // Search for relevant providers based on query
+      let providers: any[] = [];
+      const searchKeywords = trimmed.toLowerCase();
+      
+      // Only search if the query seems to be about finding providers
+      if (
+        searchKeywords.includes("find") ||
+        searchKeywords.includes("recommend") ||
+        searchKeywords.includes("groomer") ||
+        searchKeywords.includes("vet") ||
+        searchKeywords.includes("trainer") ||
+        searchKeywords.includes("walker") ||
+        searchKeywords.includes("boarding") ||
+        searchKeywords.includes("daycare")
+      ) {
+        try {
+          // Try to determine category from query
+          let category = null;
+          if (searchKeywords.includes("groomer") || searchKeywords.includes("grooming")) category = "groomer";
+          else if (searchKeywords.includes("vet") || searchKeywords.includes("veterinar")) category = "veterinarian";
+          else if (searchKeywords.includes("train")) category = "trainer";
+          else if (searchKeywords.includes("walk")) category = "dog_walker";
+          else if (searchKeywords.includes("board") || searchKeywords.includes("daycare")) category = "boarding";
+
+          let query = supabase
+            .from("providers")
+            .select("*")
+            .limit(4);
+
+          if (category) {
+            query = query.eq("category", category);
+          }
+
+          const { data } = await query;
+          if (data) providers = data;
+        } catch (error) {
+          console.error("Error fetching providers:", error);
+        }
+      }
+
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -379,6 +424,7 @@ export function AiChat() {
             dietaryNeeds: dogProfile.dietaryNeeds,
           } : null,
           systemContext,
+          hasProviders: providers.length > 0,
         }),
       });
 
@@ -386,34 +432,54 @@ export function AiChat() {
         throw new Error("Failed to get response");
       }
 
-      const { content } = await res.json();
+      const { content, suggestions } = await res.json();
 
-      const assistantMsg: ChatMessage = {
-        id: crypto.randomUUID(),
-        role: "assistant",
-        content,
-      };
+      // Type out the response
+      setIsTyping(true);
+      setTypingContent("");
+      let index = 0;
+      const typingInterval = setInterval(() => {
+        if (index < content.length) {
+          setTypingContent((prev) => prev + content[index]);
+          index++;
+        } else {
+          clearInterval(typingInterval);
+          setIsTyping(false);
+          setTypingContent("");
 
-      // Save assistant message to database
-      await supabase.from("chat_messages").insert({
-        session_id: session.id,
-        role: "assistant",
-        content,
-      });
+          const assistantMsg: ChatMessage = {
+            id: crypto.randomUUID(),
+            role: "assistant",
+            content,
+            providers: providers.length > 0 ? providers : undefined,
+            suggestions: suggestions || undefined,
+          };
 
-      // Update session timestamp
-      await supabase
-        .from("chat_sessions")
-        .update({ updated_at: new Date().toISOString() })
-        .eq("id", session.id);
+          // Save assistant message to database
+          supabase.from("chat_messages").insert({
+            session_id: session!.id,
+            role: "assistant",
+            content,
+          });
 
-      setSessions((prev) =>
-        prev.map((s) =>
-          s.id === session!.id ? { ...s, messages: [...s.messages, assistantMsg] } : s
-        )
-      );
+          // Update session timestamp
+          supabase
+            .from("chat_sessions")
+            .update({ updated_at: new Date().toISOString() })
+            .eq("id", session!.id);
+
+          setSessions((prev) =>
+            prev.map((s) =>
+              s.id === session!.id ? { ...s, messages: [...s.messages, assistantMsg] } : s
+            )
+          );
+          setIsLoading(false);
+        }
+      }, 20);
     } catch (error) {
       console.error("Error sending message:", error);
+      setIsTyping(false);
+      setTypingContent("");
       setSessions((prev) =>
         prev.map((s) =>
           s.id === session!.id
@@ -431,7 +497,6 @@ export function AiChat() {
             : s
         )
       );
-    } finally {
       setIsLoading(false);
     }
   };
@@ -602,56 +667,91 @@ export function AiChat() {
             </div>
           ) : (
             <div className="max-w-3xl mx-auto space-y-6">
-              {messages.map((m) => (
-                <div
-                  key={m.id}
-                  className={`flex gap-4 ${
-                    m.role === "user" ? "flex-row-reverse" : ""
-                  }`}
-                >
+              {messages.map((m, idx) => (
+                <div key={m.id}>
                   <div
-                    className={`shrink-0 w-10 h-10 rounded-full flex items-center justify-center ${
-                      m.role === "user"
-                        ? "bg-[#5F7E9D] shadow-[0px_2px_4px_rgba(95,126,157,0.3)]"
-                        : "bg-[#F3B443]/20 shadow-[0px_2px_4px_rgba(137,82,43,0.2)]"
-                    }`}
-                  >
-                    {m.role === "user" ? (
-                      <User className="h-5 w-5 text-white" />
-                    ) : (
-                      <Bot className="h-5 w-5 text-[#F3B443]" />
-                    )}
-                  </div>
-                  <div
-                    className={`flex-1 min-w-0 ${
-                      m.role === "user" ? "text-right" : ""
+                    className={`flex gap-4 ${
+                      m.role === "user" ? "flex-row-reverse" : ""
                     }`}
                   >
                     <div
-                      className={`inline-block px-5 py-3 rounded-2xl text-base ${
+                      className={`shrink-0 w-10 h-10 rounded-full flex items-center justify-center ${
                         m.role === "user"
-                          ? "bg-[#5F7E9D] text-white shadow-[0px_2px_4px_rgba(95,126,157,0.3)]"
-                          : "bg-white text-[#260900] shadow-[0px_2px_4px_rgba(0,0,0,0.06)] border border-[#260900]/5"
+                          ? "bg-[#5F7E9D] shadow-[0px_2px_4px_rgba(95,126,157,0.3)]"
+                          : "bg-[#F3B443]/20 shadow-[0px_2px_4px_rgba(137,82,43,0.2)]"
                       }`}
                     >
-                      <p className="whitespace-pre-wrap">{m.content}</p>
+                      {m.role === "user" ? (
+                        <User className="h-5 w-5 text-white" />
+                      ) : (
+                        <Bot className="h-5 w-5 text-[#F3B443]" />
+                      )}
+                    </div>
+                    <div
+                      className={`flex-1 min-w-0 ${
+                        m.role === "user" ? "text-right" : ""
+                      }`}
+                    >
+                      <div
+                        className={`inline-block px-5 py-3 rounded-2xl text-base ${
+                          m.role === "user"
+                            ? "bg-[#5F7E9D] text-white shadow-[0px_2px_4px_rgba(95,126,157,0.3)]"
+                            : "bg-white text-[#260900] shadow-[0px_2px_4px_rgba(0,0,0,0.06)] border border-[#260900]/5"
+                        }`}
+                      >
+                        <p className="whitespace-pre-wrap">{m.content}</p>
+                      </div>
+
+                      {/* Provider Grid - only for assistant messages */}
+                      {m.role === "assistant" && m.providers && m.providers.length > 0 && (
+                        <div className="mt-3">
+                          <ProviderGrid 
+                            providers={m.providers} 
+                            title="Here are some providers that might help:"
+                          />
+                        </div>
+                      )}
+
+                      {/* Follow-up Suggestions - only for last assistant message */}
+                      {m.role === "assistant" && m.suggestions && m.suggestions.length > 0 && idx === messages.length - 1 && (
+                        <div className="mt-3 flex flex-wrap gap-2">
+                          {m.suggestions.map((suggestion, sIdx) => (
+                            <button
+                              key={sIdx}
+                              onClick={() => handleSuggestion(suggestion)}
+                              disabled={isLoading}
+                              className="px-4 py-2 rounded-full bg-[#F3B443]/10 hover:bg-[#F3B443] text-sm text-[#260900] hover:text-white transition-all duration-300 border border-[#F3B443]/30 hover:border-[#F3B443] disabled:opacity-50 shadow-[0px_2px_4px_rgba(0,0,0,0.04)]"
+                            >
+                              {suggestion}
+                            </button>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
               ))}
-              {isLoading && (
+              
+              {/* Typing indicator */}
+              {(isLoading || isTyping) && (
                 <div className="flex gap-4">
                   <div className="shrink-0 w-10 h-10 rounded-full bg-[#F3B443]/20 flex items-center justify-center shadow-[0px_2px_4px_rgba(137,82,43,0.2)]">
                     <Bot className="h-5 w-5 text-[#F3B443]" />
                   </div>
                   <div className="flex-1">
-                    <div className="inline-block px-5 py-3 rounded-2xl bg-white shadow-[0px_2px_4px_rgba(0,0,0,0.06)] border border-[#260900]/5">
-                      <div className="flex gap-1.5">
-                        <span className="w-2 h-2 rounded-full bg-[#F3B443] animate-bounce" style={{ animationDelay: "0ms" }} />
-                        <span className="w-2 h-2 rounded-full bg-[#F3B443] animate-bounce" style={{ animationDelay: "150ms" }} />
-                        <span className="w-2 h-2 rounded-full bg-[#F3B443] animate-bounce" style={{ animationDelay: "300ms" }} />
+                    {isTyping && typingContent ? (
+                      <div className="inline-block px-5 py-3 rounded-2xl bg-white shadow-[0px_2px_4px_rgba(0,0,0,0.06)] border border-[#260900]/5">
+                        <p className="text-[#260900] text-base whitespace-pre-wrap">{typingContent}<span className="animate-pulse">|</span></p>
                       </div>
-                    </div>
+                    ) : (
+                      <div className="inline-block px-5 py-3 rounded-2xl bg-white shadow-[0px_2px_4px_rgba(0,0,0,0.06)] border border-[#260900]/5">
+                        <div className="flex gap-1.5">
+                          <span className="w-2 h-2 rounded-full bg-[#F3B443] animate-bounce" style={{ animationDelay: "0ms" }} />
+                          <span className="w-2 h-2 rounded-full bg-[#F3B443] animate-bounce" style={{ animationDelay: "150ms" }} />
+                          <span className="w-2 h-2 rounded-full bg-[#F3B443] animate-bounce" style={{ animationDelay: "300ms" }} />
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               )}

@@ -86,7 +86,31 @@ IMPORTANT LANGUAGE RULES:
     const content =
       response.choices[0]?.message?.content ?? "I couldn't generate a response.";
 
-    return NextResponse.json({ content });
+    // Generate 3 follow-up question suggestions based on the conversation
+    const suggestionResponse = await openai.chat.completions.create({
+      model: "gpt-4o-mini",
+      messages: [
+        {
+          role: "system",
+          content: "Generate exactly 3 short, relevant follow-up questions (max 10 words each) based on the conversation. Return only the questions, one per line, without numbers or bullets.",
+        },
+        ...messages.slice(-3).map((m) => ({
+          role: m.role as "user" | "assistant",
+          content: m.content,
+        })),
+        { role: "assistant", content },
+      ],
+      max_tokens: 100,
+      temperature: 0.8,
+    });
+
+    const suggestionsText = suggestionResponse.choices[0]?.message?.content ?? "";
+    const suggestions = suggestionsText
+      .split("\n")
+      .filter((s) => s.trim())
+      .slice(0, 3);
+
+    return NextResponse.json({ content, suggestions });
   } catch (err) {
     console.error("Chat API error:", err);
     return NextResponse.json(

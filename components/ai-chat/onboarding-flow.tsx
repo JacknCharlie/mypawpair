@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { Bot, Zap, ClipboardList, User as UserIcon, Users, Paw, Bone, Heart, Utensils } from "lucide-react";
+import { Bot, Zap, ClipboardList, User as UserIcon, Users, Dog, Cat, Heart, Utensils } from "lucide-react";
 import Image from "next/image";
 
 export interface DogProfile {
@@ -50,11 +50,56 @@ export function OnboardingFlow({ onComplete, onSkip }: OnboardingFlowProps) {
     dietaryNeeds: [],
   });
   const [userInput, setUserInput] = useState("");
-  const [chatHistory, setChatHistory] = useState<Array<{ role: "user" | "assistant"; content: string }>>([]);
+  const [chatHistory, setChatHistory] = useState<Array<{ role: "user" | "assistant"; content: string; isTyping?: boolean }>>([]);
   const [isQuickPath, setIsQuickPath] = useState(false);
+  const [typingContent, setTypingContent] = useState("");
+  const [isTyping, setIsTyping] = useState(false);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
-  const addMessage = (role: "user" | "assistant", content: string) => {
-    setChatHistory((prev) => [...prev, { role, content }]);
+  // Auto-scroll to bottom
+  useEffect(() => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollTo({
+        top: scrollRef.current.scrollHeight,
+        behavior: "smooth",
+      });
+    }
+  }, [chatHistory, typingContent]);
+
+  // Focus input when step changes
+  useEffect(() => {
+    if (inputRef.current && ["name", "breed", "age", "health", "dietary"].includes(step)) {
+      setTimeout(() => inputRef.current?.focus(), 100);
+    }
+  }, [step]);
+
+  const typeMessage = (content: string, callback?: () => void) => {
+    setIsTyping(true);
+    setTypingContent("");
+    let index = 0;
+    const interval = setInterval(() => {
+      if (index < content.length) {
+        setTypingContent((prev) => prev + content[index]);
+        index++;
+      } else {
+        clearInterval(interval);
+        setIsTyping(false);
+        setChatHistory((prev) => [...prev, { role: "assistant", content }]);
+        setTypingContent("");
+        if (callback) callback();
+      }
+    }, 20); // Typing speed
+  };
+
+  const addMessage = (role: "user" | "assistant", content: string, withTyping = true) => {
+    if (role === "user") {
+      setChatHistory((prev) => [...prev, { role, content }]);
+    } else if (withTyping) {
+      typeMessage(content);
+    } else {
+      setChatHistory((prev) => [...prev, { role, content }]);
+    }
   };
 
   const handleWelcomeChoice = (choice: "quick" | "detailed") => {
@@ -90,50 +135,56 @@ export function OnboardingFlow({ onComplete, onSkip }: OnboardingFlowProps) {
     if (!userInput.trim()) return;
 
     const value = userInput.trim();
-    addMessage("user", value);
+    addMessage("user", value, false);
     setUserInput("");
 
     switch (step) {
       case "name":
         setProfile((p) => ({ ...p, name: value }));
         setTimeout(() => {
-          addMessage("assistant", `${CHARLIE_MESSAGES.pronouns} ${value}?`);
-          setStep("pronouns");
+          typeMessage(`${CHARLIE_MESSAGES.species} ${value}?`, () => {
+            setStep("species");
+          });
+        }, 500);
+        break;
+
+      case "species":
+        const speciesName = value.toLowerCase();
+        setProfile((p) => ({ ...p, species: speciesName }));
+        setTimeout(() => {
+          typeMessage(`${CHARLIE_MESSAGES.pronouns} ${profile.name}?`, () => {
+            setStep("pronouns");
+          });
         }, 500);
         break;
 
       case "pronouns":
         setProfile((p) => ({ ...p, pronouns: value }));
         setTimeout(() => {
-          addMessage("assistant", `${CHARLIE_MESSAGES.species} ${profile.name}?`);
-          setStep("species");
-        }, 500);
-        break;
-
-      case "species":
-        setProfile((p) => ({ ...p, species: value }));
-        setTimeout(() => {
-          addMessage("assistant", `${CHARLIE_MESSAGES.breed} ${profile.name}?`);
-          setStep("breed");
+          typeMessage(`${CHARLIE_MESSAGES.breed} ${profile.name}?`, () => {
+            setStep("breed");
+          });
         }, 500);
         break;
 
       case "breed":
         setProfile((p) => ({ ...p, breed: value }));
         setTimeout(() => {
-          addMessage("assistant", `${CHARLIE_MESSAGES.age} ${profile.name}?`);
-          setStep("age");
+          typeMessage(`${CHARLIE_MESSAGES.age} ${profile.name}?`, () => {
+            setStep("age");
+          });
         }, 500);
         break;
 
       case "age":
         setProfile((p) => ({ ...p, age: value }));
         setTimeout(() => {
-          addMessage(
-            "assistant",
-            CHARLIE_MESSAGES.health.replace("{name}", profile.name || "your dog")
+          typeMessage(
+            CHARLIE_MESSAGES.health.replace("{name}", profile.name || "your pet"),
+            () => {
+              setStep("health");
+            }
           );
-          setStep("health");
         }, 500);
         break;
 
@@ -143,11 +194,12 @@ export function OnboardingFlow({ onComplete, onSkip }: OnboardingFlowProps) {
           : value.split(",").map((s) => s.trim());
         setProfile((p) => ({ ...p, healthConditions }));
         setTimeout(() => {
-          addMessage(
-            "assistant",
-            CHARLIE_MESSAGES.dietary.replace("{name}", profile.name || "your dog")
+          typeMessage(
+            CHARLIE_MESSAGES.dietary.replace("{name}", profile.name || "your pet"),
+            () => {
+              setStep("dietary");
+            }
           );
-          setStep("dietary");
         }, 500);
         break;
 
@@ -157,28 +209,34 @@ export function OnboardingFlow({ onComplete, onSkip }: OnboardingFlowProps) {
           : value.split(",").map((s) => s.trim());
         setProfile((p) => ({ ...p, dietaryNeeds }));
         setTimeout(() => {
-          addMessage("assistant", `Perfect! I've got all the details about ${profile.name}. Let's chat!`);
-          setTimeout(() => {
-            onComplete({
-              ...profile,
-              dietaryNeeds,
-            } as DogProfile);
-          }, 1500);
+          typeMessage(`Perfect! I've got all the details about ${profile.name}. Let's chat!`, () => {
+            setTimeout(() => {
+              onComplete({
+                ...profile,
+                dietaryNeeds,
+              } as DogProfile);
+            }, 1000);
+          });
         }, 500);
         break;
     }
   };
 
-  const handleQuickButton = (value: string, nextStep?: Step) => {
-    addMessage("user", value);
+  const handleQuickButton = (value: string, targetStep: Step, fieldName: keyof DogProfile) => {
+    addMessage("user", value, false);
+    setProfile((p) => ({ ...p, [fieldName]: value }));
     
-    if (step === "pronouns" && nextStep) {
-      setProfile((p) => ({ ...p, pronouns: value }));
-      setTimeout(() => {
-        addMessage("assistant", `${CHARLIE_MESSAGES.species} ${profile.name}?`);
-        setStep(nextStep);
-      }, 500);
-    }
+    setTimeout(() => {
+      if (targetStep === "pronouns") {
+        typeMessage(`${CHARLIE_MESSAGES.pronouns} ${profile.name}?`, () => {
+          setStep(targetStep);
+        });
+      } else if (targetStep === "breed") {
+        typeMessage(`${CHARLIE_MESSAGES.breed} ${profile.name}?`, () => {
+          setStep(targetStep);
+        });
+      }
+    }, 500);
   };
 
   return (
@@ -196,7 +254,7 @@ export function OnboardingFlow({ onComplete, onSkip }: OnboardingFlowProps) {
               <div className="flex items-center gap-2 text-sm text-[#4A5563]">
                 <span className="text-[#F3B443] font-medium">
                   Step {
-                    ["name", "pronouns", "species", "breed", "age", "health", "dietary"].indexOf(step) + 1
+                    ["name", "species", "pronouns", "breed", "age", "health", "dietary"].indexOf(step) + 1
                   }/7
                 </span>
               </div>
@@ -205,7 +263,7 @@ export function OnboardingFlow({ onComplete, onSkip }: OnboardingFlowProps) {
         )}
 
         {/* Messages */}
-        <div className="flex-1 overflow-y-auto px-4 sm:px-6 py-6">
+        <div ref={scrollRef} className="flex-1 overflow-y-auto px-4 sm:px-6 py-6">
           <div className="max-w-3xl mx-auto space-y-6">
             {/* Welcome state */}
             {step === "welcome" && chatHistory.length === 0 && (
@@ -238,15 +296,17 @@ export function OnboardingFlow({ onComplete, onSkip }: OnboardingFlowProps) {
                 <div className="flex flex-col sm:flex-row gap-3 pt-4">
                   <button
                     onClick={() => handleWelcomeChoice("quick")}
-                    className="flex-1 px-6 py-4 rounded-2xl bg-white hover:bg-[#F3B443] border-2 border-[#260900]/10 hover:border-[#F3B443] text-[#260900] hover:text-white transition-all duration-300 shadow-[0px_2px_4px_rgba(0,0,0,0.04)] text-sm sm:text-base"
+                    className="flex-1 flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-white hover:bg-[#F3B443] border-2 border-[#260900]/10 hover:border-[#F3B443] text-[#260900] hover:text-white transition-all duration-300 shadow-[0px_2px_4px_rgba(0,0,0,0.04)] text-sm sm:text-base"
                   >
-                    Quick Path ⚡
+                    <Zap className="h-5 w-5" />
+                    <span>Quick Path</span>
                   </button>
                   <button
                     onClick={() => handleWelcomeChoice("detailed")}
-                    className="flex-1 px-6 py-4 rounded-2xl bg-[#F3B443] hover:bg-[#d99d2f] text-white transition-all duration-300 shadow-[0px_4px_8px_rgba(137,82,43,0.5),inset_0px_-4px_8px_rgba(137,82,43,0.3)] text-sm sm:text-base"
+                    className="flex-1 flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-[#F3B443] hover:bg-[#d99d2f] text-white transition-all duration-300 shadow-[0px_4px_8px_rgba(137,82,43,0.5),inset_0px_-4px_8px_rgba(137,82,43,0.3)] text-sm sm:text-base"
                   >
-                    Detailed Path 📋
+                    <ClipboardList className="h-5 w-5" />
+                    <span>Detailed Path</span>
                   </button>
                 </div>
               </>
@@ -297,7 +357,7 @@ export function OnboardingFlow({ onComplete, onSkip }: OnboardingFlowProps) {
                   }`}
                 >
                   {msg.role === "user" ? (
-                    <span className="text-white text-sm font-medium">You</span>
+                    <UserIcon className="h-5 w-5 text-white" />
                   ) : (
                     <Bot className="h-5 w-5 text-[#F3B443]" />
                   )}
@@ -316,43 +376,55 @@ export function OnboardingFlow({ onComplete, onSkip }: OnboardingFlowProps) {
               </div>
             ))}
 
+            {/* Typing indicator */}
+            {isTyping && typingContent && (
+              <div className="flex gap-3 sm:gap-4">
+                <div className="shrink-0 w-10 h-10 rounded-full bg-[#F3B443]/20 flex items-center justify-center shadow-[0px_2px_4px_rgba(137,82,43,0.2)]">
+                  <Bot className="h-5 w-5 text-[#F3B443]" />
+                </div>
+                <div className="flex-1">
+                  <div className="inline-block px-5 py-3 rounded-2xl bg-white shadow-[0px_2px_4px_rgba(0,0,0,0.06)] border border-[#260900]/5">
+                    <p className="text-[#260900] text-sm sm:text-base whitespace-pre-wrap">{typingContent}<span className="animate-pulse">|</span></p>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* Pronoun quick buttons */}
-            {step === "pronouns" && chatHistory[chatHistory.length - 1]?.role === "assistant" && (
+            {step === "pronouns" && !isTyping && chatHistory[chatHistory.length - 1]?.role === "assistant" && (
               <div className="flex flex-wrap gap-2 justify-center pt-2">
-                {["She/her", "He/him", "They/them"].map((pronoun) => (
+                {[
+                  { label: "She/her", icon: UserIcon },
+                  { label: "He/him", icon: UserIcon },
+                  { label: "They/them", icon: Users },
+                ].map((option) => (
                   <button
-                    key={pronoun}
-                    onClick={() => handleQuickButton(pronoun, "species")}
-                    className="px-5 py-2.5 rounded-full bg-white hover:bg-[#F3B443] border-2 border-[#F3B443]/30 hover:border-[#F3B443] text-[#260900] hover:text-white transition-all duration-300 shadow-[0px_2px_4px_rgba(0,0,0,0.04)] text-sm"
+                    key={option.label}
+                    onClick={() => handleQuickButton(option.label, "breed", "pronouns")}
+                    className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-white hover:bg-[#F3B443] border-2 border-[#F3B443]/30 hover:border-[#F3B443] text-[#260900] hover:text-white transition-all duration-300 shadow-[0px_2px_4px_rgba(0,0,0,0.04)] text-sm"
                   >
-                    {pronoun}
+                    <option.icon className="h-4 w-4" />
+                    <span>{option.label}</span>
                   </button>
                 ))}
               </div>
             )}
 
             {/* Species quick buttons */}
-            {step === "species" && chatHistory[chatHistory.length - 1]?.role === "assistant" && (
+            {step === "species" && !isTyping && chatHistory[chatHistory.length - 1]?.role === "assistant" && (
               <div className="flex flex-wrap gap-2 justify-center pt-2">
                 {[
-                  { label: "Dog 🐕", icon: "🐕" },
-                  { label: "Cat 🐈", icon: "🐈" },
-                  { label: "Other 🐾", icon: "🐾" },
+                  { label: "Dog", icon: Dog },
+                  { label: "Cat", icon: Cat },
+                  { label: "Other", icon: Heart },
                 ].map((option) => (
                   <button
                     key={option.label}
-                    onClick={() => {
-                      const speciesValue = option.label.split(" ")[0];
-                      addMessage("user", speciesValue);
-                      setProfile((p) => ({ ...p, species: speciesValue }));
-                      setTimeout(() => {
-                        addMessage("assistant", `${CHARLIE_MESSAGES.breed} ${profile.name}?`);
-                        setStep("breed");
-                      }, 500);
-                    }}
-                    className="px-5 py-2.5 rounded-full bg-white hover:bg-[#F3B443] border-2 border-[#F3B443]/30 hover:border-[#F3B443] text-[#260900] hover:text-white transition-all duration-300 shadow-[0px_2px_4px_rgba(0,0,0,0.04)] text-sm"
+                    onClick={() => handleQuickButton(option.label, "pronouns", "species")}
+                    className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-white hover:bg-[#F3B443] border-2 border-[#F3B443]/30 hover:border-[#F3B443] text-[#260900] hover:text-white transition-all duration-300 shadow-[0px_2px_4px_rgba(0,0,0,0.04)] text-sm"
                   >
-                    {option.label}
+                    <option.icon className="h-4 w-4" />
+                    <span>{option.label}</span>
                   </button>
                 ))}
               </div>
