@@ -132,7 +132,7 @@ async function CaregiverDashboard() {
         >
           Welcome back{fullName ? `, ${fullName.split(" ")[0]}` : ""}! 🐾
         </h1>
-        <p className="text-gray-500 text-[16px] mt-1" style={{ fontFamily: "Inter, sans-serif" }}>
+        <p className="text-[#6B7280] text-center text-[16px] mt-1" style={{ fontFamily: "Inter, sans-serif" }}>
           Here&apos;s your care provider overview
         </p>
       </div>
