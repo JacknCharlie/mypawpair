@@ -483,7 +483,7 @@ export function CaregiverProfileForm({ userId, existingProfile }: CaregiverProfi
             <button
               type="button"
               onClick={handleNext}
-              className="flex-1 h-12 bg-[#5F7E9D] text-white font-semibold text-[15px] rounded-xl border-2 border-transparent hover:bg-white hover:text-[#5F7E9D] hover:border-[#5F7E9D] transition-all duration-300"
+              className="flex-1 h-12 bg-[#F3B443] text-white font-semibold text-[15px] rounded-xl border-2 border-transparent hover:bg-white hover:text-[#F3B443] hover:border-[#F3B443] transition-all duration-300"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
               Continue →
@@ -493,7 +493,7 @@ export function CaregiverProfileForm({ userId, existingProfile }: CaregiverProfi
               type="button"
               onClick={handleSubmit}
               disabled={isLoading}
-              className="flex-1 h-12 bg-[#5F7E9D] text-white font-semibold text-[15px] rounded-xl border-2 border-transparent hover:bg-white hover:text-[#5F7E9D] hover:border-[#5F7E9D] transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
+              className="flex-1 h-12 bg-[#F3B443] text-white font-semibold text-[15px] rounded-xl border-2 border-transparent hover:bg-white hover:text-[#F3B443] hover:border-[#F3B443] transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
               {isLoading ? "Saving..." : isEditing ? "✓ Update Profile" : "🐾 Submit Application"}
