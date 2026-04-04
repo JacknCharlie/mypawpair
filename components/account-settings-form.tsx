@@ -293,12 +293,12 @@ export function AccountSettingsForm({
           <div>
             <div className="px-8 pt-8 pb-6 border-b border-red-50">
               <h2
-                className="text-red-600 text-[22px] font-semibold"
-                style={{ fontFamily: "var(--font-modern-sans), ui-sans-serif, system-ui, sans-serif" }}
+                className="text-red-600 text-[22px] font-semibold font-modern"
+                
               >
                 ⚠️ Danger Zone
               </h2>
-              <p className="text-gray-400 text-sm mt-1" style={{ fontFamily: "Inter, sans-serif" }}>
+              <p className="text-[#6B7280] text-sm mt-1" style={{ fontFamily: "Inter, sans-serif" }}>
                 Permanent actions that cannot be undone
               </p>
             </div>
@@ -306,7 +306,7 @@ export function AccountSettingsForm({
             <div className="px-8 py-7">
               <div className="rounded-xl border-2 border-red-100 p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div>
-                  <p className="text-[#2F3E4E] font-semibold text-[15px]" style={{ fontFamily: "Inter, sans-serif" }}>
+                  <p className="text-[#260900] font-semibold text-[15px] font-modern">
                     Delete Account
                   </p>
                   <p className="text-gray-400 text-sm mt-0.5" style={{ fontFamily: "Inter, sans-serif" }}>
