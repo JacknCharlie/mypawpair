@@ -262,7 +262,7 @@ export function CaregiverProfileForm({ userId, existingProfile }: CaregiverProfi
                   />
                 </div>
                 <div className="flex flex-col gap-1.5">
-                  <Label className="text-[#260900] text-sm font-medium font-modern">Certifications <span className="text-gray-400 font-normal">(optional)</span></Label>
+                  <Label className="text-[#260900] text-sm font-medium font-modern">Certifications <span className="text-[#6B7280] font-normal">(optional)</span></Label>
                   <Input
                     value={certifications}
                     onChange={(e) => setCertifications(e.target.value)}
@@ -473,7 +473,7 @@ export function CaregiverProfileForm({ userId, existingProfile }: CaregiverProfi
           <button
             type="button"
             onClick={() => step === 1 ? router.back() : setStep((s) => s - 1)}
-            className="h-12 px-6 text-[#2F3E4E] text-[15px] font-medium rounded-xl border-2 border-gray-200 hover:border-[#5F7E9D] transition-all"
+            className="h-12 px-6 text-[#F3B443] text-[15px] font-medium rounded-xl border-2 border-[#F3B443]  hover:border-[#F3B443] transition-all"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             {step === 1 ? "Cancel" : "← Back"}
