@@ -140,7 +140,7 @@ export default async function CaregiverMatchesPage() {
 
                   <div className="flex-1 min-w-0">
                     <div className="flex flex-wrap items-start gap-2 mb-1">
-                      <h3 className="text-[#2F3E4E] text-lg font-semibold" style={{ fontFamily: "var(--font-modern-sans), ui-sans-serif, system-ui, sans-serif" }}>
+                      <h3 className="text-[#260900] text-lg font-semibold font-modern">
                         {dog.name}
                       </h3>
                       <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${tier.bg} ${tier.text}`} style={{ fontFamily: "Inter, sans-serif" }}>
@@ -154,7 +154,7 @@ export default async function CaregiverMatchesPage() {
                       )}
                     </div>
 
-                    <p className="text-gray-400 text-sm mb-3" style={{ fontFamily: "Inter, sans-serif" }}>
+                    <p className="text-[#6B7280] text-sm mb-3" style={{ fontFamily: "Inter, sans-serif" }}>
                       Owner: {ownerName}
                     </p>
 
@@ -202,10 +202,10 @@ export default async function CaregiverMatchesPage() {
                     {/* Score breakdown */}
                     <div className="bg-[#F6F2EA] rounded-xl p-4">
                       <div className="flex items-center justify-between mb-3">
-                        <span className="text-xs font-semibold text-[#2F3E4E]" style={{ fontFamily: "Inter, sans-serif" }}>
+                        <span className="text-xs font-semibold text-[#260900] font-modern">
                           Compatibility Score
                         </span>
-                        <span className="text-lg font-bold text-[#5F7E9D]" style={{ fontFamily: "var(--font-modern-sans), ui-sans-serif, system-ui, sans-serif" }}>
+                        <span className="text-lg font-bold text-[#F3B443]" style={{ fontFamily: "var(--font-modern-sans), ui-sans-serif, system-ui, sans-serif" }}>
                           {match.total_score}/25
                         </span>
                       </div>
@@ -214,11 +214,11 @@ export default async function CaregiverMatchesPage() {
                           <div key={s.label} className="flex flex-col items-center gap-1">
                             <div className="w-full h-1.5 bg-white rounded-full overflow-hidden">
                               <div
-                                className="h-full bg-[#5F7E9D] rounded-full"
+                                className="h-full bg-[#F3B443] rounded-full"
                                 style={{ width: `${((s.score ?? 0) / 5) * 100}%` }}
                               />
                             </div>
-                            <span className="text-[10px] text-gray-400 text-center" style={{ fontFamily: "Inter, sans-serif" }}>
+                            <span className="text-[10px] text-[#F3B443] text-center" style={{ fontFamily: "Inter, sans-serif" }}>
                               {s.label}
                             </span>
                           </div>
