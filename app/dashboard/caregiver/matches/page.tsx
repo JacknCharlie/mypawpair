@@ -82,10 +82,10 @@ export default async function CaregiverMatchesPage() {
           <span>›</span>
           <span className="text-[#2F3E4E]">My Matches</span>
         </div>
-        <h1 className="text-[#2F3E4E] text-[32px] font-semibold leading-[120%]" style={{ fontFamily: "var(--font-modern-sans), ui-sans-serif, system-ui, sans-serif" }}>
+        <h1 className="text-[#260900] text-[32px] font-semibold leading-[120%] font-modern" >
           Dog Matches 💛
         </h1>
-        <p className="text-gray-500 text-[16px] mt-1" style={{ fontFamily: "Inter, sans-serif" }}>
+        <p className="text-[#6B7280] text-[16px] mt-1" style={{ fontFamily: "Inter, sans-serif" }}>
           Dogs matched to your services, availability, and preferences
         </p>
       </div>
@@ -131,7 +131,7 @@ export default async function CaregiverMatchesPage() {
             ];
 
             return (
-              <div key={match.id} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+              <div key={match.id} className="bg-white rounded-2xl p-6 border-2 border-[#F3B443] shadow-sm">
                 <div className="flex flex-col sm:flex-row sm:items-start gap-4">
                   {/* Avatar */}
                   <div className="w-14 h-14 rounded-full bg-[#F6F2EA] text-2xl flex items-center justify-center flex-shrink-0">
