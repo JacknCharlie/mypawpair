@@ -93,7 +93,7 @@ export function AccountSettingsForm({
             key={tab.id}
             type="button"
             onClick={() => setActiveTab(tab.id)}
-            className={`bg-red flex-1 flex items-center justify-center gap-2 h-10 rounded-xl text-sm font-medium transition-all duration-200 ${
+            className={`flex-1 flex items-center justify-center gap-2 h-10 rounded-xl text-sm font-medium transition-all duration-200 ${
               activeTab === tab.id
                 ? tab.id === "danger"
                   ? "bg-red-50 text-red-600 shadow-sm"
@@ -118,12 +118,12 @@ export function AccountSettingsForm({
           <form onSubmit={handleProfileUpdate}>
             <div className="px-8 pt-8 pb-6 border-b border-gray-50">
               <h2
-                className="text-[#2F3E4E] text-[22px] font-semibold"
-                style={{ fontFamily: "var(--font-modern-sans), ui-sans-serif, system-ui, sans-serif" }}
+                className="text-[#260900] text-[22px] font-semibold font-modern"
+
               >
                 👤 Profile Information
               </h2>
-              <p className="text-gray-400 text-sm mt-1" style={{ fontFamily: "Inter, sans-serif" }}>
+              <p className="text-[#6B7280] text-sm mt-1" style={{ fontFamily: "Inter, sans-serif" }}>
                 Update your name, phone, and location
               </p>
             </div>
@@ -131,7 +131,7 @@ export function AccountSettingsForm({
             <div className="px-8 py-7 flex flex-col gap-5">
               {/* Email — read only */}
               <div className="flex flex-col gap-1.5">
-                <Label className="text-[#2F3E4E] text-sm font-medium">Email</Label>
+                <Label className="text-[#260900]  font-modern text-sm font-medium">Email</Label>
                 <div className="relative">
                   <Input
                     value={email}
@@ -148,7 +148,7 @@ export function AccountSettingsForm({
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <Label className="text-[#2F3E4E] text-sm font-medium">Full Name</Label>
+                <Label className="text-[#260900]  font-modern text-sm font-medium">Full Name</Label>
                 <Input
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
@@ -159,7 +159,7 @@ export function AccountSettingsForm({
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex flex-col gap-1.5">
-                  <Label className="text-[#2F3E4E] text-sm font-medium">Phone</Label>
+                  <Label className="text-[#260900]  font-modern text-sm font-medium">Phone</Label>
                   <Input
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
@@ -168,7 +168,7 @@ export function AccountSettingsForm({
                   />
                 </div>
                 <div className="flex flex-col gap-1.5">
-                  <Label className="text-[#2F3E4E] text-sm font-medium">City</Label>
+                  <Label className="text-[#260900]  font-modern text-sm font-medium">City</Label>
                   <Input
                     value={city}
                     onChange={(e) => setCity(e.target.value)}
