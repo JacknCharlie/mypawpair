@@ -209,19 +209,18 @@ export function AccountSettingsForm({
           <form onSubmit={handlePasswordUpdate}>
             <div className="px-8 pt-8 pb-6 border-b border-gray-50">
               <h2
-                className="text-[#2F3E4E] text-[22px] font-semibold"
-                style={{ fontFamily: "var(--font-modern-sans), ui-sans-serif, system-ui, sans-serif" }}
+                className="text-[#260900] text-[22px] font-semibold font-modern"
               >
                 🔒 Change Password
               </h2>
-              <p className="text-gray-400 text-sm mt-1" style={{ fontFamily: "Inter, sans-serif" }}>
+              <p className="text-[#6B7280] text-sm mt-1" style={{ fontFamily: "Inter, sans-serif" }}>
                 Use a strong password with at least 6 characters
               </p>
             </div>
 
             <div className="px-8 py-7 flex flex-col gap-5">
               <div className="flex flex-col gap-1.5">
-                <Label className="text-[#2F3E4E] text-sm font-medium">Current Password</Label>
+                <Label className="text-[#260900] font-modern text-sm font-medium text-sm ">Current Password</Label>
                 <Input
                   type="password"
                   value={currentPassword}
@@ -235,7 +234,7 @@ export function AccountSettingsForm({
               <div className="h-px bg-gray-100" />
 
               <div className="flex flex-col gap-1.5">
-                <Label className="text-[#2F3E4E] text-sm font-medium">New Password</Label>
+                <Label className="text-[#260900] font-modern text-sm font-medium">New Password</Label>
                 <Input
                   type="password"
                   value={newPassword}
@@ -247,7 +246,7 @@ export function AccountSettingsForm({
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <Label className="text-[#2F3E4E] text-sm font-medium">Confirm New Password</Label>
+                <Label className="text-[#260900] font-modern text-sm font-medium">Confirm New Password</Label>
                 <Input
                   type="password"
                   value={confirmPassword}
