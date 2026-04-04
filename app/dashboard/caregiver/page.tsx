@@ -184,7 +184,7 @@ async function CaregiverDashboard() {
           </div>
           <Link
             href="/dashboard/caregiver/matches"
-            className="mt-auto inline-flex items-center justify-center h-11 px-6 bg-[#F3B443] text-[#fff] font-medium text-[15px] rounded-[10px] border-2 border-transparent hover:bg-transparent hover:text[#F3B443] hover:border-[#F3B443] transition-all duration-300 w-fit"
+            className="mt-auto inline-flex items-center justify-center h-11 px-6 bg-[#F3B443] text-[#fff] font-medium text-[15px] rounded-[10px] border-2 border-transparent hover:bg-transparent hover:text-[#F3B443] hover:border-[#F3B443] transition-all duration-300 w-fit"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             View Matches →
