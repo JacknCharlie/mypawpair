@@ -34,12 +34,12 @@ export default async function CaregiverProfilePage() {
       {/* Centered heading */}
       <div className="text-center max-w-xl mx-auto">
         <h1
-          className="text-[#2F3E4E] text-[32px] font-semibold leading-[120%]"
-          style={{ fontFamily: "var(--font-modern-sans), ui-sans-serif, system-ui, sans-serif" }}
+          className="text-[#260900] text-[24px] md:text-[32px] font-semibold leading-[120%] font-modern"
+           
         >
           {isEditing ? "Update Your Profile ✏️" : "Complete Your Profile 🐾"}
         </h1>
-        <p className="text-gray-500 text-[16px] mt-2" style={{ fontFamily: "Inter, sans-serif" }}>
+        <p className="text-[#6B7280] text-[16px] mt-2" style={{ fontFamily: "Inter, sans-serif" }}>
           {isEditing
             ? "Keep your profile up to date for better matches"
             : "Tell us about yourself so we can match you with the right dogs"}
